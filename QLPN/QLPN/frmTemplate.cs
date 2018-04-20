@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace QLPN
 {
-    public partial class Form1 : Form
+    public partial class frmTemplate : Form
     {
-        public Form1()
+        public frmTemplate()
         {
             InitializeComponent();
         }
+
+
     }
 }
