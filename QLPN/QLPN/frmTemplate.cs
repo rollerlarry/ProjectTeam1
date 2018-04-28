@@ -17,19 +17,5 @@ namespace QLPN
             InitializeComponent();
         }
 
-        private void btnTaiKhoan_Click(object sender, EventArgs e)
-        {
-            panel1.Visible = false;
-            panel2.Visible = true;
-        }
-
-        private void frmTemplate_Load(object sender, EventArgs e)
-        {
-            panel2.Visible = false;
-        }
-
-       
-
-
     }
 }

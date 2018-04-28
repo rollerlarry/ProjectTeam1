@@ -388,7 +388,6 @@
             this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTaiKhoan.UseVisualStyleBackColor = true;
-            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
             // btnMayTram
             // 
@@ -573,7 +572,6 @@
             this.Name = "frmTemplate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Template";
-            this.Load += new System.EventHandler(this.frmTemplate_Load);
             this.pnlTemplate.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
