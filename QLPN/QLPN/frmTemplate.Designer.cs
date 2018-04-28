@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTemplate));
             this.pnlTemplate = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnAccTV = new System.Windows.Forms.Button();
-            this.btnAccNV = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLichSu = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.pnlStatusStrip = new System.Windows.Forms.Panel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.tsslID = new System.Windows.Forms.ToolStripStatusLabel();
@@ -47,16 +39,6 @@
             this.tsslTongSoMayTram = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslDangSuDung = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslSanSang = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pnlChucNang = new System.Windows.Forms.Panel();
-            this.btnNhatKyWeb = new System.Windows.Forms.Button();
-            this.btnKhongCheUngDung = new System.Windows.Forms.Button();
-            this.btnNhomMay = new System.Windows.Forms.Button();
-            this.btnDichVu = new System.Windows.Forms.Button();
-            this.btnNhomNguoiSuDung = new System.Windows.Forms.Button();
-            this.btnNhatKyGiaoDich = new System.Windows.Forms.Button();
-            this.btnNhatKyHeThong = new System.Windows.Forms.Button();
-            this.btnTaiKhoan = new System.Windows.Forms.Button();
-            this.btnMayTram = new System.Windows.Forms.Button();
             this.pnlButton = new System.Windows.Forms.Panel();
             this.btnThayDoiNhanVien = new System.Windows.Forms.Button();
             this.btnInTaiKhoanThe = new System.Windows.Forms.Button();
@@ -76,25 +58,32 @@
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngônNgữToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlContents = new System.Windows.Forms.Panel();
+            this.tabControlChucNang = new System.Windows.Forms.TabControl();
+            this.tabMayTram = new System.Windows.Forms.TabPage();
+            this.tabTaiKhoan = new System.Windows.Forms.TabPage();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.tabNhatKyHeThong = new System.Windows.Forms.TabPage();
+            this.tabNhatKyGiaoDich = new System.Windows.Forms.TabPage();
+            this.tabNhomMay = new System.Windows.Forms.TabPage();
+            this.tabNhomNguoiSuDung = new System.Windows.Forms.TabPage();
+            this.tabDichVu = new System.Windows.Forms.TabPage();
+            this.tabKhongCheUngDung = new System.Windows.Forms.TabPage();
+            this.tabNhatKyWeb = new System.Windows.Forms.TabPage();
             this.pnlTemplate.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.pnlStatusStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
-            this.pnlChucNang.SuspendLayout();
             this.pnlButton.SuspendLayout();
             this.pnlMenuStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            this.pnlContents.SuspendLayout();
+            this.tabControlChucNang.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTemplate
             // 
-            this.pnlTemplate.Controls.Add(this.panel3);
-            this.pnlTemplate.Controls.Add(this.dataGridView1);
-            this.pnlTemplate.Controls.Add(this.panel1);
+            this.pnlTemplate.Controls.Add(this.pnlContents);
             this.pnlTemplate.Controls.Add(this.pnlStatusStrip);
-            this.pnlTemplate.Controls.Add(this.pnlChucNang);
             this.pnlTemplate.Controls.Add(this.pnlButton);
             this.pnlTemplate.Controls.Add(this.pnlMenuStrip);
             this.pnlTemplate.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -103,109 +92,13 @@
             this.pnlTemplate.Size = new System.Drawing.Size(1084, 562);
             this.pnlTemplate.TabIndex = 0;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnAccTV);
-            this.panel3.Controls.Add(this.btnAccNV);
-            this.panel3.Location = new System.Drawing.Point(1, 512);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1083, 25);
-            this.panel3.TabIndex = 9;
-            // 
-            // btnAccTV
-            // 
-            this.btnAccTV.Location = new System.Drawing.Point(0, 2);
-            this.btnAccTV.Name = "btnAccTV";
-            this.btnAccTV.Size = new System.Drawing.Size(121, 23);
-            this.btnAccTV.TabIndex = 6;
-            this.btnAccTV.Text = "Tài khoản thành viên";
-            this.btnAccTV.UseVisualStyleBackColor = true;
-            // 
-            // btnAccNV
-            // 
-            this.btnAccNV.Location = new System.Drawing.Point(127, 3);
-            this.btnAccNV.Name = "btnAccNV";
-            this.btnAccNV.Size = new System.Drawing.Size(114, 23);
-            this.btnAccNV.TabIndex = 7;
-            this.btnAccNV.Text = "Tài khoản nhân viên";
-            this.btnAccNV.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 166);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1084, 368);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnLichSu);
-            this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Controls.Add(this.btnSua);
-            this.panel1.Controls.Add(this.btnThem);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 136);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 30);
-            this.panel1.TabIndex = 4;
-            // 
-            // btnLichSu
-            // 
-            this.btnLichSu.FlatAppearance.BorderSize = 0;
-            this.btnLichSu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLichSu.Image = ((System.Drawing.Image)(resources.GetObject("btnLichSu.Image")));
-            this.btnLichSu.Location = new System.Drawing.Point(97, 2);
-            this.btnLichSu.Name = "btnLichSu";
-            this.btnLichSu.Size = new System.Drawing.Size(25, 25);
-            this.btnLichSu.TabIndex = 5;
-            this.btnLichSu.Text = " ";
-            this.btnLichSu.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(65, 2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(25, 25);
-            this.btnXoa.TabIndex = 5;
-            this.btnXoa.Text = " ";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.Location = new System.Drawing.Point(34, 2);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(25, 25);
-            this.btnSua.TabIndex = 1;
-            this.btnSua.Text = " ";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.Location = new System.Drawing.Point(3, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(25, 25);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = " ";
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
             // pnlStatusStrip
             // 
             this.pnlStatusStrip.Controls.Add(this.statusStrip);
             this.pnlStatusStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlStatusStrip.Location = new System.Drawing.Point(0, 534);
+            this.pnlStatusStrip.Location = new System.Drawing.Point(0, 542);
             this.pnlStatusStrip.Name = "pnlStatusStrip";
-            this.pnlStatusStrip.Size = new System.Drawing.Size(1084, 28);
+            this.pnlStatusStrip.Size = new System.Drawing.Size(1084, 20);
             this.pnlStatusStrip.TabIndex = 3;
             // 
             // statusStrip
@@ -217,7 +110,7 @@
             this.tsslTongSoMayTram,
             this.tsslDangSuDung,
             this.tsslSanSang});
-            this.statusStrip.Location = new System.Drawing.Point(0, 6);
+            this.statusStrip.Location = new System.Drawing.Point(0, -2);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1084, 22);
             this.statusStrip.TabIndex = 0;
@@ -258,150 +151,6 @@
             this.tsslSanSang.Name = "tsslSanSang";
             this.tsslSanSang.Size = new System.Drawing.Size(60, 17);
             this.tsslSanSang.Text = "Sẵn sàng: ";
-            // 
-            // pnlChucNang
-            // 
-            this.pnlChucNang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlChucNang.Controls.Add(this.btnNhatKyWeb);
-            this.pnlChucNang.Controls.Add(this.btnKhongCheUngDung);
-            this.pnlChucNang.Controls.Add(this.btnNhomMay);
-            this.pnlChucNang.Controls.Add(this.btnDichVu);
-            this.pnlChucNang.Controls.Add(this.btnNhomNguoiSuDung);
-            this.pnlChucNang.Controls.Add(this.btnNhatKyGiaoDich);
-            this.pnlChucNang.Controls.Add(this.btnNhatKyHeThong);
-            this.pnlChucNang.Controls.Add(this.btnTaiKhoan);
-            this.pnlChucNang.Controls.Add(this.btnMayTram);
-            this.pnlChucNang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlChucNang.Location = new System.Drawing.Point(0, 96);
-            this.pnlChucNang.Name = "pnlChucNang";
-            this.pnlChucNang.Size = new System.Drawing.Size(1084, 40);
-            this.pnlChucNang.TabIndex = 2;
-            // 
-            // btnNhatKyWeb
-            // 
-            this.btnNhatKyWeb.FlatAppearance.BorderSize = 0;
-            this.btnNhatKyWeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhatKyWeb.Image = ((System.Drawing.Image)(resources.GetObject("btnNhatKyWeb.Image")));
-            this.btnNhatKyWeb.Location = new System.Drawing.Point(939, 0);
-            this.btnNhatKyWeb.Name = "btnNhatKyWeb";
-            this.btnNhatKyWeb.Size = new System.Drawing.Size(100, 40);
-            this.btnNhatKyWeb.TabIndex = 7;
-            this.btnNhatKyWeb.Text = " Nhật ký web";
-            this.btnNhatKyWeb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhatKyWeb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhatKyWeb.UseVisualStyleBackColor = true;
-            // 
-            // btnKhongCheUngDung
-            // 
-            this.btnKhongCheUngDung.FlatAppearance.BorderSize = 0;
-            this.btnKhongCheUngDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhongCheUngDung.Image = ((System.Drawing.Image)(resources.GetObject("btnKhongCheUngDung.Image")));
-            this.btnKhongCheUngDung.Location = new System.Drawing.Point(793, 0);
-            this.btnKhongCheUngDung.Name = "btnKhongCheUngDung";
-            this.btnKhongCheUngDung.Size = new System.Drawing.Size(150, 40);
-            this.btnKhongCheUngDung.TabIndex = 6;
-            this.btnKhongCheUngDung.Text = " Khống chế ứng dụng";
-            this.btnKhongCheUngDung.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnKhongCheUngDung.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKhongCheUngDung.UseVisualStyleBackColor = true;
-            // 
-            // btnNhomMay
-            // 
-            this.btnNhomMay.FlatAppearance.BorderSize = 0;
-            this.btnNhomMay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhomMay.Image = ((System.Drawing.Image)(resources.GetObject("btnNhomMay.Image")));
-            this.btnNhomMay.Location = new System.Drawing.Point(452, 0);
-            this.btnNhomMay.Name = "btnNhomMay";
-            this.btnNhomMay.Size = new System.Drawing.Size(100, 40);
-            this.btnNhomMay.TabIndex = 3;
-            this.btnNhomMay.Text = " Nhóm máy";
-            this.btnNhomMay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhomMay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhomMay.UseVisualStyleBackColor = true;
-            // 
-            // btnDichVu
-            // 
-            this.btnDichVu.FlatAppearance.BorderSize = 0;
-            this.btnDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDichVu.Image = ((System.Drawing.Image)(resources.GetObject("btnDichVu.Image")));
-            this.btnDichVu.Location = new System.Drawing.Point(696, 0);
-            this.btnDichVu.Name = "btnDichVu";
-            this.btnDichVu.Size = new System.Drawing.Size(100, 40);
-            this.btnDichVu.TabIndex = 5;
-            this.btnDichVu.Text = " Dịch vụ";
-            this.btnDichVu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDichVu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDichVu.UseVisualStyleBackColor = true;
-            // 
-            // btnNhomNguoiSuDung
-            // 
-            this.btnNhomNguoiSuDung.FlatAppearance.BorderSize = 0;
-            this.btnNhomNguoiSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhomNguoiSuDung.Image = ((System.Drawing.Image)(resources.GetObject("btnNhomNguoiSuDung.Image")));
-            this.btnNhomNguoiSuDung.Location = new System.Drawing.Point(549, 0);
-            this.btnNhomNguoiSuDung.Name = "btnNhomNguoiSuDung";
-            this.btnNhomNguoiSuDung.Size = new System.Drawing.Size(150, 40);
-            this.btnNhomNguoiSuDung.TabIndex = 4;
-            this.btnNhomNguoiSuDung.Text = " Nhóm người sử dụng";
-            this.btnNhomNguoiSuDung.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhomNguoiSuDung.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhomNguoiSuDung.UseVisualStyleBackColor = true;
-            // 
-            // btnNhatKyGiaoDich
-            // 
-            this.btnNhatKyGiaoDich.FlatAppearance.BorderSize = 0;
-            this.btnNhatKyGiaoDich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhatKyGiaoDich.Image = ((System.Drawing.Image)(resources.GetObject("btnNhatKyGiaoDich.Image")));
-            this.btnNhatKyGiaoDich.Location = new System.Drawing.Point(325, 0);
-            this.btnNhatKyGiaoDich.Name = "btnNhatKyGiaoDich";
-            this.btnNhatKyGiaoDich.Size = new System.Drawing.Size(130, 40);
-            this.btnNhatKyGiaoDich.TabIndex = 3;
-            this.btnNhatKyGiaoDich.Text = " Nhật ký giao dịch";
-            this.btnNhatKyGiaoDich.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhatKyGiaoDich.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhatKyGiaoDich.UseVisualStyleBackColor = true;
-            // 
-            // btnNhatKyHeThong
-            // 
-            this.btnNhatKyHeThong.FlatAppearance.BorderSize = 0;
-            this.btnNhatKyHeThong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhatKyHeThong.Image = ((System.Drawing.Image)(resources.GetObject("btnNhatKyHeThong.Image")));
-            this.btnNhatKyHeThong.Location = new System.Drawing.Point(198, 0);
-            this.btnNhatKyHeThong.Name = "btnNhatKyHeThong";
-            this.btnNhatKyHeThong.Size = new System.Drawing.Size(130, 40);
-            this.btnNhatKyHeThong.TabIndex = 2;
-            this.btnNhatKyHeThong.Text = " Nhật ký hệ thống";
-            this.btnNhatKyHeThong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhatKyHeThong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhatKyHeThong.UseVisualStyleBackColor = true;
-            // 
-            // btnTaiKhoan
-            // 
-            this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("btnTaiKhoan.Image")));
-            this.btnTaiKhoan.Location = new System.Drawing.Point(97, 0);
-            this.btnTaiKhoan.Name = "btnTaiKhoan";
-            this.btnTaiKhoan.Size = new System.Drawing.Size(100, 40);
-            this.btnTaiKhoan.TabIndex = 1;
-            this.btnTaiKhoan.Text = " Tài khoản";
-            this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTaiKhoan.UseVisualStyleBackColor = true;
-            // 
-            // btnMayTram
-            // 
-            this.btnMayTram.FlatAppearance.BorderSize = 0;
-            this.btnMayTram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMayTram.Image = ((System.Drawing.Image)(resources.GetObject("btnMayTram.Image")));
-            this.btnMayTram.Location = new System.Drawing.Point(0, 0);
-            this.btnMayTram.Name = "btnMayTram";
-            this.btnMayTram.Size = new System.Drawing.Size(100, 40);
-            this.btnMayTram.TabIndex = 0;
-            this.btnMayTram.Text = " Máy trạm";
-            this.btnMayTram.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMayTram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMayTram.UseVisualStyleBackColor = true;
             // 
             // pnlButton
             // 
@@ -562,6 +311,148 @@
             this.giúpĐỡToolStripMenuItem.Size = new System.Drawing.Size(77, 19);
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
             // 
+            // pnlContents
+            // 
+            this.pnlContents.Controls.Add(this.tabControlChucNang);
+            this.pnlContents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContents.Location = new System.Drawing.Point(0, 96);
+            this.pnlContents.Name = "pnlContents";
+            this.pnlContents.Size = new System.Drawing.Size(1084, 446);
+            this.pnlContents.TabIndex = 4;
+            // 
+            // tabControlChucNang
+            // 
+            this.tabControlChucNang.Controls.Add(this.tabMayTram);
+            this.tabControlChucNang.Controls.Add(this.tabTaiKhoan);
+            this.tabControlChucNang.Controls.Add(this.tabNhatKyHeThong);
+            this.tabControlChucNang.Controls.Add(this.tabNhatKyGiaoDich);
+            this.tabControlChucNang.Controls.Add(this.tabNhomMay);
+            this.tabControlChucNang.Controls.Add(this.tabNhomNguoiSuDung);
+            this.tabControlChucNang.Controls.Add(this.tabDichVu);
+            this.tabControlChucNang.Controls.Add(this.tabKhongCheUngDung);
+            this.tabControlChucNang.Controls.Add(this.tabNhatKyWeb);
+            this.tabControlChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlChucNang.ImageList = this.imageList;
+            this.tabControlChucNang.ItemSize = new System.Drawing.Size(77, 30);
+            this.tabControlChucNang.Location = new System.Drawing.Point(0, 0);
+            this.tabControlChucNang.Name = "tabControlChucNang";
+            this.tabControlChucNang.SelectedIndex = 0;
+            this.tabControlChucNang.Size = new System.Drawing.Size(1084, 446);
+            this.tabControlChucNang.TabIndex = 0;
+            // 
+            // tabMayTram
+            // 
+            this.tabMayTram.ImageIndex = 1;
+            this.tabMayTram.Location = new System.Drawing.Point(4, 34);
+            this.tabMayTram.Name = "tabMayTram";
+            this.tabMayTram.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMayTram.Size = new System.Drawing.Size(1076, 408);
+            this.tabMayTram.TabIndex = 0;
+            this.tabMayTram.Text = "Máy trạm";
+            this.tabMayTram.UseVisualStyleBackColor = true;
+            // 
+            // tabTaiKhoan
+            // 
+            this.tabTaiKhoan.ImageIndex = 7;
+            this.tabTaiKhoan.Location = new System.Drawing.Point(4, 34);
+            this.tabTaiKhoan.Name = "tabTaiKhoan";
+            this.tabTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTaiKhoan.Size = new System.Drawing.Size(1076, 408);
+            this.tabTaiKhoan.TabIndex = 1;
+            this.tabTaiKhoan.Text = "Tài khoản";
+            this.tabTaiKhoan.UseVisualStyleBackColor = true;
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "book.png");
+            this.imageList.Images.SetKeyName(1, "desktop-monitor.png");
+            this.imageList.Images.SetKeyName(2, "earth-globe.png");
+            this.imageList.Images.SetKeyName(3, "exchange-arrows.png");
+            this.imageList.Images.SetKeyName(4, "group-profile-users.png");
+            this.imageList.Images.SetKeyName(5, "retweet-arrows-symbol.png");
+            this.imageList.Images.SetKeyName(6, "screens-group-of-three-monitors.png");
+            this.imageList.Images.SetKeyName(7, "user-shape.png");
+            this.imageList.Images.SetKeyName(8, "phone-book.png");
+            // 
+            // tabNhatKyHeThong
+            // 
+            this.tabNhatKyHeThong.ImageIndex = 0;
+            this.tabNhatKyHeThong.Location = new System.Drawing.Point(4, 34);
+            this.tabNhatKyHeThong.Name = "tabNhatKyHeThong";
+            this.tabNhatKyHeThong.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNhatKyHeThong.Size = new System.Drawing.Size(1076, 403);
+            this.tabNhatKyHeThong.TabIndex = 2;
+            this.tabNhatKyHeThong.Text = "Nhật ký hệ thống";
+            this.tabNhatKyHeThong.UseVisualStyleBackColor = true;
+            // 
+            // tabNhatKyGiaoDich
+            // 
+            this.tabNhatKyGiaoDich.ImageIndex = 3;
+            this.tabNhatKyGiaoDich.Location = new System.Drawing.Point(4, 34);
+            this.tabNhatKyGiaoDich.Name = "tabNhatKyGiaoDich";
+            this.tabNhatKyGiaoDich.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNhatKyGiaoDich.Size = new System.Drawing.Size(1076, 403);
+            this.tabNhatKyGiaoDich.TabIndex = 3;
+            this.tabNhatKyGiaoDich.Text = "Nhật ký giao dịch";
+            this.tabNhatKyGiaoDich.UseVisualStyleBackColor = true;
+            // 
+            // tabNhomMay
+            // 
+            this.tabNhomMay.ImageIndex = 6;
+            this.tabNhomMay.Location = new System.Drawing.Point(4, 34);
+            this.tabNhomMay.Name = "tabNhomMay";
+            this.tabNhomMay.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNhomMay.Size = new System.Drawing.Size(1076, 403);
+            this.tabNhomMay.TabIndex = 4;
+            this.tabNhomMay.Text = "Nhóm máy";
+            this.tabNhomMay.UseVisualStyleBackColor = true;
+            // 
+            // tabNhomNguoiSuDung
+            // 
+            this.tabNhomNguoiSuDung.ImageIndex = 4;
+            this.tabNhomNguoiSuDung.Location = new System.Drawing.Point(4, 34);
+            this.tabNhomNguoiSuDung.Name = "tabNhomNguoiSuDung";
+            this.tabNhomNguoiSuDung.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNhomNguoiSuDung.Size = new System.Drawing.Size(1076, 403);
+            this.tabNhomNguoiSuDung.TabIndex = 5;
+            this.tabNhomNguoiSuDung.Text = "Nhóm người sử dụng";
+            this.tabNhomNguoiSuDung.UseVisualStyleBackColor = true;
+            // 
+            // tabDichVu
+            // 
+            this.tabDichVu.ImageIndex = 5;
+            this.tabDichVu.Location = new System.Drawing.Point(4, 34);
+            this.tabDichVu.Name = "tabDichVu";
+            this.tabDichVu.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDichVu.Size = new System.Drawing.Size(1076, 403);
+            this.tabDichVu.TabIndex = 6;
+            this.tabDichVu.Text = "Dịch vụ";
+            this.tabDichVu.UseVisualStyleBackColor = true;
+            // 
+            // tabKhongCheUngDung
+            // 
+            this.tabKhongCheUngDung.ImageIndex = 2;
+            this.tabKhongCheUngDung.Location = new System.Drawing.Point(4, 34);
+            this.tabKhongCheUngDung.Name = "tabKhongCheUngDung";
+            this.tabKhongCheUngDung.Padding = new System.Windows.Forms.Padding(3);
+            this.tabKhongCheUngDung.Size = new System.Drawing.Size(1076, 403);
+            this.tabKhongCheUngDung.TabIndex = 7;
+            this.tabKhongCheUngDung.Text = "Khống chế ứng dụng";
+            this.tabKhongCheUngDung.UseVisualStyleBackColor = true;
+            // 
+            // tabNhatKyWeb
+            // 
+            this.tabNhatKyWeb.ImageIndex = 8;
+            this.tabNhatKyWeb.Location = new System.Drawing.Point(4, 34);
+            this.tabNhatKyWeb.Name = "tabNhatKyWeb";
+            this.tabNhatKyWeb.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNhatKyWeb.Size = new System.Drawing.Size(1076, 403);
+            this.tabNhatKyWeb.TabIndex = 8;
+            this.tabNhatKyWeb.Text = "Nhật ký web";
+            this.tabNhatKyWeb.UseVisualStyleBackColor = true;
+            // 
             // frmTemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,19 +464,17 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Template";
             this.pnlTemplate.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.pnlStatusStrip.ResumeLayout(false);
             this.pnlStatusStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
-            this.pnlChucNang.ResumeLayout(false);
             this.pnlButton.ResumeLayout(false);
             this.pnlMenuStrip.ResumeLayout(false);
             this.pnlMenuStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.pnlContents.ResumeLayout(false);
+            this.tabControlChucNang.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -593,16 +482,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlTemplate;
-        private System.Windows.Forms.Panel pnlChucNang;
-        private System.Windows.Forms.Button btnNhatKyWeb;
-        private System.Windows.Forms.Button btnKhongCheUngDung;
-        private System.Windows.Forms.Button btnNhomMay;
-        private System.Windows.Forms.Button btnDichVu;
-        private System.Windows.Forms.Button btnNhomNguoiSuDung;
-        private System.Windows.Forms.Button btnNhatKyGiaoDich;
-        private System.Windows.Forms.Button btnNhatKyHeThong;
-        private System.Windows.Forms.Button btnTaiKhoan;
-        private System.Windows.Forms.Button btnMayTram;
         private System.Windows.Forms.Panel pnlButton;
         private System.Windows.Forms.Button btnThayDoiNhanVien;
         private System.Windows.Forms.Button btnInTaiKhoanThe;
@@ -630,15 +509,18 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslTongSoMayTram;
         private System.Windows.Forms.ToolStripStatusLabel tsslDangSuDung;
         private System.Windows.Forms.ToolStripStatusLabel tsslSanSang;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnLichSu;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnAccNV;
-        private System.Windows.Forms.Button btnAccTV;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel pnlContents;
+        private System.Windows.Forms.TabControl tabControlChucNang;
+        private System.Windows.Forms.TabPage tabMayTram;
+        private System.Windows.Forms.TabPage tabTaiKhoan;
+        private System.Windows.Forms.ImageList imageList;
+        private System.Windows.Forms.TabPage tabNhatKyHeThong;
+        private System.Windows.Forms.TabPage tabNhatKyGiaoDich;
+        private System.Windows.Forms.TabPage tabNhomMay;
+        private System.Windows.Forms.TabPage tabNhomNguoiSuDung;
+        private System.Windows.Forms.TabPage tabDichVu;
+        private System.Windows.Forms.TabPage tabKhongCheUngDung;
+        private System.Windows.Forms.TabPage tabNhatKyWeb;
     }
 }
 
