@@ -30,21 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTemplate));
             this.pnlTemplate = new System.Windows.Forms.Panel();
-            this.btnAccNV = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnAccTV = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tbxPage = new System.Windows.Forms.TextBox();
-            this.btnRight = new System.Windows.Forms.Button();
-            this.btnLeft = new System.Windows.Forms.Button();
-            this.lblPage = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.tbxSearch = new System.Windows.Forms.TextBox();
-            this.cbbSearch = new System.Windows.Forms.ComboBox();
-            this.btnRef = new System.Windows.Forms.Button();
-            this.btnHis = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnMod = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAccNV = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLichSu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -87,10 +76,9 @@
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngônNgữToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlTemplate.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlStatusStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -98,15 +86,12 @@
             this.pnlButton.SuspendLayout();
             this.pnlMenuStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTemplate
             // 
             this.pnlTemplate.Controls.Add(this.panel3);
             this.pnlTemplate.Controls.Add(this.dataGridView1);
-            this.pnlTemplate.Controls.Add(this.panel2);
             this.pnlTemplate.Controls.Add(this.panel1);
             this.pnlTemplate.Controls.Add(this.pnlStatusStrip);
             this.pnlTemplate.Controls.Add(this.pnlChucNang);
@@ -118,14 +103,14 @@
             this.pnlTemplate.Size = new System.Drawing.Size(1084, 562);
             this.pnlTemplate.TabIndex = 0;
             // 
-            // btnAccNV
+            // panel3
             // 
-            this.btnAccNV.Location = new System.Drawing.Point(127, 3);
-            this.btnAccNV.Name = "btnAccNV";
-            this.btnAccNV.Size = new System.Drawing.Size(114, 23);
-            this.btnAccNV.TabIndex = 7;
-            this.btnAccNV.Text = "Tài khoản nhân viên";
-            this.btnAccNV.UseVisualStyleBackColor = true;
+            this.panel3.Controls.Add(this.btnAccTV);
+            this.panel3.Controls.Add(this.btnAccNV);
+            this.panel3.Location = new System.Drawing.Point(1, 512);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1083, 25);
+            this.panel3.TabIndex = 9;
             // 
             // btnAccTV
             // 
@@ -136,154 +121,23 @@
             this.btnAccTV.Text = "Tài khoản thành viên";
             this.btnAccTV.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // btnAccNV
             // 
-            this.panel2.Controls.Add(this.tbxPage);
-            this.panel2.Controls.Add(this.btnRight);
-            this.panel2.Controls.Add(this.btnLeft);
-            this.panel2.Controls.Add(this.lblPage);
-            this.panel2.Controls.Add(this.btnSearch);
-            this.panel2.Controls.Add(this.tbxSearch);
-            this.panel2.Controls.Add(this.cbbSearch);
-            this.panel2.Controls.Add(this.btnRef);
-            this.panel2.Controls.Add(this.btnHis);
-            this.panel2.Controls.Add(this.btnDel);
-            this.panel2.Controls.Add(this.btnMod);
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 166);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1084, 30);
-            this.panel2.TabIndex = 5;
+            this.btnAccNV.Location = new System.Drawing.Point(127, 3);
+            this.btnAccNV.Name = "btnAccNV";
+            this.btnAccNV.Size = new System.Drawing.Size(114, 23);
+            this.btnAccNV.TabIndex = 7;
+            this.btnAccNV.Text = "Tài khoản nhân viên";
+            this.btnAccNV.UseVisualStyleBackColor = true;
             // 
-            // tbxPage
+            // dataGridView1
             // 
-            this.tbxPage.Location = new System.Drawing.Point(581, 6);
-            this.tbxPage.Name = "tbxPage";
-            this.tbxPage.Size = new System.Drawing.Size(38, 20);
-            this.tbxPage.TabIndex = 13;
-            // 
-            // btnRight
-            // 
-            this.btnRight.FlatAppearance.BorderSize = 0;
-            this.btnRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRight.Image = ((System.Drawing.Image)(resources.GetObject("btnRight.Image")));
-            this.btnRight.Location = new System.Drawing.Point(626, 3);
-            this.btnRight.Name = "btnRight";
-            this.btnRight.Size = new System.Drawing.Size(25, 25);
-            this.btnRight.TabIndex = 12;
-            this.btnRight.Text = " ";
-            this.btnRight.UseVisualStyleBackColor = true;
-            // 
-            // btnLeft
-            // 
-            this.btnLeft.FlatAppearance.BorderSize = 0;
-            this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLeft.Image = ((System.Drawing.Image)(resources.GetObject("btnLeft.Image")));
-            this.btnLeft.Location = new System.Drawing.Point(550, 2);
-            this.btnLeft.Name = "btnLeft";
-            this.btnLeft.Size = new System.Drawing.Size(25, 25);
-            this.btnLeft.TabIndex = 11;
-            this.btnLeft.Text = " ";
-            this.btnLeft.UseVisualStyleBackColor = true;
-            // 
-            // lblPage
-            // 
-            this.lblPage.AutoSize = true;
-            this.lblPage.Location = new System.Drawing.Point(506, 7);
-            this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(38, 13);
-            this.lblPage.TabIndex = 10;
-            this.lblPage.Text = "Trang:";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(453, 1);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(25, 25);
-            this.btnSearch.TabIndex = 9;
-            this.btnSearch.Text = " ";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // tbxSearch
-            // 
-            this.tbxSearch.Location = new System.Drawing.Point(343, 4);
-            this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(100, 20);
-            this.tbxSearch.TabIndex = 8;
-            // 
-            // cbbSearch
-            // 
-            this.cbbSearch.FormattingEnabled = true;
-            this.cbbSearch.Items.AddRange(new object[] {
-            "Tên người sử dụng"});
-            this.cbbSearch.Location = new System.Drawing.Point(204, 4);
-            this.cbbSearch.Name = "cbbSearch";
-            this.cbbSearch.Size = new System.Drawing.Size(125, 21);
-            this.cbbSearch.TabIndex = 7;
-            // 
-            // btnRef
-            // 
-            this.btnRef.FlatAppearance.BorderSize = 0;
-            this.btnRef.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRef.Image = ((System.Drawing.Image)(resources.GetObject("btnRef.Image")));
-            this.btnRef.Location = new System.Drawing.Point(173, 2);
-            this.btnRef.Name = "btnRef";
-            this.btnRef.Size = new System.Drawing.Size(25, 25);
-            this.btnRef.TabIndex = 6;
-            this.btnRef.Text = " ";
-            this.btnRef.UseVisualStyleBackColor = true;
-            // 
-            // btnHis
-            // 
-            this.btnHis.FlatAppearance.BorderSize = 0;
-            this.btnHis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHis.Image = ((System.Drawing.Image)(resources.GetObject("btnHis.Image")));
-            this.btnHis.Location = new System.Drawing.Point(97, 2);
-            this.btnHis.Name = "btnHis";
-            this.btnHis.Size = new System.Drawing.Size(25, 25);
-            this.btnHis.TabIndex = 5;
-            this.btnHis.Text = " ";
-            this.btnHis.UseVisualStyleBackColor = true;
-            // 
-            // btnDel
-            // 
-            this.btnDel.FlatAppearance.BorderSize = 0;
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
-            this.btnDel.Location = new System.Drawing.Point(65, 2);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(25, 25);
-            this.btnDel.TabIndex = 5;
-            this.btnDel.Text = " ";
-            this.btnDel.UseVisualStyleBackColor = true;
-            // 
-            // btnMod
-            // 
-            this.btnMod.FlatAppearance.BorderSize = 0;
-            this.btnMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMod.Image = ((System.Drawing.Image)(resources.GetObject("btnMod.Image")));
-            this.btnMod.Location = new System.Drawing.Point(34, 2);
-            this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(25, 25);
-            this.btnMod.TabIndex = 1;
-            this.btnMod.Text = " ";
-            this.btnMod.UseVisualStyleBackColor = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(3, 2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(25, 25);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = " ";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 166);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1084, 368);
+            this.dataGridView1.TabIndex = 8;
             // 
             // panel1
             // 
@@ -709,24 +563,6 @@
             this.giúpĐỡToolStripMenuItem.Size = new System.Drawing.Size(77, 19);
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 196);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1084, 338);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnAccTV);
-            this.panel3.Controls.Add(this.btnAccNV);
-            this.panel3.Location = new System.Drawing.Point(1, 512);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1083, 25);
-            this.panel3.TabIndex = 9;
-            // 
             // frmTemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -739,8 +575,8 @@
             this.Text = "Template";
             this.Load += new System.EventHandler(this.frmTemplate_Load);
             this.pnlTemplate.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.pnlStatusStrip.ResumeLayout(false);
             this.pnlStatusStrip.PerformLayout();
@@ -752,8 +588,6 @@
             this.pnlMenuStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -803,19 +637,6 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnHis;
-        private System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.Button btnMod;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.ComboBox cbbSearch;
-        private System.Windows.Forms.Button btnRef;
-        private System.Windows.Forms.TextBox tbxSearch;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label lblPage;
-        private System.Windows.Forms.TextBox tbxPage;
-        private System.Windows.Forms.Button btnRight;
-        private System.Windows.Forms.Button btnLeft;
         private System.Windows.Forms.Button btnAccNV;
         private System.Windows.Forms.Button btnAccTV;
         private System.Windows.Forms.Panel panel3;
