@@ -31,6 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTemplate));
             this.pnlTemplate = new System.Windows.Forms.Panel();
+            this.pnlContents = new System.Windows.Forms.Panel();
+            this.tabControlChucNang = new System.Windows.Forms.TabControl();
+            this.tabMayTram = new System.Windows.Forms.TabPage();
+            this.tabTaiKhoan = new System.Windows.Forms.TabPage();
+            this.tabNhatKyHeThong = new System.Windows.Forms.TabPage();
+            this.tabNhatKyGiaoDich = new System.Windows.Forms.TabPage();
+            this.tabNhomMay = new System.Windows.Forms.TabPage();
+            this.tabNhomNguoiSuDung = new System.Windows.Forms.TabPage();
+            this.tabDichVu = new System.Windows.Forms.TabPage();
+            this.tabKhongCheUngDung = new System.Windows.Forms.TabPage();
+            this.tabNhatKyWeb = new System.Windows.Forms.TabPage();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.pnlStatusStrip = new System.Windows.Forms.Panel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.tsslID = new System.Windows.Forms.ToolStripStatusLabel();
@@ -58,26 +70,14 @@
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngônNgữToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlContents = new System.Windows.Forms.Panel();
-            this.tabControlChucNang = new System.Windows.Forms.TabControl();
-            this.tabMayTram = new System.Windows.Forms.TabPage();
-            this.tabTaiKhoan = new System.Windows.Forms.TabPage();
-            this.imageList = new System.Windows.Forms.ImageList(this.components);
-            this.tabNhatKyHeThong = new System.Windows.Forms.TabPage();
-            this.tabNhatKyGiaoDich = new System.Windows.Forms.TabPage();
-            this.tabNhomMay = new System.Windows.Forms.TabPage();
-            this.tabNhomNguoiSuDung = new System.Windows.Forms.TabPage();
-            this.tabDichVu = new System.Windows.Forms.TabPage();
-            this.tabKhongCheUngDung = new System.Windows.Forms.TabPage();
-            this.tabNhatKyWeb = new System.Windows.Forms.TabPage();
             this.pnlTemplate.SuspendLayout();
+            this.pnlContents.SuspendLayout();
+            this.tabControlChucNang.SuspendLayout();
             this.pnlStatusStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.pnlButton.SuspendLayout();
             this.pnlMenuStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
-            this.pnlContents.SuspendLayout();
-            this.tabControlChucNang.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTemplate
@@ -91,6 +91,149 @@
             this.pnlTemplate.Name = "pnlTemplate";
             this.pnlTemplate.Size = new System.Drawing.Size(1084, 562);
             this.pnlTemplate.TabIndex = 0;
+            // 
+            // pnlContents
+            // 
+            this.pnlContents.Controls.Add(this.tabControlChucNang);
+            this.pnlContents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContents.Location = new System.Drawing.Point(0, 96);
+            this.pnlContents.Name = "pnlContents";
+            this.pnlContents.Size = new System.Drawing.Size(1084, 446);
+            this.pnlContents.TabIndex = 4;
+            // 
+            // tabControlChucNang
+            // 
+            this.tabControlChucNang.Controls.Add(this.tabMayTram);
+            this.tabControlChucNang.Controls.Add(this.tabTaiKhoan);
+            this.tabControlChucNang.Controls.Add(this.tabNhatKyHeThong);
+            this.tabControlChucNang.Controls.Add(this.tabNhatKyGiaoDich);
+            this.tabControlChucNang.Controls.Add(this.tabNhomMay);
+            this.tabControlChucNang.Controls.Add(this.tabNhomNguoiSuDung);
+            this.tabControlChucNang.Controls.Add(this.tabDichVu);
+            this.tabControlChucNang.Controls.Add(this.tabKhongCheUngDung);
+            this.tabControlChucNang.Controls.Add(this.tabNhatKyWeb);
+            this.tabControlChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlChucNang.ImageList = this.imageList;
+            this.tabControlChucNang.ItemSize = new System.Drawing.Size(77, 30);
+            this.tabControlChucNang.Location = new System.Drawing.Point(0, 0);
+            this.tabControlChucNang.Name = "tabControlChucNang";
+            this.tabControlChucNang.Padding = new System.Drawing.Point(12, 4);
+            this.tabControlChucNang.SelectedIndex = 0;
+            this.tabControlChucNang.Size = new System.Drawing.Size(1084, 446);
+            this.tabControlChucNang.TabIndex = 0;
+            // 
+            // tabMayTram
+            // 
+            this.tabMayTram.ImageIndex = 1;
+            this.tabMayTram.Location = new System.Drawing.Point(4, 34);
+            this.tabMayTram.Name = "tabMayTram";
+            this.tabMayTram.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMayTram.Size = new System.Drawing.Size(1076, 408);
+            this.tabMayTram.TabIndex = 0;
+            this.tabMayTram.Text = "Máy trạm";
+            this.tabMayTram.UseVisualStyleBackColor = true;
+            // 
+            // tabTaiKhoan
+            // 
+            this.tabTaiKhoan.ImageIndex = 7;
+            this.tabTaiKhoan.Location = new System.Drawing.Point(4, 34);
+            this.tabTaiKhoan.Name = "tabTaiKhoan";
+            this.tabTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTaiKhoan.Size = new System.Drawing.Size(1076, 408);
+            this.tabTaiKhoan.TabIndex = 1;
+            this.tabTaiKhoan.Text = "Tài khoản";
+            this.tabTaiKhoan.UseVisualStyleBackColor = true;
+            // 
+            // tabNhatKyHeThong
+            // 
+            this.tabNhatKyHeThong.ImageIndex = 0;
+            this.tabNhatKyHeThong.Location = new System.Drawing.Point(4, 34);
+            this.tabNhatKyHeThong.Name = "tabNhatKyHeThong";
+            this.tabNhatKyHeThong.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNhatKyHeThong.Size = new System.Drawing.Size(1076, 408);
+            this.tabNhatKyHeThong.TabIndex = 2;
+            this.tabNhatKyHeThong.Text = "Nhật ký hệ thống";
+            this.tabNhatKyHeThong.UseVisualStyleBackColor = true;
+            // 
+            // tabNhatKyGiaoDich
+            // 
+            this.tabNhatKyGiaoDich.ImageIndex = 3;
+            this.tabNhatKyGiaoDich.Location = new System.Drawing.Point(4, 34);
+            this.tabNhatKyGiaoDich.Name = "tabNhatKyGiaoDich";
+            this.tabNhatKyGiaoDich.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNhatKyGiaoDich.Size = new System.Drawing.Size(1076, 408);
+            this.tabNhatKyGiaoDich.TabIndex = 3;
+            this.tabNhatKyGiaoDich.Text = "Nhật ký giao dịch";
+            this.tabNhatKyGiaoDich.UseVisualStyleBackColor = true;
+            // 
+            // tabNhomMay
+            // 
+            this.tabNhomMay.ImageIndex = 6;
+            this.tabNhomMay.Location = new System.Drawing.Point(4, 34);
+            this.tabNhomMay.Name = "tabNhomMay";
+            this.tabNhomMay.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNhomMay.Size = new System.Drawing.Size(1076, 408);
+            this.tabNhomMay.TabIndex = 4;
+            this.tabNhomMay.Text = "Nhóm máy";
+            this.tabNhomMay.UseVisualStyleBackColor = true;
+            // 
+            // tabNhomNguoiSuDung
+            // 
+            this.tabNhomNguoiSuDung.ImageIndex = 4;
+            this.tabNhomNguoiSuDung.Location = new System.Drawing.Point(4, 34);
+            this.tabNhomNguoiSuDung.Name = "tabNhomNguoiSuDung";
+            this.tabNhomNguoiSuDung.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNhomNguoiSuDung.Size = new System.Drawing.Size(1076, 408);
+            this.tabNhomNguoiSuDung.TabIndex = 5;
+            this.tabNhomNguoiSuDung.Text = "Nhóm người sử dụng";
+            this.tabNhomNguoiSuDung.UseVisualStyleBackColor = true;
+            // 
+            // tabDichVu
+            // 
+            this.tabDichVu.ImageIndex = 5;
+            this.tabDichVu.Location = new System.Drawing.Point(4, 34);
+            this.tabDichVu.Name = "tabDichVu";
+            this.tabDichVu.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDichVu.Size = new System.Drawing.Size(1076, 408);
+            this.tabDichVu.TabIndex = 6;
+            this.tabDichVu.Text = "Dịch vụ";
+            this.tabDichVu.UseVisualStyleBackColor = true;
+            // 
+            // tabKhongCheUngDung
+            // 
+            this.tabKhongCheUngDung.ImageIndex = 2;
+            this.tabKhongCheUngDung.Location = new System.Drawing.Point(4, 34);
+            this.tabKhongCheUngDung.Name = "tabKhongCheUngDung";
+            this.tabKhongCheUngDung.Padding = new System.Windows.Forms.Padding(3);
+            this.tabKhongCheUngDung.Size = new System.Drawing.Size(1076, 408);
+            this.tabKhongCheUngDung.TabIndex = 7;
+            this.tabKhongCheUngDung.Text = "Khống chế ứng dụng";
+            this.tabKhongCheUngDung.UseVisualStyleBackColor = true;
+            // 
+            // tabNhatKyWeb
+            // 
+            this.tabNhatKyWeb.ImageIndex = 8;
+            this.tabNhatKyWeb.Location = new System.Drawing.Point(4, 34);
+            this.tabNhatKyWeb.Name = "tabNhatKyWeb";
+            this.tabNhatKyWeb.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNhatKyWeb.Size = new System.Drawing.Size(1076, 408);
+            this.tabNhatKyWeb.TabIndex = 8;
+            this.tabNhatKyWeb.Text = "Nhật ký web";
+            this.tabNhatKyWeb.UseVisualStyleBackColor = true;
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "book.png");
+            this.imageList.Images.SetKeyName(1, "desktop-monitor.png");
+            this.imageList.Images.SetKeyName(2, "earth-globe.png");
+            this.imageList.Images.SetKeyName(3, "exchange-arrows.png");
+            this.imageList.Images.SetKeyName(4, "group-profile-users.png");
+            this.imageList.Images.SetKeyName(5, "retweet-arrows-symbol.png");
+            this.imageList.Images.SetKeyName(6, "screens-group-of-three-monitors.png");
+            this.imageList.Images.SetKeyName(7, "user-shape.png");
+            this.imageList.Images.SetKeyName(8, "phone-book.png");
             // 
             // pnlStatusStrip
             // 
@@ -311,148 +454,6 @@
             this.giúpĐỡToolStripMenuItem.Size = new System.Drawing.Size(77, 19);
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
             // 
-            // pnlContents
-            // 
-            this.pnlContents.Controls.Add(this.tabControlChucNang);
-            this.pnlContents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContents.Location = new System.Drawing.Point(0, 96);
-            this.pnlContents.Name = "pnlContents";
-            this.pnlContents.Size = new System.Drawing.Size(1084, 446);
-            this.pnlContents.TabIndex = 4;
-            // 
-            // tabControlChucNang
-            // 
-            this.tabControlChucNang.Controls.Add(this.tabMayTram);
-            this.tabControlChucNang.Controls.Add(this.tabTaiKhoan);
-            this.tabControlChucNang.Controls.Add(this.tabNhatKyHeThong);
-            this.tabControlChucNang.Controls.Add(this.tabNhatKyGiaoDich);
-            this.tabControlChucNang.Controls.Add(this.tabNhomMay);
-            this.tabControlChucNang.Controls.Add(this.tabNhomNguoiSuDung);
-            this.tabControlChucNang.Controls.Add(this.tabDichVu);
-            this.tabControlChucNang.Controls.Add(this.tabKhongCheUngDung);
-            this.tabControlChucNang.Controls.Add(this.tabNhatKyWeb);
-            this.tabControlChucNang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlChucNang.ImageList = this.imageList;
-            this.tabControlChucNang.ItemSize = new System.Drawing.Size(77, 30);
-            this.tabControlChucNang.Location = new System.Drawing.Point(0, 0);
-            this.tabControlChucNang.Name = "tabControlChucNang";
-            this.tabControlChucNang.SelectedIndex = 0;
-            this.tabControlChucNang.Size = new System.Drawing.Size(1084, 446);
-            this.tabControlChucNang.TabIndex = 0;
-            // 
-            // tabMayTram
-            // 
-            this.tabMayTram.ImageIndex = 1;
-            this.tabMayTram.Location = new System.Drawing.Point(4, 34);
-            this.tabMayTram.Name = "tabMayTram";
-            this.tabMayTram.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMayTram.Size = new System.Drawing.Size(1076, 408);
-            this.tabMayTram.TabIndex = 0;
-            this.tabMayTram.Text = "Máy trạm";
-            this.tabMayTram.UseVisualStyleBackColor = true;
-            // 
-            // tabTaiKhoan
-            // 
-            this.tabTaiKhoan.ImageIndex = 7;
-            this.tabTaiKhoan.Location = new System.Drawing.Point(4, 34);
-            this.tabTaiKhoan.Name = "tabTaiKhoan";
-            this.tabTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTaiKhoan.Size = new System.Drawing.Size(1076, 408);
-            this.tabTaiKhoan.TabIndex = 1;
-            this.tabTaiKhoan.Text = "Tài khoản";
-            this.tabTaiKhoan.UseVisualStyleBackColor = true;
-            // 
-            // imageList
-            // 
-            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
-            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList.Images.SetKeyName(0, "book.png");
-            this.imageList.Images.SetKeyName(1, "desktop-monitor.png");
-            this.imageList.Images.SetKeyName(2, "earth-globe.png");
-            this.imageList.Images.SetKeyName(3, "exchange-arrows.png");
-            this.imageList.Images.SetKeyName(4, "group-profile-users.png");
-            this.imageList.Images.SetKeyName(5, "retweet-arrows-symbol.png");
-            this.imageList.Images.SetKeyName(6, "screens-group-of-three-monitors.png");
-            this.imageList.Images.SetKeyName(7, "user-shape.png");
-            this.imageList.Images.SetKeyName(8, "phone-book.png");
-            // 
-            // tabNhatKyHeThong
-            // 
-            this.tabNhatKyHeThong.ImageIndex = 0;
-            this.tabNhatKyHeThong.Location = new System.Drawing.Point(4, 34);
-            this.tabNhatKyHeThong.Name = "tabNhatKyHeThong";
-            this.tabNhatKyHeThong.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNhatKyHeThong.Size = new System.Drawing.Size(1076, 403);
-            this.tabNhatKyHeThong.TabIndex = 2;
-            this.tabNhatKyHeThong.Text = "Nhật ký hệ thống";
-            this.tabNhatKyHeThong.UseVisualStyleBackColor = true;
-            // 
-            // tabNhatKyGiaoDich
-            // 
-            this.tabNhatKyGiaoDich.ImageIndex = 3;
-            this.tabNhatKyGiaoDich.Location = new System.Drawing.Point(4, 34);
-            this.tabNhatKyGiaoDich.Name = "tabNhatKyGiaoDich";
-            this.tabNhatKyGiaoDich.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNhatKyGiaoDich.Size = new System.Drawing.Size(1076, 403);
-            this.tabNhatKyGiaoDich.TabIndex = 3;
-            this.tabNhatKyGiaoDich.Text = "Nhật ký giao dịch";
-            this.tabNhatKyGiaoDich.UseVisualStyleBackColor = true;
-            // 
-            // tabNhomMay
-            // 
-            this.tabNhomMay.ImageIndex = 6;
-            this.tabNhomMay.Location = new System.Drawing.Point(4, 34);
-            this.tabNhomMay.Name = "tabNhomMay";
-            this.tabNhomMay.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNhomMay.Size = new System.Drawing.Size(1076, 403);
-            this.tabNhomMay.TabIndex = 4;
-            this.tabNhomMay.Text = "Nhóm máy";
-            this.tabNhomMay.UseVisualStyleBackColor = true;
-            // 
-            // tabNhomNguoiSuDung
-            // 
-            this.tabNhomNguoiSuDung.ImageIndex = 4;
-            this.tabNhomNguoiSuDung.Location = new System.Drawing.Point(4, 34);
-            this.tabNhomNguoiSuDung.Name = "tabNhomNguoiSuDung";
-            this.tabNhomNguoiSuDung.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNhomNguoiSuDung.Size = new System.Drawing.Size(1076, 403);
-            this.tabNhomNguoiSuDung.TabIndex = 5;
-            this.tabNhomNguoiSuDung.Text = "Nhóm người sử dụng";
-            this.tabNhomNguoiSuDung.UseVisualStyleBackColor = true;
-            // 
-            // tabDichVu
-            // 
-            this.tabDichVu.ImageIndex = 5;
-            this.tabDichVu.Location = new System.Drawing.Point(4, 34);
-            this.tabDichVu.Name = "tabDichVu";
-            this.tabDichVu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDichVu.Size = new System.Drawing.Size(1076, 403);
-            this.tabDichVu.TabIndex = 6;
-            this.tabDichVu.Text = "Dịch vụ";
-            this.tabDichVu.UseVisualStyleBackColor = true;
-            // 
-            // tabKhongCheUngDung
-            // 
-            this.tabKhongCheUngDung.ImageIndex = 2;
-            this.tabKhongCheUngDung.Location = new System.Drawing.Point(4, 34);
-            this.tabKhongCheUngDung.Name = "tabKhongCheUngDung";
-            this.tabKhongCheUngDung.Padding = new System.Windows.Forms.Padding(3);
-            this.tabKhongCheUngDung.Size = new System.Drawing.Size(1076, 403);
-            this.tabKhongCheUngDung.TabIndex = 7;
-            this.tabKhongCheUngDung.Text = "Khống chế ứng dụng";
-            this.tabKhongCheUngDung.UseVisualStyleBackColor = true;
-            // 
-            // tabNhatKyWeb
-            // 
-            this.tabNhatKyWeb.ImageIndex = 8;
-            this.tabNhatKyWeb.Location = new System.Drawing.Point(4, 34);
-            this.tabNhatKyWeb.Name = "tabNhatKyWeb";
-            this.tabNhatKyWeb.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNhatKyWeb.Size = new System.Drawing.Size(1076, 403);
-            this.tabNhatKyWeb.TabIndex = 8;
-            this.tabNhatKyWeb.Text = "Nhật ký web";
-            this.tabNhatKyWeb.UseVisualStyleBackColor = true;
-            // 
             // frmTemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,6 +465,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Template";
             this.pnlTemplate.ResumeLayout(false);
+            this.pnlContents.ResumeLayout(false);
+            this.tabControlChucNang.ResumeLayout(false);
             this.pnlStatusStrip.ResumeLayout(false);
             this.pnlStatusStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -473,8 +476,6 @@
             this.pnlMenuStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.pnlContents.ResumeLayout(false);
-            this.tabControlChucNang.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
