@@ -35,6 +35,9 @@
             this.tabControlChucNang = new System.Windows.Forms.TabControl();
             this.tabMayTram = new System.Windows.Forms.TabPage();
             this.tabTaiKhoan = new System.Windows.Forms.TabPage();
+            this.pnlBotAcc = new System.Windows.Forms.Panel();
+            this.btnTV = new System.Windows.Forms.Button();
+            this.pnlTopAcc = new System.Windows.Forms.Panel();
             this.tabNhatKyHeThong = new System.Windows.Forms.TabPage();
             this.tabNhatKyGiaoDich = new System.Windows.Forms.TabPage();
             this.tabNhomMay = new System.Windows.Forms.TabPage();
@@ -70,19 +73,17 @@
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngônNgữToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlTopAcc = new System.Windows.Forms.Panel();
-            this.pnlBotAcc = new System.Windows.Forms.Panel();
-            this.btnTV = new System.Windows.Forms.Button();
+            this.btnNV = new System.Windows.Forms.Button();
             this.pnlTemplate.SuspendLayout();
             this.pnlContents.SuspendLayout();
             this.tabControlChucNang.SuspendLayout();
             this.tabTaiKhoan.SuspendLayout();
+            this.pnlBotAcc.SuspendLayout();
             this.pnlStatusStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.pnlButton.SuspendLayout();
             this.pnlMenuStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
-            this.pnlBotAcc.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTemplate
@@ -149,6 +150,33 @@
             this.tabTaiKhoan.TabIndex = 1;
             this.tabTaiKhoan.Text = "Tài khoản";
             this.tabTaiKhoan.UseVisualStyleBackColor = true;
+            // 
+            // pnlBotAcc
+            // 
+            this.pnlBotAcc.Controls.Add(this.btnNV);
+            this.pnlBotAcc.Controls.Add(this.btnTV);
+            this.pnlBotAcc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlBotAcc.Location = new System.Drawing.Point(3, 383);
+            this.pnlBotAcc.Name = "pnlBotAcc";
+            this.pnlBotAcc.Size = new System.Drawing.Size(1070, 22);
+            this.pnlBotAcc.TabIndex = 1;
+            // 
+            // btnTV
+            // 
+            this.btnTV.Location = new System.Drawing.Point(0, 0);
+            this.btnTV.Name = "btnTV";
+            this.btnTV.Size = new System.Drawing.Size(119, 23);
+            this.btnTV.TabIndex = 0;
+            this.btnTV.Text = "Tài khoản thành viên";
+            this.btnTV.UseVisualStyleBackColor = true;
+            // 
+            // pnlTopAcc
+            // 
+            this.pnlTopAcc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopAcc.Location = new System.Drawing.Point(3, 3);
+            this.pnlTopAcc.Name = "pnlTopAcc";
+            this.pnlTopAcc.Size = new System.Drawing.Size(1070, 42);
+            this.pnlTopAcc.TabIndex = 0;
             // 
             // tabNhatKyHeThong
             // 
@@ -460,31 +488,14 @@
             this.giúpĐỡToolStripMenuItem.Size = new System.Drawing.Size(77, 19);
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
             // 
-            // pnlTopAcc
+            // btnNV
             // 
-            this.pnlTopAcc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTopAcc.Location = new System.Drawing.Point(3, 3);
-            this.pnlTopAcc.Name = "pnlTopAcc";
-            this.pnlTopAcc.Size = new System.Drawing.Size(1070, 42);
-            this.pnlTopAcc.TabIndex = 0;
-            // 
-            // pnlBotAcc
-            // 
-            this.pnlBotAcc.Controls.Add(this.btnTV);
-            this.pnlBotAcc.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBotAcc.Location = new System.Drawing.Point(3, 383);
-            this.pnlBotAcc.Name = "pnlBotAcc";
-            this.pnlBotAcc.Size = new System.Drawing.Size(1070, 22);
-            this.pnlBotAcc.TabIndex = 1;
-            // 
-            // btnTV
-            // 
-            this.btnTV.Location = new System.Drawing.Point(0, 0);
-            this.btnTV.Name = "btnTV";
-            this.btnTV.Size = new System.Drawing.Size(119, 23);
-            this.btnTV.TabIndex = 0;
-            this.btnTV.Text = "Tài khoản thành viên";
-            this.btnTV.UseVisualStyleBackColor = true;
+            this.btnNV.Location = new System.Drawing.Point(125, 0);
+            this.btnNV.Name = "btnNV";
+            this.btnNV.Size = new System.Drawing.Size(119, 23);
+            this.btnNV.TabIndex = 1;
+            this.btnNV.Text = "Tài khoản nhân viên";
+            this.btnNV.UseVisualStyleBackColor = true;
             // 
             // frmTemplate
             // 
@@ -500,6 +511,7 @@
             this.pnlContents.ResumeLayout(false);
             this.tabControlChucNang.ResumeLayout(false);
             this.tabTaiKhoan.ResumeLayout(false);
+            this.pnlBotAcc.ResumeLayout(false);
             this.pnlStatusStrip.ResumeLayout(false);
             this.pnlStatusStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -509,7 +521,6 @@
             this.pnlMenuStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.pnlBotAcc.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -559,6 +570,7 @@
         private System.Windows.Forms.Panel pnlBotAcc;
         private System.Windows.Forms.Panel pnlTopAcc;
         private System.Windows.Forms.Button btnTV;
+        private System.Windows.Forms.Button btnNV;
     }
 }
 
