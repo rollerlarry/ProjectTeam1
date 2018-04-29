@@ -37,20 +37,20 @@
             this.tabTaiKhoan = new System.Windows.Forms.TabPage();
             this.dgvCanAcc = new System.Windows.Forms.DataGridView();
             this.pnlBotAcc = new System.Windows.Forms.Panel();
-            this.btnNV = new System.Windows.Forms.Button();
-            this.btnTV = new System.Windows.Forms.Button();
+            this.btnCanNV = new System.Windows.Forms.Button();
+            this.btnCanTV = new System.Windows.Forms.Button();
             this.pnlTopAcc = new System.Windows.Forms.Panel();
-            this.lblPage = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.cbxSearch = new System.Windows.Forms.ComboBox();
-            this.btnHistory = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnMod = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.lblCanPage = new System.Windows.Forms.Label();
+            this.txtCanSearch = new System.Windows.Forms.TextBox();
+            this.cbxCanSearch = new System.Windows.Forms.ComboBox();
+            this.btnCanHistory = new System.Windows.Forms.Button();
+            this.btnCanDel = new System.Windows.Forms.Button();
+            this.btnCanRefresh = new System.Windows.Forms.Button();
+            this.btnCanMod = new System.Windows.Forms.Button();
+            this.btnCanNext = new System.Windows.Forms.Button();
+            this.btnCanPrevious = new System.Windows.Forms.Button();
+            this.btnCanSearch = new System.Windows.Forms.Button();
+            this.btnCanAdd = new System.Windows.Forms.Button();
             this.tabNhatKyHeThong = new System.Windows.Forms.TabPage();
             this.tabNhatKyGiaoDich = new System.Windows.Forms.TabPage();
             this.tabNhomMay = new System.Windows.Forms.TabPage();
@@ -177,165 +177,165 @@
             // 
             // pnlBotAcc
             // 
-            this.pnlBotAcc.Controls.Add(this.btnNV);
-            this.pnlBotAcc.Controls.Add(this.btnTV);
+            this.pnlBotAcc.Controls.Add(this.btnCanNV);
+            this.pnlBotAcc.Controls.Add(this.btnCanTV);
             this.pnlBotAcc.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBotAcc.Location = new System.Drawing.Point(3, 383);
             this.pnlBotAcc.Name = "pnlBotAcc";
             this.pnlBotAcc.Size = new System.Drawing.Size(1070, 22);
             this.pnlBotAcc.TabIndex = 1;
             // 
-            // btnNV
+            // btnCanNV
             // 
-            this.btnNV.Location = new System.Drawing.Point(125, 0);
-            this.btnNV.Name = "btnNV";
-            this.btnNV.Size = new System.Drawing.Size(119, 23);
-            this.btnNV.TabIndex = 1;
-            this.btnNV.Text = "Tài khoản nhân viên";
-            this.btnNV.UseVisualStyleBackColor = true;
+            this.btnCanNV.Location = new System.Drawing.Point(125, 0);
+            this.btnCanNV.Name = "btnCanNV";
+            this.btnCanNV.Size = new System.Drawing.Size(119, 23);
+            this.btnCanNV.TabIndex = 1;
+            this.btnCanNV.Text = "Tài khoản nhân viên";
+            this.btnCanNV.UseVisualStyleBackColor = true;
             // 
-            // btnTV
+            // btnCanTV
             // 
-            this.btnTV.Location = new System.Drawing.Point(0, 0);
-            this.btnTV.Name = "btnTV";
-            this.btnTV.Size = new System.Drawing.Size(119, 23);
-            this.btnTV.TabIndex = 0;
-            this.btnTV.Text = "Tài khoản thành viên";
-            this.btnTV.UseVisualStyleBackColor = true;
+            this.btnCanTV.Location = new System.Drawing.Point(0, 0);
+            this.btnCanTV.Name = "btnCanTV";
+            this.btnCanTV.Size = new System.Drawing.Size(119, 23);
+            this.btnCanTV.TabIndex = 0;
+            this.btnCanTV.Text = "Tài khoản thành viên";
+            this.btnCanTV.UseVisualStyleBackColor = true;
             // 
             // pnlTopAcc
             // 
-            this.pnlTopAcc.Controls.Add(this.lblPage);
-            this.pnlTopAcc.Controls.Add(this.txtSearch);
-            this.pnlTopAcc.Controls.Add(this.cbxSearch);
-            this.pnlTopAcc.Controls.Add(this.btnHistory);
-            this.pnlTopAcc.Controls.Add(this.btnDel);
-            this.pnlTopAcc.Controls.Add(this.btnRefresh);
-            this.pnlTopAcc.Controls.Add(this.btnMod);
-            this.pnlTopAcc.Controls.Add(this.btnNext);
-            this.pnlTopAcc.Controls.Add(this.btnPrevious);
-            this.pnlTopAcc.Controls.Add(this.btnSearch);
-            this.pnlTopAcc.Controls.Add(this.btnAdd);
+            this.pnlTopAcc.Controls.Add(this.lblCanPage);
+            this.pnlTopAcc.Controls.Add(this.txtCanSearch);
+            this.pnlTopAcc.Controls.Add(this.cbxCanSearch);
+            this.pnlTopAcc.Controls.Add(this.btnCanHistory);
+            this.pnlTopAcc.Controls.Add(this.btnCanDel);
+            this.pnlTopAcc.Controls.Add(this.btnCanRefresh);
+            this.pnlTopAcc.Controls.Add(this.btnCanMod);
+            this.pnlTopAcc.Controls.Add(this.btnCanNext);
+            this.pnlTopAcc.Controls.Add(this.btnCanPrevious);
+            this.pnlTopAcc.Controls.Add(this.btnCanSearch);
+            this.pnlTopAcc.Controls.Add(this.btnCanAdd);
             this.pnlTopAcc.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTopAcc.Location = new System.Drawing.Point(3, 3);
             this.pnlTopAcc.Name = "pnlTopAcc";
             this.pnlTopAcc.Size = new System.Drawing.Size(1070, 39);
             this.pnlTopAcc.TabIndex = 0;
             // 
-            // lblPage
+            // lblCanPage
             // 
-            this.lblPage.AutoSize = true;
-            this.lblPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblPage.Location = new System.Drawing.Point(595, 13);
-            this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(15, 15);
-            this.lblPage.TabIndex = 11;
-            this.lblPage.Text = "1";
+            this.lblCanPage.AutoSize = true;
+            this.lblCanPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCanPage.Location = new System.Drawing.Point(595, 13);
+            this.lblCanPage.Name = "lblCanPage";
+            this.lblCanPage.Size = new System.Drawing.Size(15, 15);
+            this.lblCanPage.TabIndex = 11;
+            this.lblCanPage.Text = "1";
             // 
-            // txtSearch
+            // txtCanSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(363, 10);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(130, 20);
-            this.txtSearch.TabIndex = 10;
+            this.txtCanSearch.Location = new System.Drawing.Point(363, 10);
+            this.txtCanSearch.Name = "txtCanSearch";
+            this.txtCanSearch.Size = new System.Drawing.Size(130, 20);
+            this.txtCanSearch.TabIndex = 10;
             // 
-            // cbxSearch
+            // cbxCanSearch
             // 
-            this.cbxSearch.FormattingEnabled = true;
-            this.cbxSearch.Items.AddRange(new object[] {
+            this.cbxCanSearch.FormattingEnabled = true;
+            this.cbxCanSearch.Items.AddRange(new object[] {
             "Tên người sử dụng"});
-            this.cbxSearch.Location = new System.Drawing.Point(236, 10);
-            this.cbxSearch.Name = "cbxSearch";
-            this.cbxSearch.Size = new System.Drawing.Size(121, 21);
-            this.cbxSearch.TabIndex = 9;
+            this.cbxCanSearch.Location = new System.Drawing.Point(236, 10);
+            this.cbxCanSearch.Name = "cbxCanSearch";
+            this.cbxCanSearch.Size = new System.Drawing.Size(121, 21);
+            this.cbxCanSearch.TabIndex = 9;
             // 
-            // btnHistory
+            // btnCanHistory
             // 
-            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistory.ForeColor = System.Drawing.Color.White;
-            this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
-            this.btnHistory.Location = new System.Drawing.Point(119, 3);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(32, 32);
-            this.btnHistory.TabIndex = 8;
-            this.btnHistory.UseVisualStyleBackColor = true;
+            this.btnCanHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCanHistory.ForeColor = System.Drawing.Color.White;
+            this.btnCanHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnCanHistory.Image")));
+            this.btnCanHistory.Location = new System.Drawing.Point(119, 3);
+            this.btnCanHistory.Name = "btnCanHistory";
+            this.btnCanHistory.Size = new System.Drawing.Size(32, 32);
+            this.btnCanHistory.TabIndex = 8;
+            this.btnCanHistory.UseVisualStyleBackColor = true;
             // 
-            // btnDel
+            // btnCanDel
             // 
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
-            this.btnDel.Location = new System.Drawing.Point(81, 3);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(32, 32);
-            this.btnDel.TabIndex = 7;
-            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnCanDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCanDel.ForeColor = System.Drawing.Color.White;
+            this.btnCanDel.Image = ((System.Drawing.Image)(resources.GetObject("btnCanDel.Image")));
+            this.btnCanDel.Location = new System.Drawing.Point(81, 3);
+            this.btnCanDel.Name = "btnCanDel";
+            this.btnCanDel.Size = new System.Drawing.Size(32, 32);
+            this.btnCanDel.TabIndex = 7;
+            this.btnCanDel.UseVisualStyleBackColor = true;
             // 
-            // btnRefresh
+            // btnCanRefresh
             // 
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(198, 3);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(32, 32);
-            this.btnRefresh.TabIndex = 6;
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnCanRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCanRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnCanRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnCanRefresh.Image")));
+            this.btnCanRefresh.Location = new System.Drawing.Point(198, 3);
+            this.btnCanRefresh.Name = "btnCanRefresh";
+            this.btnCanRefresh.Size = new System.Drawing.Size(32, 32);
+            this.btnCanRefresh.TabIndex = 6;
+            this.btnCanRefresh.UseVisualStyleBackColor = true;
             // 
-            // btnMod
+            // btnCanMod
             // 
-            this.btnMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMod.ForeColor = System.Drawing.Color.White;
-            this.btnMod.Image = ((System.Drawing.Image)(resources.GetObject("btnMod.Image")));
-            this.btnMod.Location = new System.Drawing.Point(43, 3);
-            this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(32, 32);
-            this.btnMod.TabIndex = 5;
-            this.btnMod.UseVisualStyleBackColor = true;
+            this.btnCanMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCanMod.ForeColor = System.Drawing.Color.White;
+            this.btnCanMod.Image = ((System.Drawing.Image)(resources.GetObject("btnCanMod.Image")));
+            this.btnCanMod.Location = new System.Drawing.Point(43, 3);
+            this.btnCanMod.Name = "btnCanMod";
+            this.btnCanMod.Size = new System.Drawing.Size(32, 32);
+            this.btnCanMod.TabIndex = 5;
+            this.btnCanMod.UseVisualStyleBackColor = true;
             // 
-            // btnNext
+            // btnCanNext
             // 
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.Location = new System.Drawing.Point(620, 3);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(32, 32);
-            this.btnNext.TabIndex = 4;
-            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnCanNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCanNext.ForeColor = System.Drawing.Color.White;
+            this.btnCanNext.Image = ((System.Drawing.Image)(resources.GetObject("btnCanNext.Image")));
+            this.btnCanNext.Location = new System.Drawing.Point(620, 3);
+            this.btnCanNext.Name = "btnCanNext";
+            this.btnCanNext.Size = new System.Drawing.Size(32, 32);
+            this.btnCanNext.TabIndex = 4;
+            this.btnCanNext.UseVisualStyleBackColor = true;
             // 
-            // btnPrevious
+            // btnCanPrevious
             // 
-            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevious.ForeColor = System.Drawing.Color.White;
-            this.btnPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.Image")));
-            this.btnPrevious.Location = new System.Drawing.Point(557, 3);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(32, 32);
-            this.btnPrevious.TabIndex = 3;
-            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnCanPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCanPrevious.ForeColor = System.Drawing.Color.White;
+            this.btnCanPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnCanPrevious.Image")));
+            this.btnCanPrevious.Location = new System.Drawing.Point(557, 3);
+            this.btnCanPrevious.Name = "btnCanPrevious";
+            this.btnCanPrevious.Size = new System.Drawing.Size(32, 32);
+            this.btnCanPrevious.TabIndex = 3;
+            this.btnCanPrevious.UseVisualStyleBackColor = true;
             // 
-            // btnSearch
+            // btnCanSearch
             // 
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(499, 3);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(32, 32);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnCanSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCanSearch.ForeColor = System.Drawing.Color.White;
+            this.btnCanSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnCanSearch.Image")));
+            this.btnCanSearch.Location = new System.Drawing.Point(499, 3);
+            this.btnCanSearch.Name = "btnCanSearch";
+            this.btnCanSearch.Size = new System.Drawing.Size(32, 32);
+            this.btnCanSearch.TabIndex = 2;
+            this.btnCanSearch.UseVisualStyleBackColor = true;
             // 
-            // btnAdd
+            // btnCanAdd
             // 
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(5, 3);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(32, 32);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnCanAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCanAdd.ForeColor = System.Drawing.Color.White;
+            this.btnCanAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnCanAdd.Image")));
+            this.btnCanAdd.Location = new System.Drawing.Point(5, 3);
+            this.btnCanAdd.Name = "btnCanAdd";
+            this.btnCanAdd.Size = new System.Drawing.Size(32, 32);
+            this.btnCanAdd.TabIndex = 0;
+            this.btnCanAdd.UseVisualStyleBackColor = true;
             // 
             // tabNhatKyHeThong
             // 
@@ -722,19 +722,19 @@
         private System.Windows.Forms.TabPage tabNhatKyWeb;
         private System.Windows.Forms.Panel pnlBotAcc;
         private System.Windows.Forms.Panel pnlTopAcc;
-        private System.Windows.Forms.Button btnTV;
-        private System.Windows.Forms.Button btnNV;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnHistory;
-        private System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button btnMod;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button btnPrevious;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label lblPage;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.ComboBox cbxSearch;
+        private System.Windows.Forms.Button btnCanTV;
+        private System.Windows.Forms.Button btnCanNV;
+        private System.Windows.Forms.Button btnCanAdd;
+        private System.Windows.Forms.Button btnCanHistory;
+        private System.Windows.Forms.Button btnCanDel;
+        private System.Windows.Forms.Button btnCanRefresh;
+        private System.Windows.Forms.Button btnCanMod;
+        private System.Windows.Forms.Button btnCanNext;
+        private System.Windows.Forms.Button btnCanPrevious;
+        private System.Windows.Forms.Button btnCanSearch;
+        private System.Windows.Forms.Label lblCanPage;
+        private System.Windows.Forms.TextBox txtCanSearch;
+        private System.Windows.Forms.ComboBox cbxCanSearch;
         private System.Windows.Forms.DataGridView dgvCanAcc;
     }
 }
