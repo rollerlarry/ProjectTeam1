@@ -17,5 +17,6 @@ namespace QLPN
             InitializeComponent();
         }
 
+
     }
 }
