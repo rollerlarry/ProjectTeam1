@@ -35,9 +35,23 @@
             this.tabControlChucNang = new System.Windows.Forms.TabControl();
             this.tabMayTram = new System.Windows.Forms.TabPage();
             this.tabTaiKhoan = new System.Windows.Forms.TabPage();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBotAcc = new System.Windows.Forms.Panel();
             this.btnTV = new System.Windows.Forms.Button();
+            this.btnNV = new System.Windows.Forms.Button();
             this.pnlTopAcc = new System.Windows.Forms.Panel();
+            this.lblPage = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.cbxSearch = new System.Windows.Forms.ComboBox();
+            this.btnHistory = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnMod = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tabNhatKyHeThong = new System.Windows.Forms.TabPage();
             this.tabNhatKyGiaoDich = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -88,13 +102,13 @@
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngônNgữToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTemplate.SuspendLayout();
             this.pnlContents.SuspendLayout();
             this.tabControlChucNang.SuspendLayout();
             this.tabTaiKhoan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.pnlBotAcc.SuspendLayout();
+            this.pnlTopAcc.SuspendLayout();
             this.tabNhatKyGiaoDich.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlStatusStrip.SuspendLayout();
@@ -102,7 +116,6 @@
             this.pnlButton.SuspendLayout();
             this.pnlMenuStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTemplate
@@ -174,15 +187,34 @@
             this.tabTaiKhoan.TabIndex = 1;
             this.tabTaiKhoan.Text = "Tài khoản";
             this.tabTaiKhoan.UseVisualStyleBackColor = true;
+            this.tabTaiKhoan.Click += new System.EventHandler(this.tabTaiKhoan_Click);
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(1360, 467);
+            this.dataGridView.TabIndex = 2;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Tên người sử dụng";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 200;
             // 
             // pnlBotAcc
             // 
+            this.pnlBotAcc.Controls.Add(this.btnNV);
             this.pnlBotAcc.Controls.Add(this.btnTV);
             this.pnlBotAcc.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBotAcc.Location = new System.Drawing.Point(6, 265);
+            this.pnlBotAcc.Location = new System.Drawing.Point(6, 284);
             this.pnlBotAcc.Margin = new System.Windows.Forms.Padding(6);
             this.pnlBotAcc.Name = "pnlBotAcc";
-            this.pnlBotAcc.Size = new System.Drawing.Size(1264, 41);
+            this.pnlBotAcc.Size = new System.Drawing.Size(1264, 22);
             this.pnlBotAcc.TabIndex = 1;
             // 
             // btnTV
@@ -190,19 +222,154 @@
             this.btnTV.Location = new System.Drawing.Point(0, 0);
             this.btnTV.Margin = new System.Windows.Forms.Padding(6);
             this.btnTV.Name = "btnTV";
-            this.btnTV.Size = new System.Drawing.Size(218, 42);
+            this.btnTV.Size = new System.Drawing.Size(119, 23);
             this.btnTV.TabIndex = 0;
             this.btnTV.Text = "Tài khoản thành viên";
             this.btnTV.UseVisualStyleBackColor = true;
             // 
+            // btnNV
+            // 
+            this.btnNV.Location = new System.Drawing.Point(125, 0);
+            this.btnNV.Name = "btnNV";
+            this.btnNV.Size = new System.Drawing.Size(119, 23);
+            this.btnNV.TabIndex = 1;
+            this.btnNV.Text = "Tài khoản nhân viên";
+            this.btnNV.UseVisualStyleBackColor = true;
+            // 
             // pnlTopAcc
             // 
+            this.pnlTopAcc.Controls.Add(this.lblPage);
+            this.pnlTopAcc.Controls.Add(this.txtSearch);
+            this.pnlTopAcc.Controls.Add(this.cbxSearch);
+            this.pnlTopAcc.Controls.Add(this.btnHistory);
+            this.pnlTopAcc.Controls.Add(this.btnDel);
+            this.pnlTopAcc.Controls.Add(this.btnRefresh);
+            this.pnlTopAcc.Controls.Add(this.btnMod);
+            this.pnlTopAcc.Controls.Add(this.btnNext);
+            this.pnlTopAcc.Controls.Add(this.btnPrevious);
+            this.pnlTopAcc.Controls.Add(this.btnSearch);
+            this.pnlTopAcc.Controls.Add(this.btnAdd);
             this.pnlTopAcc.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTopAcc.Location = new System.Drawing.Point(6, 6);
             this.pnlTopAcc.Margin = new System.Windows.Forms.Padding(6);
             this.pnlTopAcc.Name = "pnlTopAcc";
-            this.pnlTopAcc.Size = new System.Drawing.Size(1264, 78);
+            this.pnlTopAcc.Size = new System.Drawing.Size(1264, 39);
             this.pnlTopAcc.TabIndex = 0;
+            // 
+            // lblPage
+            // 
+            this.lblPage.AutoSize = true;
+            this.lblPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPage.Location = new System.Drawing.Point(595, 13);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.Size = new System.Drawing.Size(22, 26);
+            this.lblPage.TabIndex = 11;
+            this.lblPage.Text = "1";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(363, 10);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(130, 29);
+            this.txtSearch.TabIndex = 10;
+            // 
+            // cbxSearch
+            // 
+            this.cbxSearch.FormattingEnabled = true;
+            this.cbxSearch.Items.AddRange(new object[] {
+            "Tên người sử dụng"});
+            this.cbxSearch.Location = new System.Drawing.Point(236, 10);
+            this.cbxSearch.Name = "cbxSearch";
+            this.cbxSearch.Size = new System.Drawing.Size(121, 32);
+            this.cbxSearch.TabIndex = 9;
+            // 
+            // btnHistory
+            // 
+            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistory.ForeColor = System.Drawing.Color.White;
+            this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
+            this.btnHistory.Location = new System.Drawing.Point(119, 3);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(32, 32);
+            this.btnHistory.TabIndex = 8;
+            this.btnHistory.UseVisualStyleBackColor = true;
+            // 
+            // btnDel
+            // 
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.ForeColor = System.Drawing.Color.White;
+            this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
+            this.btnDel.Location = new System.Drawing.Point(81, 3);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(32, 32);
+            this.btnDel.TabIndex = 7;
+            this.btnDel.UseVisualStyleBackColor = true;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(198, 3);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(32, 32);
+            this.btnRefresh.TabIndex = 6;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            // 
+            // btnMod
+            // 
+            this.btnMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMod.ForeColor = System.Drawing.Color.White;
+            this.btnMod.Image = ((System.Drawing.Image)(resources.GetObject("btnMod.Image")));
+            this.btnMod.Location = new System.Drawing.Point(43, 3);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(32, 32);
+            this.btnMod.TabIndex = 5;
+            this.btnMod.UseVisualStyleBackColor = true;
+            // 
+            // btnNext
+            // 
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+            this.btnNext.Location = new System.Drawing.Point(620, 3);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(32, 32);
+            this.btnNext.TabIndex = 4;
+            this.btnNext.UseVisualStyleBackColor = true;
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevious.ForeColor = System.Drawing.Color.White;
+            this.btnPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.Image")));
+            this.btnPrevious.Location = new System.Drawing.Point(557, 3);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(32, 32);
+            this.btnPrevious.TabIndex = 3;
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(499, 3);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(32, 32);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(5, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(32, 32);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // tabNhatKyHeThong
             // 
@@ -245,7 +412,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridView);
             this.panel1.Location = new System.Drawing.Point(-1, 32);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1360, 467);
@@ -696,22 +863,6 @@
             this.giúpĐỡToolStripMenuItem.Size = new System.Drawing.Size(77, 19);
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(163, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tên người sử dụng";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
-            // 
             // frmTemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -728,7 +879,10 @@
             this.pnlContents.ResumeLayout(false);
             this.tabControlChucNang.ResumeLayout(false);
             this.tabTaiKhoan.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.pnlBotAcc.ResumeLayout(false);
+            this.pnlTopAcc.ResumeLayout(false);
+            this.pnlTopAcc.PerformLayout();
             this.tabNhatKyGiaoDich.ResumeLayout(false);
             this.tabNhatKyGiaoDich.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -741,7 +895,6 @@
             this.pnlMenuStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -806,8 +959,21 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Button btnNV;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnHistory;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnMod;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label lblPage;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.ComboBox cbxSearch;
+        //private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

@@ -22,5 +22,10 @@ namespace QLPN
             string time = DTPBatDau.Value.ToString("MM/dd/yyyy");
             MessageBox.Show(time);
         }
+
+        private void tabTaiKhoan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
