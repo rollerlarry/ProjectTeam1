@@ -86,6 +86,22 @@
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngônNgữToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDuyNgayBatDau = new System.Windows.Forms.Button();
+            this.lbDuyBatDau = new System.Windows.Forms.Label();
+            this.dtpDuyNgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.btnDuyKT = new System.Windows.Forms.Button();
+            this.lbDuyKT = new System.Windows.Forms.Label();
+            this.dtpDuyKT = new System.Windows.Forms.DateTimePicker();
+            this.btnDuyRefresh = new System.Windows.Forms.Button();
+            this.btnDuyTime = new System.Windows.Forms.Button();
+            this.cboDuyHinhThuc = new System.Windows.Forms.ComboBox();
+            this.cboDuyTenNguoiDung = new System.Windows.Forms.ComboBox();
+            this.txtDuySearch = new System.Windows.Forms.TextBox();
+            this.btnDuySearch = new System.Windows.Forms.Button();
+            this.lbDuyTrang = new System.Windows.Forms.Label();
+            this.btnDuyPre = new System.Windows.Forms.Button();
+            this.btnDuyNext = new System.Windows.Forms.Button();
+            this.lbDuySoTrang = new System.Windows.Forms.Label();
             this.pnlTemplate.SuspendLayout();
             this.pnlContents.SuspendLayout();
             this.tabControlChucNang.SuspendLayout();
@@ -93,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCanAcc)).BeginInit();
             this.pnlBotAcc.SuspendLayout();
             this.pnlTopAcc.SuspendLayout();
+            this.tabNhatKyGiaoDich.SuspendLayout();
             this.pnlStatusStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.pnlButton.SuspendLayout();
@@ -350,6 +367,22 @@
             // 
             // tabNhatKyGiaoDich
             // 
+            this.tabNhatKyGiaoDich.Controls.Add(this.txtDuySearch);
+            this.tabNhatKyGiaoDich.Controls.Add(this.cboDuyTenNguoiDung);
+            this.tabNhatKyGiaoDich.Controls.Add(this.cboDuyHinhThuc);
+            this.tabNhatKyGiaoDich.Controls.Add(this.dtpDuyKT);
+            this.tabNhatKyGiaoDich.Controls.Add(this.dtpDuyNgayBatDau);
+            this.tabNhatKyGiaoDich.Controls.Add(this.lbDuySoTrang);
+            this.tabNhatKyGiaoDich.Controls.Add(this.lbDuyTrang);
+            this.tabNhatKyGiaoDich.Controls.Add(this.lbDuyKT);
+            this.tabNhatKyGiaoDich.Controls.Add(this.lbDuyBatDau);
+            this.tabNhatKyGiaoDich.Controls.Add(this.btnDuyNext);
+            this.tabNhatKyGiaoDich.Controls.Add(this.btnDuyPre);
+            this.tabNhatKyGiaoDich.Controls.Add(this.btnDuySearch);
+            this.tabNhatKyGiaoDich.Controls.Add(this.btnDuyTime);
+            this.tabNhatKyGiaoDich.Controls.Add(this.btnDuyRefresh);
+            this.tabNhatKyGiaoDich.Controls.Add(this.btnDuyKT);
+            this.tabNhatKyGiaoDich.Controls.Add(this.btnDuyNgayBatDau);
             this.tabNhatKyGiaoDich.ImageIndex = 3;
             this.tabNhatKyGiaoDich.Location = new System.Drawing.Point(4, 34);
             this.tabNhatKyGiaoDich.Name = "tabNhatKyGiaoDich";
@@ -647,6 +680,170 @@
             this.giúpĐỡToolStripMenuItem.Size = new System.Drawing.Size(77, 19);
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
             // 
+            // btnDuyNgayBatDau
+            // 
+            this.btnDuyNgayBatDau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyNgayBatDau.ForeColor = System.Drawing.Color.White;
+            this.btnDuyNgayBatDau.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyNgayBatDau.Image")));
+            this.btnDuyNgayBatDau.Location = new System.Drawing.Point(8, 6);
+            this.btnDuyNgayBatDau.Name = "btnDuyNgayBatDau";
+            this.btnDuyNgayBatDau.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyNgayBatDau.TabIndex = 8;
+            this.btnDuyNgayBatDau.UseVisualStyleBackColor = true;
+            // 
+            // lbDuyBatDau
+            // 
+            this.lbDuyBatDau.AutoSize = true;
+            this.lbDuyBatDau.Location = new System.Drawing.Point(38, 19);
+            this.lbDuyBatDau.Name = "lbDuyBatDau";
+            this.lbDuyBatDau.Size = new System.Drawing.Size(45, 13);
+            this.lbDuyBatDau.TabIndex = 9;
+            this.lbDuyBatDau.Text = "Bắt đầu";
+            // 
+            // dtpDuyNgayBatDau
+            // 
+            this.dtpDuyNgayBatDau.CustomFormat = "dd-MM-yyyy";
+            this.dtpDuyNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDuyNgayBatDau.Location = new System.Drawing.Point(86, 15);
+            this.dtpDuyNgayBatDau.Name = "dtpDuyNgayBatDau";
+            this.dtpDuyNgayBatDau.Size = new System.Drawing.Size(88, 20);
+            this.dtpDuyNgayBatDau.TabIndex = 10;
+            // 
+            // btnDuyKT
+            // 
+            this.btnDuyKT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyKT.ForeColor = System.Drawing.Color.White;
+            this.btnDuyKT.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyKT.Image")));
+            this.btnDuyKT.Location = new System.Drawing.Point(211, 6);
+            this.btnDuyKT.Name = "btnDuyKT";
+            this.btnDuyKT.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyKT.TabIndex = 8;
+            this.btnDuyKT.UseVisualStyleBackColor = true;
+            // 
+            // lbDuyKT
+            // 
+            this.lbDuyKT.AutoSize = true;
+            this.lbDuyKT.Location = new System.Drawing.Point(242, 19);
+            this.lbDuyKT.Name = "lbDuyKT";
+            this.lbDuyKT.Size = new System.Drawing.Size(47, 13);
+            this.lbDuyKT.TabIndex = 9;
+            this.lbDuyKT.Text = "Kết thúc";
+            // 
+            // dtpDuyKT
+            // 
+            this.dtpDuyKT.CustomFormat = "dd-MM-yyyy";
+            this.dtpDuyKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDuyKT.Location = new System.Drawing.Point(290, 14);
+            this.dtpDuyKT.Name = "dtpDuyKT";
+            this.dtpDuyKT.Size = new System.Drawing.Size(88, 20);
+            this.dtpDuyKT.TabIndex = 10;
+            // 
+            // btnDuyRefresh
+            // 
+            this.btnDuyRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnDuyRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyRefresh.Image")));
+            this.btnDuyRefresh.Location = new System.Drawing.Point(418, 9);
+            this.btnDuyRefresh.Name = "btnDuyRefresh";
+            this.btnDuyRefresh.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyRefresh.TabIndex = 8;
+            this.btnDuyRefresh.UseVisualStyleBackColor = true;
+            // 
+            // btnDuyTime
+            // 
+            this.btnDuyTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyTime.ForeColor = System.Drawing.Color.White;
+            this.btnDuyTime.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyTime.Image")));
+            this.btnDuyTime.Location = new System.Drawing.Point(454, 9);
+            this.btnDuyTime.Name = "btnDuyTime";
+            this.btnDuyTime.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyTime.TabIndex = 8;
+            this.btnDuyTime.UseVisualStyleBackColor = true;
+            this.btnDuyTime.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // cboDuyHinhThuc
+            // 
+            this.cboDuyHinhThuc.FormattingEnabled = true;
+            this.cboDuyHinhThuc.Items.AddRange(new object[] {
+            "Chưa thanh toán (0)"});
+            this.cboDuyHinhThuc.Location = new System.Drawing.Point(503, 13);
+            this.cboDuyHinhThuc.Name = "cboDuyHinhThuc";
+            this.cboDuyHinhThuc.Size = new System.Drawing.Size(127, 21);
+            this.cboDuyHinhThuc.TabIndex = 11;
+            // 
+            // cboDuyTenNguoiDung
+            // 
+            this.cboDuyTenNguoiDung.FormattingEnabled = true;
+            this.cboDuyTenNguoiDung.Items.AddRange(new object[] {
+            "Tên người sử dụng"});
+            this.cboDuyTenNguoiDung.Location = new System.Drawing.Point(639, 13);
+            this.cboDuyTenNguoiDung.Name = "cboDuyTenNguoiDung";
+            this.cboDuyTenNguoiDung.Size = new System.Drawing.Size(127, 21);
+            this.cboDuyTenNguoiDung.TabIndex = 11;
+            // 
+            // txtDuySearch
+            // 
+            this.txtDuySearch.Location = new System.Drawing.Point(775, 14);
+            this.txtDuySearch.Name = "txtDuySearch";
+            this.txtDuySearch.Size = new System.Drawing.Size(123, 20);
+            this.txtDuySearch.TabIndex = 12;
+            // 
+            // btnDuySearch
+            // 
+            this.btnDuySearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuySearch.ForeColor = System.Drawing.Color.White;
+            this.btnDuySearch.Image = ((System.Drawing.Image)(resources.GetObject("btnDuySearch.Image")));
+            this.btnDuySearch.Location = new System.Drawing.Point(901, 7);
+            this.btnDuySearch.Name = "btnDuySearch";
+            this.btnDuySearch.Size = new System.Drawing.Size(32, 32);
+            this.btnDuySearch.TabIndex = 8;
+            this.btnDuySearch.UseVisualStyleBackColor = true;
+            this.btnDuySearch.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lbDuyTrang
+            // 
+            this.lbDuyTrang.AutoSize = true;
+            this.lbDuyTrang.Location = new System.Drawing.Point(939, 17);
+            this.lbDuyTrang.Name = "lbDuyTrang";
+            this.lbDuyTrang.Size = new System.Drawing.Size(38, 13);
+            this.lbDuyTrang.TabIndex = 9;
+            this.lbDuyTrang.Text = "Trang:";
+            this.lbDuyTrang.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnDuyPre
+            // 
+            this.btnDuyPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyPre.ForeColor = System.Drawing.Color.White;
+            this.btnDuyPre.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyPre.Image")));
+            this.btnDuyPre.Location = new System.Drawing.Point(973, 7);
+            this.btnDuyPre.Name = "btnDuyPre";
+            this.btnDuyPre.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyPre.TabIndex = 8;
+            this.btnDuyPre.UseVisualStyleBackColor = true;
+            this.btnDuyPre.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnDuyNext
+            // 
+            this.btnDuyNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyNext.ForeColor = System.Drawing.Color.White;
+            this.btnDuyNext.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyNext.Image")));
+            this.btnDuyNext.Location = new System.Drawing.Point(1038, 7);
+            this.btnDuyNext.Name = "btnDuyNext";
+            this.btnDuyNext.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyNext.TabIndex = 8;
+            this.btnDuyNext.UseVisualStyleBackColor = true;
+            this.btnDuyNext.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lbDuySoTrang
+            // 
+            this.lbDuySoTrang.AutoSize = true;
+            this.lbDuySoTrang.Location = new System.Drawing.Point(1011, 19);
+            this.lbDuySoTrang.Name = "lbDuySoTrang";
+            this.lbDuySoTrang.Size = new System.Drawing.Size(24, 13);
+            this.lbDuySoTrang.TabIndex = 9;
+            this.lbDuySoTrang.Text = "1/1";
+            this.lbDuySoTrang.Click += new System.EventHandler(this.label1_Click);
+            // 
             // frmTemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,6 +862,8 @@
             this.pnlBotAcc.ResumeLayout(false);
             this.pnlTopAcc.ResumeLayout(false);
             this.pnlTopAcc.PerformLayout();
+            this.tabNhatKyGiaoDich.ResumeLayout(false);
+            this.tabNhatKyGiaoDich.PerformLayout();
             this.pnlStatusStrip.ResumeLayout(false);
             this.pnlStatusStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -736,6 +935,22 @@
         private System.Windows.Forms.TextBox txtCanSearch;
         private System.Windows.Forms.ComboBox cbxCanSearch;
         private System.Windows.Forms.DataGridView dgvCanAcc;
+        private System.Windows.Forms.DateTimePicker dtpDuyNgayBatDau;
+        private System.Windows.Forms.Label lbDuyBatDau;
+        private System.Windows.Forms.Button btnDuyNgayBatDau;
+        private System.Windows.Forms.DateTimePicker dtpDuyKT;
+        private System.Windows.Forms.Label lbDuyKT;
+        private System.Windows.Forms.Button btnDuyKT;
+        private System.Windows.Forms.Button btnDuyTime;
+        private System.Windows.Forms.Button btnDuyRefresh;
+        private System.Windows.Forms.ComboBox cboDuyTenNguoiDung;
+        private System.Windows.Forms.ComboBox cboDuyHinhThuc;
+        private System.Windows.Forms.TextBox txtDuySearch;
+        private System.Windows.Forms.Label lbDuyTrang;
+        private System.Windows.Forms.Button btnDuySearch;
+        private System.Windows.Forms.Label lbDuySoTrang;
+        private System.Windows.Forms.Button btnDuyNext;
+        private System.Windows.Forms.Button btnDuyPre;
     }
 }
 
