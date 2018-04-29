@@ -17,5 +17,10 @@ namespace QLPN
             InitializeComponent();
         }
 
+        private void DTPBatDau_ValueChanged(object sender, EventArgs e)
+        {
+            string time = DTPBatDau.Value.ToString("MM/dd/yyyy");
+            MessageBox.Show(time);
+        }
     }
 }
