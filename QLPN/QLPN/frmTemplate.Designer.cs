@@ -86,6 +86,13 @@
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngônNgữToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvNhomNguoiSuDung = new System.Windows.Forms.DataGridView();
+            this.TenNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDelNhomNguoiSuDung = new System.Windows.Forms.Button();
+            this.btnEditNhomNguoiSuDung = new System.Windows.Forms.Button();
+            this.btnAddNhomNguoiSuDung = new System.Windows.Forms.Button();
             this.pnlTemplate.SuspendLayout();
             this.pnlContents.SuspendLayout();
             this.tabControlChucNang.SuspendLayout();
@@ -93,11 +100,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCanAcc)).BeginInit();
             this.pnlBotAcc.SuspendLayout();
             this.pnlTopAcc.SuspendLayout();
+            this.tabNhomNguoiSuDung.SuspendLayout();
             this.pnlStatusStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.pnlButton.SuspendLayout();
             this.pnlMenuStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiSuDung)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTemplate
@@ -372,6 +381,10 @@
             // 
             // tabNhomNguoiSuDung
             // 
+            this.tabNhomNguoiSuDung.Controls.Add(this.dgvNhomNguoiSuDung);
+            this.tabNhomNguoiSuDung.Controls.Add(this.btnDelNhomNguoiSuDung);
+            this.tabNhomNguoiSuDung.Controls.Add(this.btnEditNhomNguoiSuDung);
+            this.tabNhomNguoiSuDung.Controls.Add(this.btnAddNhomNguoiSuDung);
             this.tabNhomNguoiSuDung.ImageIndex = 4;
             this.tabNhomNguoiSuDung.Location = new System.Drawing.Point(4, 34);
             this.tabNhomNguoiSuDung.Name = "tabNhomNguoiSuDung";
@@ -647,6 +660,66 @@
             this.giúpĐỡToolStripMenuItem.Size = new System.Drawing.Size(77, 19);
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
             // 
+            // dgvNhomNguoiSuDung
+            // 
+            this.dgvNhomNguoiSuDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNhomNguoiSuDung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenNhom,
+            this.LoaiTaiKhoan,
+            this.GiaTien});
+            this.dgvNhomNguoiSuDung.Location = new System.Drawing.Point(8, 44);
+            this.dgvNhomNguoiSuDung.Name = "dgvNhomNguoiSuDung";
+            this.dgvNhomNguoiSuDung.Size = new System.Drawing.Size(1060, 358);
+            this.dgvNhomNguoiSuDung.TabIndex = 16;
+            // 
+            // TenNhom
+            // 
+            this.TenNhom.HeaderText = "Tên";
+            this.TenNhom.Name = "TenNhom";
+            // 
+            // LoaiTaiKhoan
+            // 
+            this.LoaiTaiKhoan.HeaderText = "Kiểu";
+            this.LoaiTaiKhoan.Name = "LoaiTaiKhoan";
+            // 
+            // GiaTien
+            // 
+            this.GiaTien.HeaderText = "Giá Tiền";
+            this.GiaTien.Name = "GiaTien";
+            // 
+            // btnDelNhomNguoiSuDung
+            // 
+            this.btnDelNhomNguoiSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelNhomNguoiSuDung.ForeColor = System.Drawing.Color.White;
+            this.btnDelNhomNguoiSuDung.Image = ((System.Drawing.Image)(resources.GetObject("btnDelNhomNguoiSuDung.Image")));
+            this.btnDelNhomNguoiSuDung.Location = new System.Drawing.Point(84, 6);
+            this.btnDelNhomNguoiSuDung.Name = "btnDelNhomNguoiSuDung";
+            this.btnDelNhomNguoiSuDung.Size = new System.Drawing.Size(32, 32);
+            this.btnDelNhomNguoiSuDung.TabIndex = 15;
+            this.btnDelNhomNguoiSuDung.UseVisualStyleBackColor = true;
+            // 
+            // btnEditNhomNguoiSuDung
+            // 
+            this.btnEditNhomNguoiSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditNhomNguoiSuDung.ForeColor = System.Drawing.Color.White;
+            this.btnEditNhomNguoiSuDung.Image = ((System.Drawing.Image)(resources.GetObject("btnEditNhomNguoiSuDung.Image")));
+            this.btnEditNhomNguoiSuDung.Location = new System.Drawing.Point(46, 6);
+            this.btnEditNhomNguoiSuDung.Name = "btnEditNhomNguoiSuDung";
+            this.btnEditNhomNguoiSuDung.Size = new System.Drawing.Size(32, 32);
+            this.btnEditNhomNguoiSuDung.TabIndex = 14;
+            this.btnEditNhomNguoiSuDung.UseVisualStyleBackColor = true;
+            // 
+            // btnAddNhomNguoiSuDung
+            // 
+            this.btnAddNhomNguoiSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNhomNguoiSuDung.ForeColor = System.Drawing.Color.White;
+            this.btnAddNhomNguoiSuDung.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNhomNguoiSuDung.Image")));
+            this.btnAddNhomNguoiSuDung.Location = new System.Drawing.Point(8, 6);
+            this.btnAddNhomNguoiSuDung.Name = "btnAddNhomNguoiSuDung";
+            this.btnAddNhomNguoiSuDung.Size = new System.Drawing.Size(32, 32);
+            this.btnAddNhomNguoiSuDung.TabIndex = 13;
+            this.btnAddNhomNguoiSuDung.UseVisualStyleBackColor = true;
+            // 
             // frmTemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,6 +738,7 @@
             this.pnlBotAcc.ResumeLayout(false);
             this.pnlTopAcc.ResumeLayout(false);
             this.pnlTopAcc.PerformLayout();
+            this.tabNhomNguoiSuDung.ResumeLayout(false);
             this.pnlStatusStrip.ResumeLayout(false);
             this.pnlStatusStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -674,6 +748,7 @@
             this.pnlMenuStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiSuDung)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -736,6 +811,13 @@
         private System.Windows.Forms.TextBox txtCanSearch;
         private System.Windows.Forms.ComboBox cbxCanSearch;
         private System.Windows.Forms.DataGridView dgvCanAcc;
+        private System.Windows.Forms.DataGridView dgvNhomNguoiSuDung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNhom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiTaiKhoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaTien;
+        private System.Windows.Forms.Button btnDelNhomNguoiSuDung;
+        private System.Windows.Forms.Button btnEditNhomNguoiSuDung;
+        private System.Windows.Forms.Button btnAddNhomNguoiSuDung;
     }
 }
 
