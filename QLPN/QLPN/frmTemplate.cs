@@ -26,5 +26,10 @@ namespace QLPN
         {
 
         }
+
+        private void frmTemplate_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

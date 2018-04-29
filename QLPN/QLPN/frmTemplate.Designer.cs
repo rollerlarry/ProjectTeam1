@@ -34,6 +34,20 @@
             this.pnlContents = new System.Windows.Forms.Panel();
             this.tabControlChucNang = new System.Windows.Forms.TabControl();
             this.tabMayTram = new System.Windows.Forms.TabPage();
+            this.panel_DanhHy = new System.Windows.Forms.Panel();
+            this.listView_DanhHy = new System.Windows.Forms.ListView();
+            this.columnHeader1_DanhHy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2_DanhHy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3_DanhHy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4_DanhHy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5_DanhHy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6_DanhHy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7_DanhHy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8_DanhHy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9_DanhHy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10_DanhHy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11_DanhHy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.tabTaiKhoan = new System.Windows.Forms.TabPage();
             this.dgvCanAcc = new System.Windows.Forms.DataGridView();
             this.pnlBotAcc = new System.Windows.Forms.Panel();
@@ -53,12 +67,34 @@
             this.btnCanAdd = new System.Windows.Forms.Button();
             this.tabNhatKyHeThong = new System.Windows.Forms.TabPage();
             this.tabNhatKyGiaoDich = new System.Windows.Forms.TabPage();
+            this.txtDuySearch = new System.Windows.Forms.TextBox();
+            this.cboDuyTenNguoiDung = new System.Windows.Forms.ComboBox();
+            this.cboDuyHinhThuc = new System.Windows.Forms.ComboBox();
+            this.dtpDuyKT = new System.Windows.Forms.DateTimePicker();
+            this.dtpDuyNgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.lbDuySoTrang = new System.Windows.Forms.Label();
+            this.lbDuyTrang = new System.Windows.Forms.Label();
+            this.lbDuyKT = new System.Windows.Forms.Label();
+            this.lbDuyBatDau = new System.Windows.Forms.Label();
+            this.btnDuyNext = new System.Windows.Forms.Button();
+            this.btnDuyPre = new System.Windows.Forms.Button();
+            this.btnDuySearch = new System.Windows.Forms.Button();
+            this.btnDuyTime = new System.Windows.Forms.Button();
+            this.btnDuyRefresh = new System.Windows.Forms.Button();
+            this.btnDuyKT = new System.Windows.Forms.Button();
+            this.btnDuyNgayBatDau = new System.Windows.Forms.Button();
             this.tabNhomMay = new System.Windows.Forms.TabPage();
             this.tabNhomNguoiSuDung = new System.Windows.Forms.TabPage();
+            this.dgvNhomNguoiSuDung = new System.Windows.Forms.DataGridView();
+            this.TenNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDelNhomNguoiSuDung = new System.Windows.Forms.Button();
+            this.btnEditNhomNguoiSuDung = new System.Windows.Forms.Button();
+            this.btnAddNhomNguoiSuDung = new System.Windows.Forms.Button();
             this.tabDichVu = new System.Windows.Forms.TabPage();
             this.tabKhongCheUngDung = new System.Windows.Forms.TabPage();
             this.tabNhatKyWeb = new System.Windows.Forms.TabPage();
-            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.pnlStatusStrip = new System.Windows.Forms.Panel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.tsslID = new System.Windows.Forms.ToolStripStatusLabel();
@@ -86,44 +122,23 @@
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngônNgữToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDuyNgayBatDau = new System.Windows.Forms.Button();
-            this.lbDuyBatDau = new System.Windows.Forms.Label();
-            this.dtpDuyNgayBatDau = new System.Windows.Forms.DateTimePicker();
-            this.btnDuyKT = new System.Windows.Forms.Button();
-            this.lbDuyKT = new System.Windows.Forms.Label();
-            this.dtpDuyKT = new System.Windows.Forms.DateTimePicker();
-            this.btnDuyRefresh = new System.Windows.Forms.Button();
-            this.btnDuyTime = new System.Windows.Forms.Button();
-            this.cboDuyHinhThuc = new System.Windows.Forms.ComboBox();
-            this.cboDuyTenNguoiDung = new System.Windows.Forms.ComboBox();
-            this.txtDuySearch = new System.Windows.Forms.TextBox();
-            this.btnDuySearch = new System.Windows.Forms.Button();
-            this.lbDuyTrang = new System.Windows.Forms.Label();
-            this.btnDuyPre = new System.Windows.Forms.Button();
-            this.btnDuyNext = new System.Windows.Forms.Button();
-            this.lbDuySoTrang = new System.Windows.Forms.Label();
-            this.dgvNhomNguoiSuDung = new System.Windows.Forms.DataGridView();
-            this.TenNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDelNhomNguoiSuDung = new System.Windows.Forms.Button();
-            this.btnEditNhomNguoiSuDung = new System.Windows.Forms.Button();
-            this.btnAddNhomNguoiSuDung = new System.Windows.Forms.Button();
             this.pnlTemplate.SuspendLayout();
             this.pnlContents.SuspendLayout();
             this.tabControlChucNang.SuspendLayout();
+            this.tabMayTram.SuspendLayout();
+            this.panel_DanhHy.SuspendLayout();
             this.tabTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCanAcc)).BeginInit();
             this.pnlBotAcc.SuspendLayout();
             this.pnlTopAcc.SuspendLayout();
             this.tabNhatKyGiaoDich.SuspendLayout();
             this.tabNhomNguoiSuDung.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiSuDung)).BeginInit();
             this.pnlStatusStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.pnlButton.SuspendLayout();
             this.pnlMenuStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiSuDung)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTemplate
@@ -169,6 +184,7 @@
             // 
             // tabMayTram
             // 
+            this.tabMayTram.Controls.Add(this.panel_DanhHy);
             this.tabMayTram.ImageIndex = 1;
             this.tabMayTram.Location = new System.Drawing.Point(4, 34);
             this.tabMayTram.Name = "tabMayTram";
@@ -177,6 +193,124 @@
             this.tabMayTram.TabIndex = 0;
             this.tabMayTram.Text = "Máy trạm";
             this.tabMayTram.UseVisualStyleBackColor = true;
+            // 
+            // panel_DanhHy
+            // 
+            this.panel_DanhHy.Controls.Add(this.listView_DanhHy);
+            this.panel_DanhHy.Location = new System.Drawing.Point(17, 18);
+            this.panel_DanhHy.Name = "panel_DanhHy";
+            this.panel_DanhHy.Size = new System.Drawing.Size(1041, 372);
+            this.panel_DanhHy.TabIndex = 0;
+            // 
+            // listView_DanhHy
+            // 
+            this.listView_DanhHy.BackColor = System.Drawing.SystemColors.Window;
+            this.listView_DanhHy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView_DanhHy.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1_DanhHy,
+            this.columnHeader2_DanhHy,
+            this.columnHeader3_DanhHy,
+            this.columnHeader4_DanhHy,
+            this.columnHeader5_DanhHy,
+            this.columnHeader6_DanhHy,
+            this.columnHeader7_DanhHy,
+            this.columnHeader8_DanhHy,
+            this.columnHeader9_DanhHy,
+            this.columnHeader10_DanhHy,
+            this.columnHeader11_DanhHy});
+            this.listView_DanhHy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView_DanhHy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_DanhHy.FullRowSelect = true;
+            this.listView_DanhHy.GridLines = true;
+            this.listView_DanhHy.Location = new System.Drawing.Point(0, 0);
+            this.listView_DanhHy.Name = "listView_DanhHy";
+            this.listView_DanhHy.Size = new System.Drawing.Size(1041, 372);
+            this.listView_DanhHy.SmallImageList = this.imageList;
+            this.listView_DanhHy.TabIndex = 0;
+            this.listView_DanhHy.UseCompatibleStateImageBehavior = false;
+            this.listView_DanhHy.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1_DanhHy
+            // 
+            this.columnHeader1_DanhHy.Text = "Tên";
+            this.columnHeader1_DanhHy.Width = 100;
+            // 
+            // columnHeader2_DanhHy
+            // 
+            this.columnHeader2_DanhHy.Text = "Tình trạng";
+            this.columnHeader2_DanhHy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2_DanhHy.Width = 80;
+            // 
+            // columnHeader3_DanhHy
+            // 
+            this.columnHeader3_DanhHy.Text = "Người sử dụng";
+            this.columnHeader3_DanhHy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3_DanhHy.Width = 100;
+            // 
+            // columnHeader4_DanhHy
+            // 
+            this.columnHeader4_DanhHy.Text = "Bắt đầu";
+            this.columnHeader4_DanhHy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4_DanhHy.Width = 100;
+            // 
+            // columnHeader5_DanhHy
+            // 
+            this.columnHeader5_DanhHy.Text = "Đã sử dụng";
+            this.columnHeader5_DanhHy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5_DanhHy.Width = 100;
+            // 
+            // columnHeader6_DanhHy
+            // 
+            this.columnHeader6_DanhHy.Text = "Còn lại";
+            this.columnHeader6_DanhHy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6_DanhHy.Width = 100;
+            // 
+            // columnHeader7_DanhHy
+            // 
+            this.columnHeader7_DanhHy.Text = "Tiền";
+            this.columnHeader7_DanhHy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7_DanhHy.Width = 100;
+            // 
+            // columnHeader8_DanhHy
+            // 
+            this.columnHeader8_DanhHy.Text = "Ngày ";
+            this.columnHeader8_DanhHy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader8_DanhHy.Width = 100;
+            // 
+            // columnHeader9_DanhHy
+            // 
+            this.columnHeader9_DanhHy.Text = "Phiên bản";
+            this.columnHeader9_DanhHy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader9_DanhHy.Width = 80;
+            // 
+            // columnHeader10_DanhHy
+            // 
+            this.columnHeader10_DanhHy.Text = "Nhóm";
+            this.columnHeader10_DanhHy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader10_DanhHy.Width = 100;
+            // 
+            // columnHeader11_DanhHy
+            // 
+            this.columnHeader11_DanhHy.Text = "Ghi chú";
+            this.columnHeader11_DanhHy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader11_DanhHy.Width = 100;
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "book.png");
+            this.imageList.Images.SetKeyName(1, "desktop-monitor.png");
+            this.imageList.Images.SetKeyName(2, "earth-globe.png");
+            this.imageList.Images.SetKeyName(3, "exchange-arrows.png");
+            this.imageList.Images.SetKeyName(4, "group-profile-users.png");
+            this.imageList.Images.SetKeyName(5, "retweet-arrows-symbol.png");
+            this.imageList.Images.SetKeyName(6, "screens-group-of-three-monitors.png");
+            this.imageList.Images.SetKeyName(7, "user-shape.png");
+            this.imageList.Images.SetKeyName(8, "phone-book.png");
+            this.imageList.Images.SetKeyName(9, "desktop-monitor.png");
+            this.imageList.Images.SetKeyName(10, "desktop-monitor-1.png");
+            this.imageList.Images.SetKeyName(11, "desktop-monitor (1).png");
             // 
             // tabTaiKhoan
             // 
@@ -401,6 +535,170 @@
             this.tabNhatKyGiaoDich.Text = "Nhật ký giao dịch";
             this.tabNhatKyGiaoDich.UseVisualStyleBackColor = true;
             // 
+            // txtDuySearch
+            // 
+            this.txtDuySearch.Location = new System.Drawing.Point(775, 14);
+            this.txtDuySearch.Name = "txtDuySearch";
+            this.txtDuySearch.Size = new System.Drawing.Size(123, 20);
+            this.txtDuySearch.TabIndex = 12;
+            // 
+            // cboDuyTenNguoiDung
+            // 
+            this.cboDuyTenNguoiDung.FormattingEnabled = true;
+            this.cboDuyTenNguoiDung.Items.AddRange(new object[] {
+            "Tên người sử dụng"});
+            this.cboDuyTenNguoiDung.Location = new System.Drawing.Point(639, 13);
+            this.cboDuyTenNguoiDung.Name = "cboDuyTenNguoiDung";
+            this.cboDuyTenNguoiDung.Size = new System.Drawing.Size(127, 21);
+            this.cboDuyTenNguoiDung.TabIndex = 11;
+            // 
+            // cboDuyHinhThuc
+            // 
+            this.cboDuyHinhThuc.FormattingEnabled = true;
+            this.cboDuyHinhThuc.Items.AddRange(new object[] {
+            "Chưa thanh toán (0)"});
+            this.cboDuyHinhThuc.Location = new System.Drawing.Point(503, 13);
+            this.cboDuyHinhThuc.Name = "cboDuyHinhThuc";
+            this.cboDuyHinhThuc.Size = new System.Drawing.Size(127, 21);
+            this.cboDuyHinhThuc.TabIndex = 11;
+            // 
+            // dtpDuyKT
+            // 
+            this.dtpDuyKT.CustomFormat = "dd-MM-yyyy";
+            this.dtpDuyKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDuyKT.Location = new System.Drawing.Point(290, 14);
+            this.dtpDuyKT.Name = "dtpDuyKT";
+            this.dtpDuyKT.Size = new System.Drawing.Size(88, 20);
+            this.dtpDuyKT.TabIndex = 10;
+            // 
+            // dtpDuyNgayBatDau
+            // 
+            this.dtpDuyNgayBatDau.CustomFormat = "dd-MM-yyyy";
+            this.dtpDuyNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDuyNgayBatDau.Location = new System.Drawing.Point(86, 15);
+            this.dtpDuyNgayBatDau.Name = "dtpDuyNgayBatDau";
+            this.dtpDuyNgayBatDau.Size = new System.Drawing.Size(88, 20);
+            this.dtpDuyNgayBatDau.TabIndex = 10;
+            // 
+            // lbDuySoTrang
+            // 
+            this.lbDuySoTrang.AutoSize = true;
+            this.lbDuySoTrang.Location = new System.Drawing.Point(1011, 19);
+            this.lbDuySoTrang.Name = "lbDuySoTrang";
+            this.lbDuySoTrang.Size = new System.Drawing.Size(24, 13);
+            this.lbDuySoTrang.TabIndex = 9;
+            this.lbDuySoTrang.Text = "1/1";
+            this.lbDuySoTrang.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lbDuyTrang
+            // 
+            this.lbDuyTrang.AutoSize = true;
+            this.lbDuyTrang.Location = new System.Drawing.Point(939, 17);
+            this.lbDuyTrang.Name = "lbDuyTrang";
+            this.lbDuyTrang.Size = new System.Drawing.Size(38, 13);
+            this.lbDuyTrang.TabIndex = 9;
+            this.lbDuyTrang.Text = "Trang:";
+            this.lbDuyTrang.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lbDuyKT
+            // 
+            this.lbDuyKT.AutoSize = true;
+            this.lbDuyKT.Location = new System.Drawing.Point(242, 19);
+            this.lbDuyKT.Name = "lbDuyKT";
+            this.lbDuyKT.Size = new System.Drawing.Size(47, 13);
+            this.lbDuyKT.TabIndex = 9;
+            this.lbDuyKT.Text = "Kết thúc";
+            // 
+            // lbDuyBatDau
+            // 
+            this.lbDuyBatDau.AutoSize = true;
+            this.lbDuyBatDau.Location = new System.Drawing.Point(38, 19);
+            this.lbDuyBatDau.Name = "lbDuyBatDau";
+            this.lbDuyBatDau.Size = new System.Drawing.Size(45, 13);
+            this.lbDuyBatDau.TabIndex = 9;
+            this.lbDuyBatDau.Text = "Bắt đầu";
+            // 
+            // btnDuyNext
+            // 
+            this.btnDuyNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyNext.ForeColor = System.Drawing.Color.White;
+            this.btnDuyNext.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyNext.Image")));
+            this.btnDuyNext.Location = new System.Drawing.Point(1038, 7);
+            this.btnDuyNext.Name = "btnDuyNext";
+            this.btnDuyNext.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyNext.TabIndex = 8;
+            this.btnDuyNext.UseVisualStyleBackColor = true;
+            this.btnDuyNext.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnDuyPre
+            // 
+            this.btnDuyPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyPre.ForeColor = System.Drawing.Color.White;
+            this.btnDuyPre.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyPre.Image")));
+            this.btnDuyPre.Location = new System.Drawing.Point(973, 7);
+            this.btnDuyPre.Name = "btnDuyPre";
+            this.btnDuyPre.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyPre.TabIndex = 8;
+            this.btnDuyPre.UseVisualStyleBackColor = true;
+            this.btnDuyPre.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnDuySearch
+            // 
+            this.btnDuySearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuySearch.ForeColor = System.Drawing.Color.White;
+            this.btnDuySearch.Image = ((System.Drawing.Image)(resources.GetObject("btnDuySearch.Image")));
+            this.btnDuySearch.Location = new System.Drawing.Point(901, 7);
+            this.btnDuySearch.Name = "btnDuySearch";
+            this.btnDuySearch.Size = new System.Drawing.Size(32, 32);
+            this.btnDuySearch.TabIndex = 8;
+            this.btnDuySearch.UseVisualStyleBackColor = true;
+            this.btnDuySearch.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnDuyTime
+            // 
+            this.btnDuyTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyTime.ForeColor = System.Drawing.Color.White;
+            this.btnDuyTime.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyTime.Image")));
+            this.btnDuyTime.Location = new System.Drawing.Point(454, 9);
+            this.btnDuyTime.Name = "btnDuyTime";
+            this.btnDuyTime.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyTime.TabIndex = 8;
+            this.btnDuyTime.UseVisualStyleBackColor = true;
+            this.btnDuyTime.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnDuyRefresh
+            // 
+            this.btnDuyRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnDuyRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyRefresh.Image")));
+            this.btnDuyRefresh.Location = new System.Drawing.Point(418, 9);
+            this.btnDuyRefresh.Name = "btnDuyRefresh";
+            this.btnDuyRefresh.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyRefresh.TabIndex = 8;
+            this.btnDuyRefresh.UseVisualStyleBackColor = true;
+            // 
+            // btnDuyKT
+            // 
+            this.btnDuyKT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyKT.ForeColor = System.Drawing.Color.White;
+            this.btnDuyKT.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyKT.Image")));
+            this.btnDuyKT.Location = new System.Drawing.Point(211, 6);
+            this.btnDuyKT.Name = "btnDuyKT";
+            this.btnDuyKT.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyKT.TabIndex = 8;
+            this.btnDuyKT.UseVisualStyleBackColor = true;
+            // 
+            // btnDuyNgayBatDau
+            // 
+            this.btnDuyNgayBatDau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDuyNgayBatDau.ForeColor = System.Drawing.Color.White;
+            this.btnDuyNgayBatDau.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyNgayBatDau.Image")));
+            this.btnDuyNgayBatDau.Location = new System.Drawing.Point(8, 6);
+            this.btnDuyNgayBatDau.Name = "btnDuyNgayBatDau";
+            this.btnDuyNgayBatDau.Size = new System.Drawing.Size(32, 32);
+            this.btnDuyNgayBatDau.TabIndex = 8;
+            this.btnDuyNgayBatDau.UseVisualStyleBackColor = true;
+            // 
             // tabNhomMay
             // 
             this.tabNhomMay.ImageIndex = 6;
@@ -426,6 +724,66 @@
             this.tabNhomNguoiSuDung.TabIndex = 5;
             this.tabNhomNguoiSuDung.Text = "Nhóm người sử dụng";
             this.tabNhomNguoiSuDung.UseVisualStyleBackColor = true;
+            // 
+            // dgvNhomNguoiSuDung
+            // 
+            this.dgvNhomNguoiSuDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNhomNguoiSuDung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenNhom,
+            this.LoaiTaiKhoan,
+            this.GiaTien});
+            this.dgvNhomNguoiSuDung.Location = new System.Drawing.Point(8, 44);
+            this.dgvNhomNguoiSuDung.Name = "dgvNhomNguoiSuDung";
+            this.dgvNhomNguoiSuDung.Size = new System.Drawing.Size(1060, 358);
+            this.dgvNhomNguoiSuDung.TabIndex = 16;
+            // 
+            // TenNhom
+            // 
+            this.TenNhom.HeaderText = "Tên";
+            this.TenNhom.Name = "TenNhom";
+            // 
+            // LoaiTaiKhoan
+            // 
+            this.LoaiTaiKhoan.HeaderText = "Kiểu";
+            this.LoaiTaiKhoan.Name = "LoaiTaiKhoan";
+            // 
+            // GiaTien
+            // 
+            this.GiaTien.HeaderText = "Giá Tiền";
+            this.GiaTien.Name = "GiaTien";
+            // 
+            // btnDelNhomNguoiSuDung
+            // 
+            this.btnDelNhomNguoiSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelNhomNguoiSuDung.ForeColor = System.Drawing.Color.White;
+            this.btnDelNhomNguoiSuDung.Image = ((System.Drawing.Image)(resources.GetObject("btnDelNhomNguoiSuDung.Image")));
+            this.btnDelNhomNguoiSuDung.Location = new System.Drawing.Point(84, 6);
+            this.btnDelNhomNguoiSuDung.Name = "btnDelNhomNguoiSuDung";
+            this.btnDelNhomNguoiSuDung.Size = new System.Drawing.Size(32, 32);
+            this.btnDelNhomNguoiSuDung.TabIndex = 15;
+            this.btnDelNhomNguoiSuDung.UseVisualStyleBackColor = true;
+            // 
+            // btnEditNhomNguoiSuDung
+            // 
+            this.btnEditNhomNguoiSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditNhomNguoiSuDung.ForeColor = System.Drawing.Color.White;
+            this.btnEditNhomNguoiSuDung.Image = ((System.Drawing.Image)(resources.GetObject("btnEditNhomNguoiSuDung.Image")));
+            this.btnEditNhomNguoiSuDung.Location = new System.Drawing.Point(46, 6);
+            this.btnEditNhomNguoiSuDung.Name = "btnEditNhomNguoiSuDung";
+            this.btnEditNhomNguoiSuDung.Size = new System.Drawing.Size(32, 32);
+            this.btnEditNhomNguoiSuDung.TabIndex = 14;
+            this.btnEditNhomNguoiSuDung.UseVisualStyleBackColor = true;
+            // 
+            // btnAddNhomNguoiSuDung
+            // 
+            this.btnAddNhomNguoiSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNhomNguoiSuDung.ForeColor = System.Drawing.Color.White;
+            this.btnAddNhomNguoiSuDung.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNhomNguoiSuDung.Image")));
+            this.btnAddNhomNguoiSuDung.Location = new System.Drawing.Point(8, 6);
+            this.btnAddNhomNguoiSuDung.Name = "btnAddNhomNguoiSuDung";
+            this.btnAddNhomNguoiSuDung.Size = new System.Drawing.Size(32, 32);
+            this.btnAddNhomNguoiSuDung.TabIndex = 13;
+            this.btnAddNhomNguoiSuDung.UseVisualStyleBackColor = true;
             // 
             // tabDichVu
             // 
@@ -459,20 +817,6 @@
             this.tabNhatKyWeb.TabIndex = 8;
             this.tabNhatKyWeb.Text = "Nhật ký web";
             this.tabNhatKyWeb.UseVisualStyleBackColor = true;
-            // 
-            // imageList
-            // 
-            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
-            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList.Images.SetKeyName(0, "book.png");
-            this.imageList.Images.SetKeyName(1, "desktop-monitor.png");
-            this.imageList.Images.SetKeyName(2, "earth-globe.png");
-            this.imageList.Images.SetKeyName(3, "exchange-arrows.png");
-            this.imageList.Images.SetKeyName(4, "group-profile-users.png");
-            this.imageList.Images.SetKeyName(5, "retweet-arrows-symbol.png");
-            this.imageList.Images.SetKeyName(6, "screens-group-of-three-monitors.png");
-            this.imageList.Images.SetKeyName(7, "user-shape.png");
-            this.imageList.Images.SetKeyName(8, "phone-book.png");
             // 
             // pnlStatusStrip
             // 
@@ -693,229 +1037,6 @@
             this.giúpĐỡToolStripMenuItem.Size = new System.Drawing.Size(77, 19);
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
             // 
-            // btnDuyNgayBatDau
-            // 
-            this.btnDuyNgayBatDau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuyNgayBatDau.ForeColor = System.Drawing.Color.White;
-            this.btnDuyNgayBatDau.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyNgayBatDau.Image")));
-            this.btnDuyNgayBatDau.Location = new System.Drawing.Point(8, 6);
-            this.btnDuyNgayBatDau.Name = "btnDuyNgayBatDau";
-            this.btnDuyNgayBatDau.Size = new System.Drawing.Size(32, 32);
-            this.btnDuyNgayBatDau.TabIndex = 8;
-            this.btnDuyNgayBatDau.UseVisualStyleBackColor = true;
-            // 
-            // lbDuyBatDau
-            // 
-            this.lbDuyBatDau.AutoSize = true;
-            this.lbDuyBatDau.Location = new System.Drawing.Point(38, 19);
-            this.lbDuyBatDau.Name = "lbDuyBatDau";
-            this.lbDuyBatDau.Size = new System.Drawing.Size(45, 13);
-            this.lbDuyBatDau.TabIndex = 9;
-            this.lbDuyBatDau.Text = "Bắt đầu";
-            // 
-            // dtpDuyNgayBatDau
-            // 
-            this.dtpDuyNgayBatDau.CustomFormat = "dd-MM-yyyy";
-            this.dtpDuyNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDuyNgayBatDau.Location = new System.Drawing.Point(86, 15);
-            this.dtpDuyNgayBatDau.Name = "dtpDuyNgayBatDau";
-            this.dtpDuyNgayBatDau.Size = new System.Drawing.Size(88, 20);
-            this.dtpDuyNgayBatDau.TabIndex = 10;
-            // 
-            // btnDuyKT
-            // 
-            this.btnDuyKT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuyKT.ForeColor = System.Drawing.Color.White;
-            this.btnDuyKT.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyKT.Image")));
-            this.btnDuyKT.Location = new System.Drawing.Point(211, 6);
-            this.btnDuyKT.Name = "btnDuyKT";
-            this.btnDuyKT.Size = new System.Drawing.Size(32, 32);
-            this.btnDuyKT.TabIndex = 8;
-            this.btnDuyKT.UseVisualStyleBackColor = true;
-            // 
-            // lbDuyKT
-            // 
-            this.lbDuyKT.AutoSize = true;
-            this.lbDuyKT.Location = new System.Drawing.Point(242, 19);
-            this.lbDuyKT.Name = "lbDuyKT";
-            this.lbDuyKT.Size = new System.Drawing.Size(47, 13);
-            this.lbDuyKT.TabIndex = 9;
-            this.lbDuyKT.Text = "Kết thúc";
-            // 
-            // dtpDuyKT
-            // 
-            this.dtpDuyKT.CustomFormat = "dd-MM-yyyy";
-            this.dtpDuyKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDuyKT.Location = new System.Drawing.Point(290, 14);
-            this.dtpDuyKT.Name = "dtpDuyKT";
-            this.dtpDuyKT.Size = new System.Drawing.Size(88, 20);
-            this.dtpDuyKT.TabIndex = 10;
-            // 
-            // btnDuyRefresh
-            // 
-            this.btnDuyRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuyRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnDuyRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyRefresh.Image")));
-            this.btnDuyRefresh.Location = new System.Drawing.Point(418, 9);
-            this.btnDuyRefresh.Name = "btnDuyRefresh";
-            this.btnDuyRefresh.Size = new System.Drawing.Size(32, 32);
-            this.btnDuyRefresh.TabIndex = 8;
-            this.btnDuyRefresh.UseVisualStyleBackColor = true;
-            // 
-            // btnDuyTime
-            // 
-            this.btnDuyTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuyTime.ForeColor = System.Drawing.Color.White;
-            this.btnDuyTime.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyTime.Image")));
-            this.btnDuyTime.Location = new System.Drawing.Point(454, 9);
-            this.btnDuyTime.Name = "btnDuyTime";
-            this.btnDuyTime.Size = new System.Drawing.Size(32, 32);
-            this.btnDuyTime.TabIndex = 8;
-            this.btnDuyTime.UseVisualStyleBackColor = true;
-            this.btnDuyTime.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // cboDuyHinhThuc
-            // 
-            this.cboDuyHinhThuc.FormattingEnabled = true;
-            this.cboDuyHinhThuc.Items.AddRange(new object[] {
-            "Chưa thanh toán (0)"});
-            this.cboDuyHinhThuc.Location = new System.Drawing.Point(503, 13);
-            this.cboDuyHinhThuc.Name = "cboDuyHinhThuc";
-            this.cboDuyHinhThuc.Size = new System.Drawing.Size(127, 21);
-            this.cboDuyHinhThuc.TabIndex = 11;
-            // 
-            // cboDuyTenNguoiDung
-            // 
-            this.cboDuyTenNguoiDung.FormattingEnabled = true;
-            this.cboDuyTenNguoiDung.Items.AddRange(new object[] {
-            "Tên người sử dụng"});
-            this.cboDuyTenNguoiDung.Location = new System.Drawing.Point(639, 13);
-            this.cboDuyTenNguoiDung.Name = "cboDuyTenNguoiDung";
-            this.cboDuyTenNguoiDung.Size = new System.Drawing.Size(127, 21);
-            this.cboDuyTenNguoiDung.TabIndex = 11;
-            // 
-            // txtDuySearch
-            // 
-            this.txtDuySearch.Location = new System.Drawing.Point(775, 14);
-            this.txtDuySearch.Name = "txtDuySearch";
-            this.txtDuySearch.Size = new System.Drawing.Size(123, 20);
-            this.txtDuySearch.TabIndex = 12;
-            // 
-            // btnDuySearch
-            // 
-            this.btnDuySearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuySearch.ForeColor = System.Drawing.Color.White;
-            this.btnDuySearch.Image = ((System.Drawing.Image)(resources.GetObject("btnDuySearch.Image")));
-            this.btnDuySearch.Location = new System.Drawing.Point(901, 7);
-            this.btnDuySearch.Name = "btnDuySearch";
-            this.btnDuySearch.Size = new System.Drawing.Size(32, 32);
-            this.btnDuySearch.TabIndex = 8;
-            this.btnDuySearch.UseVisualStyleBackColor = true;
-            this.btnDuySearch.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lbDuyTrang
-            // 
-            this.lbDuyTrang.AutoSize = true;
-            this.lbDuyTrang.Location = new System.Drawing.Point(939, 17);
-            this.lbDuyTrang.Name = "lbDuyTrang";
-            this.lbDuyTrang.Size = new System.Drawing.Size(38, 13);
-            this.lbDuyTrang.TabIndex = 9;
-            this.lbDuyTrang.Text = "Trang:";
-            this.lbDuyTrang.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnDuyPre
-            // 
-            this.btnDuyPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuyPre.ForeColor = System.Drawing.Color.White;
-            this.btnDuyPre.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyPre.Image")));
-            this.btnDuyPre.Location = new System.Drawing.Point(973, 7);
-            this.btnDuyPre.Name = "btnDuyPre";
-            this.btnDuyPre.Size = new System.Drawing.Size(32, 32);
-            this.btnDuyPre.TabIndex = 8;
-            this.btnDuyPre.UseVisualStyleBackColor = true;
-            this.btnDuyPre.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnDuyNext
-            // 
-            this.btnDuyNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuyNext.ForeColor = System.Drawing.Color.White;
-            this.btnDuyNext.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyNext.Image")));
-            this.btnDuyNext.Location = new System.Drawing.Point(1038, 7);
-            this.btnDuyNext.Name = "btnDuyNext";
-            this.btnDuyNext.Size = new System.Drawing.Size(32, 32);
-            this.btnDuyNext.TabIndex = 8;
-            this.btnDuyNext.UseVisualStyleBackColor = true;
-            this.btnDuyNext.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lbDuySoTrang
-            // 
-            this.lbDuySoTrang.AutoSize = true;
-            this.lbDuySoTrang.Location = new System.Drawing.Point(1011, 19);
-            this.lbDuySoTrang.Name = "lbDuySoTrang";
-            this.lbDuySoTrang.Size = new System.Drawing.Size(24, 13);
-            this.lbDuySoTrang.TabIndex = 9;
-            this.lbDuySoTrang.Text = "1/1";
-            this.lbDuySoTrang.Click += new System.EventHandler(this.label1_Click);
-            // dgvNhomNguoiSuDung
-            // 
-            this.dgvNhomNguoiSuDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNhomNguoiSuDung.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TenNhom,
-            this.LoaiTaiKhoan,
-            this.GiaTien});
-            this.dgvNhomNguoiSuDung.Location = new System.Drawing.Point(8, 44);
-            this.dgvNhomNguoiSuDung.Name = "dgvNhomNguoiSuDung";
-            this.dgvNhomNguoiSuDung.Size = new System.Drawing.Size(1060, 358);
-            this.dgvNhomNguoiSuDung.TabIndex = 16;
-            // 
-            // TenNhom
-            // 
-            this.TenNhom.HeaderText = "Tên";
-            this.TenNhom.Name = "TenNhom";
-            // 
-            // LoaiTaiKhoan
-            // 
-            this.LoaiTaiKhoan.HeaderText = "Kiểu";
-            this.LoaiTaiKhoan.Name = "LoaiTaiKhoan";
-            // 
-            // GiaTien
-            // 
-            this.GiaTien.HeaderText = "Giá Tiền";
-            this.GiaTien.Name = "GiaTien";
-            // 
-            // btnDelNhomNguoiSuDung
-            // 
-            this.btnDelNhomNguoiSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelNhomNguoiSuDung.ForeColor = System.Drawing.Color.White;
-            this.btnDelNhomNguoiSuDung.Image = ((System.Drawing.Image)(resources.GetObject("btnDelNhomNguoiSuDung.Image")));
-            this.btnDelNhomNguoiSuDung.Location = new System.Drawing.Point(84, 6);
-            this.btnDelNhomNguoiSuDung.Name = "btnDelNhomNguoiSuDung";
-            this.btnDelNhomNguoiSuDung.Size = new System.Drawing.Size(32, 32);
-            this.btnDelNhomNguoiSuDung.TabIndex = 15;
-            this.btnDelNhomNguoiSuDung.UseVisualStyleBackColor = true;
-            // 
-            // btnEditNhomNguoiSuDung
-            // 
-            this.btnEditNhomNguoiSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditNhomNguoiSuDung.ForeColor = System.Drawing.Color.White;
-            this.btnEditNhomNguoiSuDung.Image = ((System.Drawing.Image)(resources.GetObject("btnEditNhomNguoiSuDung.Image")));
-            this.btnEditNhomNguoiSuDung.Location = new System.Drawing.Point(46, 6);
-            this.btnEditNhomNguoiSuDung.Name = "btnEditNhomNguoiSuDung";
-            this.btnEditNhomNguoiSuDung.Size = new System.Drawing.Size(32, 32);
-            this.btnEditNhomNguoiSuDung.TabIndex = 14;
-            this.btnEditNhomNguoiSuDung.UseVisualStyleBackColor = true;
-            // 
-            // btnAddNhomNguoiSuDung
-            // 
-            this.btnAddNhomNguoiSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNhomNguoiSuDung.ForeColor = System.Drawing.Color.White;
-            this.btnAddNhomNguoiSuDung.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNhomNguoiSuDung.Image")));
-            this.btnAddNhomNguoiSuDung.Location = new System.Drawing.Point(8, 6);
-            this.btnAddNhomNguoiSuDung.Name = "btnAddNhomNguoiSuDung";
-            this.btnAddNhomNguoiSuDung.Size = new System.Drawing.Size(32, 32);
-            this.btnAddNhomNguoiSuDung.TabIndex = 13;
-            this.btnAddNhomNguoiSuDung.UseVisualStyleBackColor = true;
-            // 
             // frmTemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -926,9 +1047,12 @@
             this.Name = "frmTemplate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Template";
+            this.Load += new System.EventHandler(this.frmTemplate_Load);
             this.pnlTemplate.ResumeLayout(false);
             this.pnlContents.ResumeLayout(false);
             this.tabControlChucNang.ResumeLayout(false);
+            this.tabMayTram.ResumeLayout(false);
+            this.panel_DanhHy.ResumeLayout(false);
             this.tabTaiKhoan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCanAcc)).EndInit();
             this.pnlBotAcc.ResumeLayout(false);
@@ -937,6 +1061,7 @@
             this.tabNhatKyGiaoDich.ResumeLayout(false);
             this.tabNhatKyGiaoDich.PerformLayout();
             this.tabNhomNguoiSuDung.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiSuDung)).EndInit();
             this.pnlStatusStrip.ResumeLayout(false);
             this.pnlStatusStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -946,7 +1071,6 @@
             this.pnlMenuStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiSuDung)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1032,6 +1156,19 @@
         private System.Windows.Forms.Button btnDelNhomNguoiSuDung;
         private System.Windows.Forms.Button btnEditNhomNguoiSuDung;
         private System.Windows.Forms.Button btnAddNhomNguoiSuDung;
+        private System.Windows.Forms.Panel panel_DanhHy;
+        private System.Windows.Forms.ListView listView_DanhHy;
+        private System.Windows.Forms.ColumnHeader columnHeader1_DanhHy;
+        private System.Windows.Forms.ColumnHeader columnHeader2_DanhHy;
+        private System.Windows.Forms.ColumnHeader columnHeader3_DanhHy;
+        private System.Windows.Forms.ColumnHeader columnHeader4_DanhHy;
+        private System.Windows.Forms.ColumnHeader columnHeader5_DanhHy;
+        private System.Windows.Forms.ColumnHeader columnHeader6_DanhHy;
+        private System.Windows.Forms.ColumnHeader columnHeader7_DanhHy;
+        private System.Windows.Forms.ColumnHeader columnHeader8_DanhHy;
+        private System.Windows.Forms.ColumnHeader columnHeader9_DanhHy;
+        private System.Windows.Forms.ColumnHeader columnHeader10_DanhHy;
+        private System.Windows.Forms.ColumnHeader columnHeader11_DanhHy;
     }
 }
 
