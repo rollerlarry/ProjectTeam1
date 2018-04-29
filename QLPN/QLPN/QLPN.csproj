@@ -104,13 +104,6 @@
     <Content Include="icon\retweet-arrows-symbol.png" />
     <Content Include="icon\switch-user.png" />
     <Content Include="icon\user-shape.png" />
-    <Content Include="QLPN.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="QLPN_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>QLPN.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
