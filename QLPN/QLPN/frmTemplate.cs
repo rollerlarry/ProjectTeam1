@@ -44,6 +44,9 @@ namespace QLPN
 
 
             LayDSMayTram_DanhHy();
+
+            tabNKGG_LoadData(); //Duy
+            tabNKGG_layTenNguoiDung();//Duy
         }
 
         private void LayDSMayTram_DanhHy()
@@ -179,7 +182,7 @@ namespace QLPN
             da.Fill(ds, "CountMember");
             DataTable dt = ds.Tables["CountMember"];
             DataRow dr = dt.Rows[0];
-            string tongThanhVien = dr["CountMember"].ToString();
+            string tongThanhVien = dr["countMember"].ToString();
             tsslTongThanhVien.Text = "Tổng thành viên: " + tongThanhVien;
         }
         private void LayTongSoMayTram()
@@ -296,5 +299,331 @@ namespace QLPN
         }
 
         //============================== End Block of Thành Danh ==============================
+
+        //============= DUC DUY vs MINH VIET ==================//
+       private void tabNKGG_LoadData()
+        {
+            try
+            {
+                string query = "select * from GIAODICH";
+                if (conn == null)
+                    conn = new SqlConnection(connectionString);
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    ListViewItem lvi = new ListViewItem(rd.GetString(1));
+                    lvi.SubItems.Add(rd.GetDateTime(2).ToString("dd-MM-yyyy")); //dt
+                    lvi.SubItems.Add(rd.GetDateTime(3).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(4).ToString("dd-MM-yyyy"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(5).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDouble(6).ToString());
+                    TimeSpan diff = DateTime.Parse(DateTime.Now.ToString()) - DateTime.Parse(rd.GetDateTime(3).ToString());
+                    long i = Math.Abs(diff.Ticks);
+                    DateTime dt = new DateTime(i);
+                    lvi.SubItems.Add(dt.ToString("HH:mm"));
+                    lvi.SubItems.Add(rd.GetString(7));
+                    lvi.SubItems.Add(rd.GetString(8));
+
+                    lvDuyNhatKyGiaoDich.Items.Add(lvi);
+                }
+                rd.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void dtpDuyNgayBatDau_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                lvDuyNhatKyGiaoDich.Items.Clear();
+                string time = dtpDuyNgayBatDau.Value.ToString("yyyy-MM-dd");
+
+                string query = string.Format("select * from GIAODICH where NgayBatDau = '{0}'", time);
+                if (conn == null)
+                    conn = new SqlConnection(connectionString);
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    ListViewItem lvi = new ListViewItem(rd.GetString(1));
+                    lvi.SubItems.Add(rd.GetDateTime(2).ToString("dd-MM-yyyy")); //dt
+                    lvi.SubItems.Add(rd.GetDateTime(3).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(4).ToString("dd-MM-yyyy"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(5).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDouble(6).ToString());
+                    TimeSpan diff = DateTime.Parse(DateTime.Now.ToString()) - DateTime.Parse(rd.GetDateTime(3).ToString());
+                    long i = Math.Abs(diff.Ticks);
+                    DateTime dt = new DateTime(i);
+                    lvi.SubItems.Add(dt.ToString("HH:mm"));
+                    lvi.SubItems.Add(rd.GetString(7));
+                    lvi.SubItems.Add(rd.GetString(8));
+
+                    lvDuyNhatKyGiaoDich.Items.Add(lvi);
+                }
+                rd.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
+        }
+
+        private void btnDuyRefresh_Click(object sender, EventArgs e)
+        {
+            lvDuyNhatKyGiaoDich.Items.Clear();
+            tabNKGG_LoadData();
+        }
+
+        private void btnDuyTime_Click(object sender, EventArgs e)
+        {
+            string name = cboDuyTenNguoiDung.SelectedValue.ToString();
+            tabNKGG_xemTheoTen(name);
+        }
+        private void tabNKGG_xemTheoTen(string name)
+        {
+            try
+            {
+                lvDuyNhatKyGiaoDich.Items.Clear();
+                string query = string.Format("select * from GIAODICH where TenTaiKhoan = '{0}'", name);
+
+
+                if (conn == null)
+                    conn = new SqlConnection(connectionString);
+
+
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    ListViewItem lvi = new ListViewItem(rd.GetString(1));
+                    lvi.SubItems.Add(rd.GetDateTime(2).ToString("dd-MM-yyyy")); //dt
+                    lvi.SubItems.Add(rd.GetDateTime(3).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(4).ToString("dd-MM-yyyy"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(5).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDouble(6).ToString());
+                    TimeSpan diff = DateTime.Parse(DateTime.Now.ToString()) - DateTime.Parse(rd.GetDateTime(3).ToString());
+                    long i = Math.Abs(diff.Ticks);
+                    DateTime dt = new DateTime(i);
+                    lvi.SubItems.Add(dt.ToString("HH:mm"));
+                    lvi.SubItems.Add(rd.GetString(7));
+                    lvi.SubItems.Add(rd.GetString(8));
+
+                    lvDuyNhatKyGiaoDich.Items.Add(lvi);
+                }
+                rd.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        //Lấy tên người dùng cho vào combobox
+        private void tabNKGG_layTenNguoiDung()
+        {
+            string query = "select * from GIAODICH";
+            SqlDataAdapter adt = new SqlDataAdapter(query, conn);
+            DataSet ds = new DataSet();
+            adt.Fill(ds, "GiaoDich");
+            cboDuyTenNguoiDung.DisplayMember = "TenTaiKhoan";
+            cboDuyTenNguoiDung.ValueMember = "TenTaiKhoan";
+            cboDuyTenNguoiDung.DataSource = ds.Tables["GiaoDich"];
+
+        }
+
+        private void cboDuyHinhThuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string hinhThuc = cboDuyHinhThuc.SelectedItem.ToString();
+
+            if (hinhThuc == "Chưa thanh toán")
+            {
+                tabNKGG_HinhThuc_ChuaThanhToan();
+            }
+
+            else if (hinhThuc == "Đã thanh toán")
+            {
+                tabNKGG_HinhThuc_DaThanhToan();
+            }
+        }
+
+        //Lay du lieu la khi chon hinh thuc da thanh thoan
+        private void tabNKGG_HinhThuc_DaThanhToan()
+        {
+            try
+            {
+                lvDuyNhatKyGiaoDich.Items.Clear();
+                string query = "select * from GIAODICH where SoTienGiaoDich > 0";
+
+
+                if (conn == null)
+                    conn = new SqlConnection(connectionString);
+
+
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    ListViewItem lvi = new ListViewItem(rd.GetString(1));
+                    lvi.SubItems.Add(rd.GetDateTime(2).ToString("dd-MM-yyyy")); //dt
+                    lvi.SubItems.Add(rd.GetDateTime(3).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(4).ToString("dd-MM-yyyy"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(5).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDouble(6).ToString());
+                    TimeSpan diff = DateTime.Parse(DateTime.Now.ToString()) - DateTime.Parse(rd.GetDateTime(3).ToString());
+                    long i = Math.Abs(diff.Ticks);
+                    DateTime dt = new DateTime(i);
+                    lvi.SubItems.Add(dt.ToString("HH:mm"));
+                    lvi.SubItems.Add(rd.GetString(7));
+                    lvi.SubItems.Add(rd.GetString(8));
+
+                    lvDuyNhatKyGiaoDich.Items.Add(lvi);
+
+
+                }
+                rd.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        //Lay du lieu khi chon hinh thuc chua thanh toan
+        private void tabNKGG_HinhThuc_ChuaThanhToan()
+        {
+            try
+            {
+                lvDuyNhatKyGiaoDich.Items.Clear();
+                string query = "select * from GIAODICH where SoTienGiaoDich < 0";
+
+
+                if (conn == null)
+                    conn = new SqlConnection(connectionString);
+
+
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    ListViewItem lvi = new ListViewItem(rd.GetString(1));
+                    lvi.SubItems.Add(rd.GetDateTime(2).ToString("dd-MM-yyyy")); //dt
+                    lvi.SubItems.Add(rd.GetDateTime(3).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(4).ToString("dd-MM-yyyy"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(5).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDouble(6).ToString());
+                    TimeSpan diff = DateTime.Parse(DateTime.Now.ToString()) - DateTime.Parse(rd.GetDateTime(3).ToString());
+                    long i = Math.Abs(diff.Ticks);
+                    DateTime dt = new DateTime(i);
+                    lvi.SubItems.Add(dt.ToString("HH:mm"));
+                    lvi.SubItems.Add(rd.GetString(7));
+                    lvi.SubItems.Add(rd.GetString(8));
+
+                    lvDuyNhatKyGiaoDich.Items.Add(lvi);
+                }
+                rd.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void btnDuySearch_Click(object sender, EventArgs e)
+        {
+            string tenVuaSearch = txtDuySearch.Text;
+            tabNKGG_xemTheoTen(tenVuaSearch);
+        }
+
+        private void dtpDuyKT_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                lvDuyNhatKyGiaoDich.Items.Clear();
+                string time = dtpDuyKT.Value.ToString("yyyy-MM-dd");
+
+                string query = string.Format("select * from GIAODICH where NgayBatDau = '{0}'", time);
+                if (conn == null)
+                    conn = new SqlConnection(connectionString);
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    ListViewItem lvi = new ListViewItem(rd.GetString(1));
+                    lvi.SubItems.Add(rd.GetDateTime(2).ToString("dd-MM-yyyy")); //dt
+                    lvi.SubItems.Add(rd.GetDateTime(3).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(4).ToString("dd-MM-yyyy"));//dt
+                    lvi.SubItems.Add(rd.GetDateTime(5).ToString("HH:mm"));//dt
+                    lvi.SubItems.Add(rd.GetDouble(6).ToString());
+                    TimeSpan diff = DateTime.Parse(DateTime.Now.ToString()) - DateTime.Parse(rd.GetDateTime(3).ToString());
+                    long i = Math.Abs(diff.Ticks);
+                    DateTime dt = new DateTime(i);
+                    lvi.SubItems.Add(dt.ToString("HH:mm"));
+                    lvi.SubItems.Add(rd.GetString(7));
+                    lvi.SubItems.Add(rd.GetString(8));
+
+                    lvDuyNhatKyGiaoDich.Items.Add(lvi);
+                }
+                rd.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        private void menuNhatKyGiaoDich_Click(object sender, EventArgs e)
+        {
+            tabControlChucNang.SelectedIndex = 3;
+        }
+        //================END DUY va VIET===============
     }
 }
+

@@ -112,7 +112,7 @@
             this.máyTrạmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhậtKýHệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhậtKýGiaoDịchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuNhatKyGiaoDich = new System.Windows.Forms.ToolStripMenuItem();
             this.nhómMáyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhómNgườiSửDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dịchVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -122,6 +122,17 @@
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngônNgữToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlDuyNKGG = new System.Windows.Forms.Panel();
+            this.lvDuyNhatKyGiaoDich = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlTemplate.SuspendLayout();
             this.pnlContents.SuspendLayout();
             this.tabControlChucNang.SuspendLayout();
@@ -139,6 +150,7 @@
             this.pnlButton.SuspendLayout();
             this.pnlMenuStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            this.pnlDuyNKGG.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTemplate
@@ -517,6 +529,7 @@
             // 
             // tabNhatKyGiaoDich
             // 
+            this.tabNhatKyGiaoDich.Controls.Add(this.pnlDuyNKGG);
             this.tabNhatKyGiaoDich.Controls.Add(this.txtDuySearch);
             this.tabNhatKyGiaoDich.Controls.Add(this.cboDuyTenNguoiDung);
             this.tabNhatKyGiaoDich.Controls.Add(this.cboDuyHinhThuc);
@@ -563,11 +576,13 @@
             // 
             this.cboDuyHinhThuc.FormattingEnabled = true;
             this.cboDuyHinhThuc.Items.AddRange(new object[] {
-            "Chưa thanh toán (0)"});
+            "Chưa thanh toán",
+            "Đã thanh toán"});
             this.cboDuyHinhThuc.Location = new System.Drawing.Point(503, 13);
             this.cboDuyHinhThuc.Name = "cboDuyHinhThuc";
             this.cboDuyHinhThuc.Size = new System.Drawing.Size(127, 21);
             this.cboDuyHinhThuc.TabIndex = 11;
+            this.cboDuyHinhThuc.SelectedIndexChanged += new System.EventHandler(this.cboDuyHinhThuc_SelectedIndexChanged);
             // 
             // dtpDuyKT
             // 
@@ -577,6 +592,7 @@
             this.dtpDuyKT.Name = "dtpDuyKT";
             this.dtpDuyKT.Size = new System.Drawing.Size(88, 20);
             this.dtpDuyKT.TabIndex = 10;
+            this.dtpDuyKT.ValueChanged += new System.EventHandler(this.dtpDuyKT_ValueChanged);
             // 
             // dtpDuyNgayBatDau
             // 
@@ -586,6 +602,7 @@
             this.dtpDuyNgayBatDau.Name = "dtpDuyNgayBatDau";
             this.dtpDuyNgayBatDau.Size = new System.Drawing.Size(88, 20);
             this.dtpDuyNgayBatDau.TabIndex = 10;
+            this.dtpDuyNgayBatDau.ValueChanged += new System.EventHandler(this.dtpDuyNgayBatDau_ValueChanged);
             // 
             // lbDuySoTrang
             // 
@@ -655,6 +672,7 @@
             this.btnDuySearch.Size = new System.Drawing.Size(32, 32);
             this.btnDuySearch.TabIndex = 8;
             this.btnDuySearch.UseVisualStyleBackColor = true;
+            this.btnDuySearch.Click += new System.EventHandler(this.btnDuySearch_Click);
             // 
             // btnDuyTime
             // 
@@ -666,6 +684,7 @@
             this.btnDuyTime.Size = new System.Drawing.Size(32, 32);
             this.btnDuyTime.TabIndex = 8;
             this.btnDuyTime.UseVisualStyleBackColor = true;
+            this.btnDuyTime.Click += new System.EventHandler(this.btnDuyTime_Click);
             // 
             // btnDuyRefresh
             // 
@@ -677,6 +696,7 @@
             this.btnDuyRefresh.Size = new System.Drawing.Size(32, 32);
             this.btnDuyRefresh.TabIndex = 8;
             this.btnDuyRefresh.UseVisualStyleBackColor = true;
+            this.btnDuyRefresh.Click += new System.EventHandler(this.btnDuyRefresh_Click);
             // 
             // btnDuyKT
             // 
@@ -946,7 +966,7 @@
             this.menuStrip.Location = new System.Drawing.Point(9, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(10, 8, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(433, 29);
+            this.menuStrip.Size = new System.Drawing.Size(525, 29);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -956,7 +976,7 @@
             this.máyTrạmToolStripMenuItem,
             this.tàiKhoảnToolStripMenuItem,
             this.nhậtKýHệThốngToolStripMenuItem,
-            this.nhậtKýGiaoDịchToolStripMenuItem,
+            this.menuNhatKyGiaoDich,
             this.nhómMáyToolStripMenuItem,
             this.nhómNgườiSửDụngToolStripMenuItem,
             this.dịchVụToolStripMenuItem,
@@ -986,11 +1006,12 @@
             this.nhậtKýHệThốngToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.nhậtKýHệThốngToolStripMenuItem.Text = "Nhật ký hệ thống";
             // 
-            // nhậtKýGiaoDịchToolStripMenuItem
+            // menuNhatKyGiaoDich
             // 
-            this.nhậtKýGiaoDịchToolStripMenuItem.Name = "nhậtKýGiaoDịchToolStripMenuItem";
-            this.nhậtKýGiaoDịchToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.nhậtKýGiaoDịchToolStripMenuItem.Text = "Nhật ký giao dịch";
+            this.menuNhatKyGiaoDich.Name = "menuNhatKyGiaoDich";
+            this.menuNhatKyGiaoDich.Size = new System.Drawing.Size(188, 22);
+            this.menuNhatKyGiaoDich.Text = "Nhật ký giao dịch";
+            this.menuNhatKyGiaoDich.Click += new System.EventHandler(this.menuNhatKyGiaoDich_Click);
             // 
             // nhómMáyToolStripMenuItem
             // 
@@ -1054,6 +1075,81 @@
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
             this.giúpĐỡToolStripMenuItem.Click += new System.EventHandler(this.Protect_Click);
             // 
+            // pnlDuyNKGG
+            // 
+            this.pnlDuyNKGG.Controls.Add(this.lvDuyNhatKyGiaoDich);
+            this.pnlDuyNKGG.Location = new System.Drawing.Point(0, 44);
+            this.pnlDuyNKGG.Name = "pnlDuyNKGG";
+            this.pnlDuyNKGG.Size = new System.Drawing.Size(1077, 363);
+            this.pnlDuyNKGG.TabIndex = 13;
+            // 
+            // lvDuyNhatKyGiaoDich
+            // 
+            this.lvDuyNhatKyGiaoDich.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9});
+            this.lvDuyNhatKyGiaoDich.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvDuyNhatKyGiaoDich.FullRowSelect = true;
+            this.lvDuyNhatKyGiaoDich.GridLines = true;
+            this.lvDuyNhatKyGiaoDich.Location = new System.Drawing.Point(0, 0);
+            this.lvDuyNhatKyGiaoDich.Name = "lvDuyNhatKyGiaoDich";
+            this.lvDuyNhatKyGiaoDich.Size = new System.Drawing.Size(1077, 363);
+            this.lvDuyNhatKyGiaoDich.TabIndex = 0;
+            this.lvDuyNhatKyGiaoDich.UseCompatibleStateImageBehavior = false;
+            this.lvDuyNhatKyGiaoDich.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên người sử dụng";
+            this.columnHeader1.Width = 150;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ngày bắt đầu";
+            this.columnHeader2.Width = 90;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Giờ bắt đầu";
+            this.columnHeader3.Width = 90;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Ngày";
+            this.columnHeader4.Width = 90;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Thời gian";
+            this.columnHeader5.Width = 100;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Tiền";
+            this.columnHeader6.Width = 100;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Thời gian đã sử dụng";
+            this.columnHeader7.Width = 120;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Nhân viên";
+            this.columnHeader8.Width = 100;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Ghi chú";
+            this.columnHeader9.Width = 235;
+            // 
             // frmTemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1089,6 +1185,7 @@
             this.pnlMenuStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.pnlDuyNKGG.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1112,7 +1209,7 @@
         private System.Windows.Forms.ToolStripMenuItem máyTrạmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhậtKýHệThốngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nhậtKýGiaoDịchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuNhatKyGiaoDich;
         private System.Windows.Forms.ToolStripMenuItem nhómMáyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhómNgườiSửDụngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dịchVụToolStripMenuItem;
@@ -1187,6 +1284,17 @@
         private System.Windows.Forms.ColumnHeader columnHeader9_DanhHy;
         private System.Windows.Forms.ColumnHeader columnHeader10_DanhHy;
         private System.Windows.Forms.ColumnHeader columnHeader11_DanhHy;
+        private System.Windows.Forms.Panel pnlDuyNKGG;
+        private System.Windows.Forms.ListView lvDuyNhatKyGiaoDich;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
     }
 }
 
