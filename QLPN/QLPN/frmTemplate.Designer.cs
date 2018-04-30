@@ -152,6 +152,7 @@
             this.pnlTemplate.Name = "pnlTemplate";
             this.pnlTemplate.Size = new System.Drawing.Size(1084, 562);
             this.pnlTemplate.TabIndex = 0;
+            this.pnlTemplate.Click += new System.EventHandler(this.Protect_Click);
             // 
             // pnlContents
             // 
@@ -161,6 +162,7 @@
             this.pnlContents.Name = "pnlContents";
             this.pnlContents.Size = new System.Drawing.Size(1084, 446);
             this.pnlContents.TabIndex = 4;
+            this.pnlContents.Click += new System.EventHandler(this.Protect_Click);
             // 
             // tabControlChucNang
             // 
@@ -181,6 +183,7 @@
             this.tabControlChucNang.SelectedIndex = 0;
             this.tabControlChucNang.Size = new System.Drawing.Size(1084, 446);
             this.tabControlChucNang.TabIndex = 0;
+            this.tabControlChucNang.Click += new System.EventHandler(this.Protect_Click);
             // 
             // tabMayTram
             // 
@@ -193,6 +196,7 @@
             this.tabMayTram.TabIndex = 0;
             this.tabMayTram.Text = "Máy trạm";
             this.tabMayTram.UseVisualStyleBackColor = true;
+            this.tabMayTram.Click += new System.EventHandler(this.Protect_Click);
             // 
             // panel_DanhHy
             // 
@@ -201,6 +205,7 @@
             this.panel_DanhHy.Name = "panel_DanhHy";
             this.panel_DanhHy.Size = new System.Drawing.Size(1041, 372);
             this.panel_DanhHy.TabIndex = 0;
+            this.panel_DanhHy.Click += new System.EventHandler(this.Protect_Click);
             // 
             // listView_DanhHy
             // 
@@ -229,6 +234,8 @@
             this.listView_DanhHy.TabIndex = 0;
             this.listView_DanhHy.UseCompatibleStateImageBehavior = false;
             this.listView_DanhHy.View = System.Windows.Forms.View.Details;
+            this.listView_DanhHy.ItemActivate += new System.EventHandler(this.Protect_Click);
+            this.listView_DanhHy.Click += new System.EventHandler(this.Protect_Click);
             // 
             // columnHeader1_DanhHy
             // 
@@ -588,7 +595,6 @@
             this.lbDuySoTrang.Size = new System.Drawing.Size(24, 13);
             this.lbDuySoTrang.TabIndex = 9;
             this.lbDuySoTrang.Text = "1/1";
-            this.lbDuySoTrang.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbDuyTrang
             // 
@@ -598,7 +604,6 @@
             this.lbDuyTrang.Size = new System.Drawing.Size(38, 13);
             this.lbDuyTrang.TabIndex = 9;
             this.lbDuyTrang.Text = "Trang:";
-            this.lbDuyTrang.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbDuyKT
             // 
@@ -628,7 +633,6 @@
             this.btnDuyNext.Size = new System.Drawing.Size(32, 32);
             this.btnDuyNext.TabIndex = 8;
             this.btnDuyNext.UseVisualStyleBackColor = true;
-            this.btnDuyNext.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnDuyPre
             // 
@@ -640,7 +644,6 @@
             this.btnDuyPre.Size = new System.Drawing.Size(32, 32);
             this.btnDuyPre.TabIndex = 8;
             this.btnDuyPre.UseVisualStyleBackColor = true;
-            this.btnDuyPre.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnDuySearch
             // 
@@ -652,7 +655,6 @@
             this.btnDuySearch.Size = new System.Drawing.Size(32, 32);
             this.btnDuySearch.TabIndex = 8;
             this.btnDuySearch.UseVisualStyleBackColor = true;
-            this.btnDuySearch.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnDuyTime
             // 
@@ -664,7 +666,6 @@
             this.btnDuyTime.Size = new System.Drawing.Size(32, 32);
             this.btnDuyTime.TabIndex = 8;
             this.btnDuyTime.UseVisualStyleBackColor = true;
-            this.btnDuyTime.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnDuyRefresh
             // 
@@ -841,41 +842,48 @@
             this.statusStrip.Size = new System.Drawing.Size(1084, 22);
             this.statusStrip.TabIndex = 0;
             this.statusStrip.Text = "statusStrip1";
+            this.statusStrip.Click += new System.EventHandler(this.Protect_Click);
             // 
             // tsslID
             // 
             this.tsslID.Name = "tsslID";
-            this.tsslID.Size = new System.Drawing.Size(51, 17);
-            this.tsslID.Text = "IRMSID: ";
+            this.tsslID.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.tsslID.Size = new System.Drawing.Size(143, 17);
+            this.tsslID.Text = "IRMSID: 1580614";
             // 
             // tsslProService
             // 
             this.tsslProService.Name = "tsslProService";
-            this.tsslProService.Size = new System.Drawing.Size(95, 17);
-            this.tsslProService.Text = "IRMSProService: ";
+            this.tsslProService.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.tsslProService.Size = new System.Drawing.Size(162, 17);
+            this.tsslProService.Text = "IRMSProService: NA";
             // 
             // tsslTongThanhVien
             // 
             this.tsslTongThanhVien.Name = "tsslTongThanhVien";
-            this.tsslTongThanhVien.Size = new System.Drawing.Size(100, 17);
+            this.tsslTongThanhVien.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.tsslTongThanhVien.Size = new System.Drawing.Size(150, 17);
             this.tsslTongThanhVien.Text = "Tổng thành viên: ";
             // 
             // tsslTongSoMayTram
             // 
             this.tsslTongSoMayTram.Name = "tsslTongSoMayTram";
-            this.tsslTongSoMayTram.Size = new System.Drawing.Size(110, 17);
+            this.tsslTongSoMayTram.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.tsslTongSoMayTram.Size = new System.Drawing.Size(160, 17);
             this.tsslTongSoMayTram.Text = "Tổng số máy trạm: ";
             // 
             // tsslDangSuDung
             // 
             this.tsslDangSuDung.Name = "tsslDangSuDung";
-            this.tsslDangSuDung.Size = new System.Drawing.Size(87, 17);
+            this.tsslDangSuDung.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.tsslDangSuDung.Size = new System.Drawing.Size(137, 17);
             this.tsslDangSuDung.Text = "Đang sử dụng: ";
             // 
             // tsslSanSang
             // 
             this.tsslSanSang.Name = "tsslSanSang";
-            this.tsslSanSang.Size = new System.Drawing.Size(60, 17);
+            this.tsslSanSang.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.tsslSanSang.Size = new System.Drawing.Size(110, 17);
             this.tsslSanSang.Text = "Sẵn sàng: ";
             // 
             // pnlButton
@@ -887,6 +895,7 @@
             this.pnlButton.Name = "pnlButton";
             this.pnlButton.Size = new System.Drawing.Size(1084, 56);
             this.pnlButton.TabIndex = 1;
+            this.pnlButton.Click += new System.EventHandler(this.Protect_Click);
             // 
             // btnThayDoiNhanVien
             // 
@@ -899,6 +908,7 @@
             this.btnThayDoiNhanVien.Text = "Thay đổi nhân viên";
             this.btnThayDoiNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThayDoiNhanVien.UseVisualStyleBackColor = true;
+            this.btnThayDoiNhanVien.Click += new System.EventHandler(this.btnThayDoiNhanVien_Click);
             // 
             // btnInTaiKhoanThe
             // 
@@ -911,6 +921,7 @@
             this.btnInTaiKhoanThe.Text = " In tài khoản thẻ";
             this.btnInTaiKhoanThe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInTaiKhoanThe.UseVisualStyleBackColor = true;
+            this.btnInTaiKhoanThe.Click += new System.EventHandler(this.Protect_Click);
             // 
             // pnlMenuStrip
             // 
@@ -921,6 +932,7 @@
             this.pnlMenuStrip.Name = "pnlMenuStrip";
             this.pnlMenuStrip.Size = new System.Drawing.Size(1084, 40);
             this.pnlMenuStrip.TabIndex = 0;
+            this.pnlMenuStrip.Click += new System.EventHandler(this.Protect_Click);
             // 
             // menuStrip
             // 
@@ -954,6 +966,7 @@
             this.chứcNăngToolStripMenuItem.Padding = new System.Windows.Forms.Padding(20, 0, 4, 0);
             this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(93, 19);
             this.chứcNăngToolStripMenuItem.Text = "Chức năng";
+            this.chứcNăngToolStripMenuItem.Click += new System.EventHandler(this.Protect_Click);
             // 
             // máyTrạmToolStripMenuItem
             // 
@@ -1015,6 +1028,7 @@
             this.hệThốngToolStripMenuItem.Padding = new System.Windows.Forms.Padding(20, 0, 4, 0);
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 19);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
+            this.hệThốngToolStripMenuItem.Click += new System.EventHandler(this.Protect_Click);
             // 
             // báoCáoToolStripMenuItem
             // 
@@ -1022,6 +1036,7 @@
             this.báoCáoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(20, 0, 4, 0);
             this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(77, 19);
             this.báoCáoToolStripMenuItem.Text = "Báo cáo";
+            this.báoCáoToolStripMenuItem.Click += new System.EventHandler(this.Protect_Click);
             // 
             // ngônNgữToolStripMenuItem
             // 
@@ -1029,6 +1044,7 @@
             this.ngônNgữToolStripMenuItem.Padding = new System.Windows.Forms.Padding(20, 0, 4, 0);
             this.ngônNgữToolStripMenuItem.Size = new System.Drawing.Size(89, 19);
             this.ngônNgữToolStripMenuItem.Text = "Ngôn ngữ";
+            this.ngônNgữToolStripMenuItem.Click += new System.EventHandler(this.Protect_Click);
             // 
             // giúpĐỡToolStripMenuItem
             // 
@@ -1036,6 +1052,7 @@
             this.giúpĐỡToolStripMenuItem.Padding = new System.Windows.Forms.Padding(20, 0, 4, 0);
             this.giúpĐỡToolStripMenuItem.Size = new System.Drawing.Size(77, 19);
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
+            this.giúpĐỡToolStripMenuItem.Click += new System.EventHandler(this.Protect_Click);
             // 
             // frmTemplate
             // 
@@ -1046,8 +1063,9 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "frmTemplate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Template";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTemplate_FormClosing);
             this.Load += new System.EventHandler(this.frmTemplate_Load);
+            this.Click += new System.EventHandler(this.Protect_Click);
             this.pnlTemplate.ResumeLayout(false);
             this.pnlContents.ResumeLayout(false);
             this.tabControlChucNang.ResumeLayout(false);

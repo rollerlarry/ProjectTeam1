@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace QLPN
 {
     public partial class frmTemplate : Form
     {
-        string connectionString = @"Server=DESKTOP-7A3KM08\SQLEXPRESS; Database=QLPN; Integrated Security=True";
+        string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["QLPN"].ConnectionString;
+        int trangThaiDangNhap = 0;
+        string tenTaiKhoan;
+
         SqlConnection conn = null;
 
         public frmTemplate()
@@ -21,18 +25,24 @@ namespace QLPN
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void frmTemplate_Load(object sender, EventArgs e)
         {
+            LayTongThanhVien(); //TD
+            LayTongSoMayTram(); //TD
+            LayMTDangSuDung(); //TD
+            LayMTSanSang(); //TD
+
+            this.Text = "IRMS - Server 1.7.38 [" + tenTaiKhoan + " Staff]"; //TD
+            frmLogin formLogin = new frmLogin(); //TD
+            formLogin.ShowDialog();  //TD
+            tenTaiKhoan = formLogin.getTenTaiKhoan; //TD
+            
+            trangThaiDangNhap = TrangThaiDangNhap(tenTaiKhoan); //TD
+            this.Text = "IRMS - Server 1.7.38 [" + tenTaiKhoan + " Staff]"; //TD
+
+
             LayDSMayTram_DanhHy();
         }
 
@@ -133,5 +143,158 @@ namespace QLPN
             }
 
         }
+        //======================================== Thành Danh ========================================
+        private int TrangThaiDangNhap(string tenTaiKhoan)
+        {
+            if(tenTaiKhoan != null)
+            {
+                try
+                {
+                    string sqlSelect = string.Format("SELECT TrangThaiTaiKhoan FROM TAIKHOANQUANTRI WHERE TenTaiKhoan = '{0}'", tenTaiKhoan);
+                    SqlConnection con = new SqlConnection(connectionString);
+                    SqlDataAdapter da = new SqlDataAdapter(sqlSelect, con);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    DataTable dt = ds.Tables[0];
+                    DataRow dr = dt.Rows[0];
+                    return Convert.ToInt16(dr["TrangThaiTaiKhoan"].ToString());
+                }
+                catch
+                {
+                    //none
+                }
+
+            }
+            return 0;
+
+
+        }
+            //===================Load Thông tin===================
+        private void LayTongThanhVien()
+        {
+            string sqlCountMember = "SELECT COUNT(*) AS CountMember  FROM TAIKHOAN";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter da = new SqlDataAdapter(sqlCountMember, con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "CountMember");
+            DataTable dt = ds.Tables["CountMember"];
+            DataRow dr = dt.Rows[0];
+            string tongThanhVien = dr["CountMember"].ToString();
+            tsslTongThanhVien.Text = "Tổng thành viên: " + tongThanhVien;
+        }
+        private void LayTongSoMayTram()
+        {
+            string sqlCountClient = "SELECT COUNT(*) AS CountClient  FROM MAYTRAM";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter da = new SqlDataAdapter(sqlCountClient, con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "CountClient");
+            DataTable dt = ds.Tables["CountClient"];
+            DataRow dr = dt.Rows[0];
+            string tongSoMayTram = dr["CountClient"].ToString();
+            tsslTongSoMayTram.Text = "Tổng số máy trạm: " + tongSoMayTram;
+        }
+        private void LayMTDangSuDung()
+        {
+            string sqlCountActiveClient = "SELECT COUNT(*) AS CountActiveClient  FROM MAYTRAM WHERE TinhTrangMayTram = '1'";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter da = new SqlDataAdapter(sqlCountActiveClient, con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "CountActiveClient");
+            DataTable dt = ds.Tables["CountActiveClient"];
+            DataRow dr = dt.Rows[0];
+            string tongMTDangSuDung = dr["CountActiveClient"].ToString();
+            tsslDangSuDung.Text = "Đang sử dụng: " + tongMTDangSuDung;
+        }
+        private void LayMTSanSang()
+        {
+            string sqlCountReadyClient = "SELECT COUNT(*) AS CountReadyClient  FROM MAYTRAM WHERE TinhTrangMayTram = '2'";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter da = new SqlDataAdapter(sqlCountReadyClient, con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "CountReadyClient");
+            DataTable dt = ds.Tables["CountReadyClient"];
+            DataRow dr = dt.Rows[0];
+            string tongMTSanSang = dr["CountReadyClient"].ToString();
+            tsslSanSang.Text = "Sẵn sàng: " + tongMTSanSang;
+        }
+            //===================End block load===================
+        private void Protect_Click(object sender, EventArgs e)
+        {
+            if (trangThaiDangNhap == 0)
+            {
+                
+                tabControlChucNang.SelectedTab = tabMayTram;
+                frmLogin formLogin1 = new frmLogin();
+                formLogin1.ShowDialog();
+                tenTaiKhoan = formLogin1.getTenTaiKhoan;
+                trangThaiDangNhap = TrangThaiDangNhap(tenTaiKhoan);
+                this.Text = "IRMS - Server 1.7.38 [" + tenTaiKhoan + " Staff]";
+
+                tabControlChucNang.SelectedTab = tabMayTram;
+
+            }
+
+        }
+        private void btnThayDoiNhanVien_Click(object sender, EventArgs e)
+        {
+            tabControlChucNang.SelectedTab = tabMayTram;
+            if (tenTaiKhoan != null)
+            {
+                string sqlUpdate = string.Format("UPDATE TAIKHOANQUANTRI SET TrangThaiTaiKhoan = '0' WHERE TenTaiKhoan = '{0}'", tenTaiKhoan);
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand(sqlUpdate, con);
+                try
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi kết nối: " + ex.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+
+            tenTaiKhoan = null;
+            trangThaiDangNhap = 0;
+            frmLogin formLogin1 = new frmLogin();
+            formLogin1.ShowDialog();
+            tenTaiKhoan = formLogin1.getTenTaiKhoan;
+            trangThaiDangNhap = TrangThaiDangNhap(tenTaiKhoan);
+            this.Text = "IRMS - Server 1.7.38 [" + tenTaiKhoan + " Staff]";
+
+            tabControlChucNang.SelectedTab = tabMayTram;
+
+        }
+
+        private void frmTemplate_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(tenTaiKhoan != null)
+            {
+                string sqlUpdate = string.Format("UPDATE TAIKHOANQUANTRI SET TrangThaiTaiKhoan = '0' WHERE TenTaiKhoan = '{0}'", tenTaiKhoan);
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand(sqlUpdate, con);
+                try
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi kết nối: " + ex.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+            
+        }
+
+        //============================== End Block of Thành Danh ==============================
     }
 }
