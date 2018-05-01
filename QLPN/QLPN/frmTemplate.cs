@@ -237,6 +237,7 @@ namespace QLPN
                 tabControlChucNang.SelectedTab = tabMayTram;
 
             }
+            checkTabNgocCan();
 
         }
         private void btnThayDoiNhanVien_Click(object sender, EventArgs e)
@@ -624,6 +625,177 @@ namespace QLPN
             tabControlChucNang.SelectedIndex = 3;
         }
         //================END DUY va VIET===============
+        //================CODE BY CAN===================
+        private void LayDSTaiKhoanNgocCan()
+        {
+            dgvCanAcc.Rows.Clear();
+            string SqlSelect = "Select *from TAIKHOAN order by TenTaiKhoan ASC";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(SqlSelect, conn))
+                {
+                    conn.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            string tenNSD = (string)dr["TenTaiKhoan"];
+                            double soTien = (double)dr["SoTien"];
+                            string nhomNSD = (string)dr["LoaiTaiKhoan"];
+                            string tinhTrang;
+                            if ((int)dr["TinhTrangTaiKhoan"] == 0)
+                            {
+                                tinhTrang = "Banned";
+                            }
+                            else
+                            {
+                                tinhTrang = null;
+                            }
+                            dgvCanAcc.Rows.Add(tenNSD.ToUpper(), String.Format("{0:0,0}", soTien), nhomNSD, tinhTrang);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnCanRefresh_Click(object sender, EventArgs e)
+        {
+            LayDSTaiKhoanNgocCan();
+        }
+        private void checkTabNgocCan()
+        {
+            if (tabControlChucNang.SelectedIndex == 1)
+            {
+                LayDSTaiKhoanNgocCan();
+            }
+        }
+
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControlChucNang.SelectedIndex = 1;
+            checkTabNgocCan();
+        }
+
+        private void btnCanRefresh_Click_1(object sender, EventArgs e)
+        {
+            LayDSTaiKhoanNgocCan();
+        }
+
+        private void btnCanTV_Click(object sender, EventArgs e)
+        {
+            string btnThanhVien = "Thành viên";
+            dgvCanAcc.Rows.Clear();
+            string SqlSelect = "Select *from TAIKHOAN where LoaiTaiKhoan like '" + btnThanhVien + "'  order by TenTaiKhoan ASC";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(SqlSelect, conn))
+                {
+                    conn.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            string tenNSD = (string)dr["TenTaiKhoan"];
+                            double soTien = (double)dr["SoTien"];
+                            string nhomNSD = (string)dr["LoaiTaiKhoan"];
+                            string tinhTrang;
+                            if ((int)dr["TinhTrangTaiKhoan"] == 0)
+                            {
+                                tinhTrang = "Banned";
+                            }
+                            else
+                            {
+                                tinhTrang = null;
+                            }
+                            dgvCanAcc.Rows.Add(tenNSD.ToUpper(), String.Format("{0:0,0}", soTien), nhomNSD, tinhTrang);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnCanNV_Click(object sender, EventArgs e)
+        {
+            string btnNhanVien = "Nhân viên";
+            dgvCanAcc.Rows.Clear();
+            string SqlSelect = "Select *from TAIKHOAN where LoaiTaiKhoan like '" + btnNhanVien + "'  order by TenTaiKhoan ASC";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(SqlSelect, conn))
+                {
+                    conn.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            string tenNSD = (string)dr["TenTaiKhoan"];
+                            double soTien = (double)dr["SoTien"];
+                            string nhomNSD = (string)dr["LoaiTaiKhoan"];
+                            string tinhTrang;
+                            if ((int)dr["TinhTrangTaiKhoan"] == 0)
+                            {
+                                tinhTrang = "Banned";
+                            }
+                            else
+                            {
+                                tinhTrang = null;
+                            }
+                            dgvCanAcc.Rows.Add(tenNSD.ToUpper(), String.Format("{0:0,0}", soTien), nhomNSD, tinhTrang);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnCanSearch_Click(object sender, EventArgs e)
+        {
+            if (cbxCanSearch.Text != null && txtCanSearch.Text != null)
+            {
+                string SqlSelect;
+                string txtCanValueSearch = txtCanSearch.Text;
+                if (cbxCanSearch.Text == "Tên người sử dụng")
+                {
+                    SqlSelect = "Select *from TAIKHOAN where TenTaiKhoan like '%" + txtCanValueSearch + "%'  order by TenTaiKhoan ASC";
+                }
+                else if (cbxCanSearch.Text == "Tình trạng tài khoản")
+                {
+                    SqlSelect = "Select *from TAIKHOAN where TinhTrangTaiKhoan = 0  order by TenTaiKhoan ASC";
+                }
+                else
+                {
+                    SqlSelect = "Select *from TAIKHOAN where LoaiTaiKhoan like '%" + txtCanValueSearch + "%'  order by TenTaiKhoan ASC";
+                }
+                
+                dgvCanAcc.Rows.Clear();
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(SqlSelect, conn))
+                    {
+                        conn.Open();
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            while (dr.Read())
+                            {
+                                string tenNSD = (string)dr["TenTaiKhoan"];
+                                double soTien = (double)dr["SoTien"];
+                                string nhomNSD = (string)dr["LoaiTaiKhoan"];
+                                string tinhTrang;
+                                if ((int)dr["TinhTrangTaiKhoan"] == 0)
+                                {
+                                    tinhTrang = "Banned";
+                                }
+                                else
+                                {
+                                    tinhTrang = null;
+                                }
+                                dgvCanAcc.Rows.Add(tenNSD.ToUpper(), String.Format("{0:0,0}", soTien), nhomNSD, tinhTrang);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //================END CODE BY CAN================== 
     }
 }
 

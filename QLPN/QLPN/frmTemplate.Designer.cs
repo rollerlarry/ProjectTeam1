@@ -67,6 +67,17 @@
             this.btnCanAdd = new System.Windows.Forms.Button();
             this.tabNhatKyHeThong = new System.Windows.Forms.TabPage();
             this.tabNhatKyGiaoDich = new System.Windows.Forms.TabPage();
+            this.pnlDuyNKGG = new System.Windows.Forms.Panel();
+            this.lvDuyNhatKyGiaoDich = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtDuySearch = new System.Windows.Forms.TextBox();
             this.cboDuyTenNguoiDung = new System.Windows.Forms.ComboBox();
             this.cboDuyHinhThuc = new System.Windows.Forms.ComboBox();
@@ -122,17 +133,10 @@
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngônNgữToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlDuyNKGG = new System.Windows.Forms.Panel();
-            this.lvDuyNhatKyGiaoDich = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TenNSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhomNSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTemplate.SuspendLayout();
             this.pnlContents.SuspendLayout();
             this.tabControlChucNang.SuspendLayout();
@@ -143,6 +147,7 @@
             this.pnlBotAcc.SuspendLayout();
             this.pnlTopAcc.SuspendLayout();
             this.tabNhatKyGiaoDich.SuspendLayout();
+            this.pnlDuyNKGG.SuspendLayout();
             this.tabNhomNguoiSuDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiSuDung)).BeginInit();
             this.pnlStatusStrip.SuspendLayout();
@@ -150,7 +155,6 @@
             this.pnlButton.SuspendLayout();
             this.pnlMenuStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
-            this.pnlDuyNKGG.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTemplate
@@ -347,10 +351,18 @@
             // 
             // dgvCanAcc
             // 
+            this.dgvCanAcc.AllowUserToAddRows = false;
+            this.dgvCanAcc.BackgroundColor = System.Drawing.Color.White;
             this.dgvCanAcc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCanAcc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenNSD,
+            this.SoTien,
+            this.NhomNSD,
+            this.TinhTrang});
             this.dgvCanAcc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCanAcc.Location = new System.Drawing.Point(3, 42);
             this.dgvCanAcc.Name = "dgvCanAcc";
+            this.dgvCanAcc.RowHeadersVisible = false;
             this.dgvCanAcc.Size = new System.Drawing.Size(1070, 341);
             this.dgvCanAcc.TabIndex = 2;
             // 
@@ -372,6 +384,7 @@
             this.btnCanNV.TabIndex = 1;
             this.btnCanNV.Text = "Tài khoản nhân viên";
             this.btnCanNV.UseVisualStyleBackColor = true;
+            this.btnCanNV.Click += new System.EventHandler(this.btnCanNV_Click);
             // 
             // btnCanTV
             // 
@@ -381,6 +394,7 @@
             this.btnCanTV.TabIndex = 0;
             this.btnCanTV.Text = "Tài khoản thành viên";
             this.btnCanTV.UseVisualStyleBackColor = true;
+            this.btnCanTV.Click += new System.EventHandler(this.btnCanTV_Click);
             // 
             // pnlTopAcc
             // 
@@ -422,7 +436,9 @@
             // 
             this.cbxCanSearch.FormattingEnabled = true;
             this.cbxCanSearch.Items.AddRange(new object[] {
-            "Tên người sử dụng"});
+            "Tên người sử dụng",
+            "Nhóm người sử dụng",
+            "Tình trạng tài khoản"});
             this.cbxCanSearch.Location = new System.Drawing.Point(236, 10);
             this.cbxCanSearch.Name = "cbxCanSearch";
             this.cbxCanSearch.Size = new System.Drawing.Size(121, 21);
@@ -460,6 +476,7 @@
             this.btnCanRefresh.Size = new System.Drawing.Size(32, 32);
             this.btnCanRefresh.TabIndex = 6;
             this.btnCanRefresh.UseVisualStyleBackColor = true;
+            this.btnCanRefresh.Click += new System.EventHandler(this.btnCanRefresh_Click_1);
             // 
             // btnCanMod
             // 
@@ -504,6 +521,7 @@
             this.btnCanSearch.Size = new System.Drawing.Size(32, 32);
             this.btnCanSearch.TabIndex = 2;
             this.btnCanSearch.UseVisualStyleBackColor = true;
+            this.btnCanSearch.Click += new System.EventHandler(this.btnCanSearch_Click);
             // 
             // btnCanAdd
             // 
@@ -554,6 +572,81 @@
             this.tabNhatKyGiaoDich.TabIndex = 3;
             this.tabNhatKyGiaoDich.Text = "Nhật ký giao dịch";
             this.tabNhatKyGiaoDich.UseVisualStyleBackColor = true;
+            // 
+            // pnlDuyNKGG
+            // 
+            this.pnlDuyNKGG.Controls.Add(this.lvDuyNhatKyGiaoDich);
+            this.pnlDuyNKGG.Location = new System.Drawing.Point(0, 44);
+            this.pnlDuyNKGG.Name = "pnlDuyNKGG";
+            this.pnlDuyNKGG.Size = new System.Drawing.Size(1077, 363);
+            this.pnlDuyNKGG.TabIndex = 13;
+            // 
+            // lvDuyNhatKyGiaoDich
+            // 
+            this.lvDuyNhatKyGiaoDich.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9});
+            this.lvDuyNhatKyGiaoDich.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvDuyNhatKyGiaoDich.FullRowSelect = true;
+            this.lvDuyNhatKyGiaoDich.GridLines = true;
+            this.lvDuyNhatKyGiaoDich.Location = new System.Drawing.Point(0, 0);
+            this.lvDuyNhatKyGiaoDich.Name = "lvDuyNhatKyGiaoDich";
+            this.lvDuyNhatKyGiaoDich.Size = new System.Drawing.Size(1077, 363);
+            this.lvDuyNhatKyGiaoDich.TabIndex = 0;
+            this.lvDuyNhatKyGiaoDich.UseCompatibleStateImageBehavior = false;
+            this.lvDuyNhatKyGiaoDich.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên người sử dụng";
+            this.columnHeader1.Width = 150;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ngày bắt đầu";
+            this.columnHeader2.Width = 90;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Giờ bắt đầu";
+            this.columnHeader3.Width = 90;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Ngày";
+            this.columnHeader4.Width = 90;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Thời gian";
+            this.columnHeader5.Width = 100;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Tiền";
+            this.columnHeader6.Width = 100;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Thời gian đã sử dụng";
+            this.columnHeader7.Width = 120;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Nhân viên";
+            this.columnHeader8.Width = 100;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Ghi chú";
+            this.columnHeader9.Width = 235;
             // 
             // txtDuySearch
             // 
@@ -966,7 +1059,7 @@
             this.menuStrip.Location = new System.Drawing.Point(9, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(10, 8, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(525, 29);
+            this.menuStrip.Size = new System.Drawing.Size(433, 29);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -999,6 +1092,7 @@
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
             this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
+            this.tàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
             // 
             // nhậtKýHệThốngToolStripMenuItem
             // 
@@ -1075,80 +1169,32 @@
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
             this.giúpĐỡToolStripMenuItem.Click += new System.EventHandler(this.Protect_Click);
             // 
-            // pnlDuyNKGG
+            // TenNSD
             // 
-            this.pnlDuyNKGG.Controls.Add(this.lvDuyNhatKyGiaoDich);
-            this.pnlDuyNKGG.Location = new System.Drawing.Point(0, 44);
-            this.pnlDuyNKGG.Name = "pnlDuyNKGG";
-            this.pnlDuyNKGG.Size = new System.Drawing.Size(1077, 363);
-            this.pnlDuyNKGG.TabIndex = 13;
+            this.TenNSD.DataPropertyName = "TenTaiKhoan";
+            this.TenNSD.HeaderText = "Tên người sử dụng";
+            this.TenNSD.Name = "TenNSD";
+            this.TenNSD.Width = 200;
             // 
-            // lvDuyNhatKyGiaoDich
+            // SoTien
             // 
-            this.lvDuyNhatKyGiaoDich.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
-            this.lvDuyNhatKyGiaoDich.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvDuyNhatKyGiaoDich.FullRowSelect = true;
-            this.lvDuyNhatKyGiaoDich.GridLines = true;
-            this.lvDuyNhatKyGiaoDich.Location = new System.Drawing.Point(0, 0);
-            this.lvDuyNhatKyGiaoDich.Name = "lvDuyNhatKyGiaoDich";
-            this.lvDuyNhatKyGiaoDich.Size = new System.Drawing.Size(1077, 363);
-            this.lvDuyNhatKyGiaoDich.TabIndex = 0;
-            this.lvDuyNhatKyGiaoDich.UseCompatibleStateImageBehavior = false;
-            this.lvDuyNhatKyGiaoDich.View = System.Windows.Forms.View.Details;
+            this.SoTien.DataPropertyName = "SoTien";
+            this.SoTien.HeaderText = "Tiền";
+            this.SoTien.Name = "SoTien";
             // 
-            // columnHeader1
+            // NhomNSD
             // 
-            this.columnHeader1.Text = "Tên người sử dụng";
-            this.columnHeader1.Width = 150;
+            this.NhomNSD.DataPropertyName = "LoaiTaiKhoan";
+            this.NhomNSD.HeaderText = "Nhóm người sử dụng";
+            this.NhomNSD.Name = "NhomNSD";
+            this.NhomNSD.Width = 200;
             // 
-            // columnHeader2
+            // TinhTrang
             // 
-            this.columnHeader2.Text = "Ngày bắt đầu";
-            this.columnHeader2.Width = 90;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Giờ bắt đầu";
-            this.columnHeader3.Width = 90;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Ngày";
-            this.columnHeader4.Width = 90;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Thời gian";
-            this.columnHeader5.Width = 100;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Tiền";
-            this.columnHeader6.Width = 100;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Thời gian đã sử dụng";
-            this.columnHeader7.Width = 120;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Nhân viên";
-            this.columnHeader8.Width = 100;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Ghi chú";
-            this.columnHeader9.Width = 235;
+            this.TinhTrang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TinhTrang.DataPropertyName = "TinhTrangTaiKhoan";
+            this.TinhTrang.HeaderText = "Tình trạng";
+            this.TinhTrang.Name = "TinhTrang";
             // 
             // frmTemplate
             // 
@@ -1174,6 +1220,7 @@
             this.pnlTopAcc.PerformLayout();
             this.tabNhatKyGiaoDich.ResumeLayout(false);
             this.tabNhatKyGiaoDich.PerformLayout();
+            this.pnlDuyNKGG.ResumeLayout(false);
             this.tabNhomNguoiSuDung.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiSuDung)).EndInit();
             this.pnlStatusStrip.ResumeLayout(false);
@@ -1185,7 +1232,6 @@
             this.pnlMenuStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.pnlDuyNKGG.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1295,6 +1341,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNSD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhomNSD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
     }
 }
 
