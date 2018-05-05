@@ -47,6 +47,8 @@ namespace QLPN
 
             tabNKGG_LoadData(); //Duy
             tabNKGG_layTenNguoiDung();//Duy
+
+            LayDSNhomNguoiSuDung();
         }
 
         private void LayDSMayTram_DanhHy()
@@ -796,6 +798,34 @@ namespace QLPN
             }
         }
         //================END CODE BY CAN================== 
+        //================CODE BY HAO======================
+
+        private void LayDSNhomNguoiSuDung()
+        {
+
+            dgvNhomNguoiSuDung.Rows.Clear(); 
+            string query = "SELECT *FROM NHOMNGUOISUDUNG";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                using(SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    using(SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string tenNhom = (string)reader["TenNhom"];
+                            string loaiTK = (string)reader["LoaiTaiKhoan"];
+                            double giaTien = (double)reader["GiaTien"];
+
+                            dgvNhomNguoiSuDung.Rows.Add(tenNhom,loaiTK, String.Format("{0:0,0}",giaTien));
+                        }
+                    }
+                }
+            }
+        }
+
+        //================END CODE HAO=====================
     }
 }
 
