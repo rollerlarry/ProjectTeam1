@@ -101,10 +101,19 @@
             this.tabNhomMay = new System.Windows.Forms.TabPage();
             this.tabNhomNguoiSuDung = new System.Windows.Forms.TabPage();
             this.dgvNhomNguoiSuDung = new System.Windows.Forms.DataGridView();
+            this.TenNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelNhomNguoiSuDung = new System.Windows.Forms.Button();
             this.btnEditNhomNguoiSuDung = new System.Windows.Forms.Button();
             this.btnAddNhomNguoiSuDung = new System.Windows.Forms.Button();
             this.tabDichVu = new System.Windows.Forms.TabPage();
+            this.dgvDichVu = new System.Windows.Forms.DataGridView();
+            this.danhMuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tonKho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabKhongCheUngDung = new System.Windows.Forms.TabPage();
             this.tabNhatKyWeb = new System.Windows.Forms.TabPage();
             this.pnlStatusStrip = new System.Windows.Forms.Panel();
@@ -134,9 +143,6 @@
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngônNgữToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giúpĐỡToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TenNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTemplate.SuspendLayout();
             this.pnlContents.SuspendLayout();
             this.tabControlChucNang.SuspendLayout();
@@ -150,6 +156,8 @@
             this.pnlDuyNKGG.SuspendLayout();
             this.tabNhomNguoiSuDung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiSuDung)).BeginInit();
+            this.tabDichVu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
             this.pnlStatusStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.pnlButton.SuspendLayout();
@@ -880,6 +888,22 @@
             this.dgvNhomNguoiSuDung.Size = new System.Drawing.Size(1060, 358);
             this.dgvNhomNguoiSuDung.TabIndex = 16;
             // 
+            // TenNhom
+            // 
+            this.TenNhom.HeaderText = "Tên";
+            this.TenNhom.Name = "TenNhom";
+            // 
+            // LoaiTaiKhoan
+            // 
+            this.LoaiTaiKhoan.HeaderText = "Kiểu";
+            this.LoaiTaiKhoan.Name = "LoaiTaiKhoan";
+            // 
+            // GiaTien
+            // 
+            this.GiaTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GiaTien.HeaderText = "Rote : Mặc định";
+            this.GiaTien.Name = "GiaTien";
+            // 
             // btnDelNhomNguoiSuDung
             // 
             this.btnDelNhomNguoiSuDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -915,6 +939,7 @@
             // 
             // tabDichVu
             // 
+            this.tabDichVu.Controls.Add(this.dgvDichVu);
             this.tabDichVu.ImageIndex = 5;
             this.tabDichVu.Location = new System.Drawing.Point(4, 34);
             this.tabDichVu.Name = "tabDichVu";
@@ -923,6 +948,47 @@
             this.tabDichVu.TabIndex = 6;
             this.tabDichVu.Text = "Dịch vụ";
             this.tabDichVu.UseVisualStyleBackColor = true;
+            // 
+            // dgvDichVu
+            // 
+            this.dgvDichVu.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDichVu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.danhMuc,
+            this.ten,
+            this.gia,
+            this.donVi,
+            this.tonKho});
+            this.dgvDichVu.Location = new System.Drawing.Point(4, 6);
+            this.dgvDichVu.Name = "dgvDichVu";
+            this.dgvDichVu.Size = new System.Drawing.Size(964, 334);
+            this.dgvDichVu.TabIndex = 0;
+            this.dgvDichVu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // danhMuc
+            // 
+            this.danhMuc.HeaderText = "Danh mục";
+            this.danhMuc.Name = "danhMuc";
+            // 
+            // ten
+            // 
+            this.ten.HeaderText = "Tên";
+            this.ten.Name = "ten";
+            // 
+            // gia
+            // 
+            this.gia.HeaderText = "Giá";
+            this.gia.Name = "gia";
+            // 
+            // donVi
+            // 
+            this.donVi.HeaderText = "Đơn vị";
+            this.donVi.Name = "donVi";
+            // 
+            // tonKho
+            // 
+            this.tonKho.HeaderText = "tồnKho";
+            this.tonKho.Name = "tonKho";
             // 
             // tabKhongCheUngDung
             // 
@@ -1060,6 +1126,7 @@
             this.pnlMenuStrip.Size = new System.Drawing.Size(1084, 40);
             this.pnlMenuStrip.TabIndex = 0;
             this.pnlMenuStrip.Click += new System.EventHandler(this.Protect_Click);
+            this.pnlMenuStrip.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMenuStrip_Paint);
             // 
             // menuStrip
             // 
@@ -1183,22 +1250,6 @@
             this.giúpĐỡToolStripMenuItem.Text = "Giúp đỡ";
             this.giúpĐỡToolStripMenuItem.Click += new System.EventHandler(this.Protect_Click);
             // 
-            // TenNhom
-            // 
-            this.TenNhom.HeaderText = "Tên";
-            this.TenNhom.Name = "TenNhom";
-            // 
-            // LoaiTaiKhoan
-            // 
-            this.LoaiTaiKhoan.HeaderText = "Kiểu";
-            this.LoaiTaiKhoan.Name = "LoaiTaiKhoan";
-            // 
-            // GiaTien
-            // 
-            this.GiaTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GiaTien.HeaderText = "Rote : Mặc định";
-            this.GiaTien.Name = "GiaTien";
-            // 
             // frmTemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1226,6 +1277,8 @@
             this.pnlDuyNKGG.ResumeLayout(false);
             this.tabNhomNguoiSuDung.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhomNguoiSuDung)).EndInit();
+            this.tabDichVu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).EndInit();
             this.pnlStatusStrip.ResumeLayout(false);
             this.pnlStatusStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -1348,6 +1401,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNhom;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiTaiKhoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaTien;
+        private System.Windows.Forms.DataGridView dgvDichVu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn danhMuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donVi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tonKho;
     }
 }
 

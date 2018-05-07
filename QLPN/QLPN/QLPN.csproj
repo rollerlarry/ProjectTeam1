@@ -74,6 +74,42 @@
     <Compile Include="frmTemplate.Designer.cs">
       <DependentUpon>frmTemplate.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuMayTram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuMayTram.designer.cs">
+      <DependentUpon>MenuMayTram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuMayTram_DichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuMayTram_DichVu.designer.cs">
+      <DependentUpon>MenuMayTram_DichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuMayTram_doiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuMayTram_doiMK.designer.cs">
+      <DependentUpon>MenuMayTram_doiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuMayTram_khoaMay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuMayTram_khoaMay.designer.cs">
+      <DependentUpon>MenuMayTram_khoaMay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuMayTram_TienIch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuMayTram_TienIch.designer.cs">
+      <DependentUpon>MenuMayTram_TienIch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuMayTram_TinNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuMayTram_TinNhan.designer.cs">
+      <DependentUpon>MenuMayTram_TinNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
@@ -81,6 +117,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTemplate.resx">
       <DependentUpon>frmTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuMayTram.resx">
+      <DependentUpon>MenuMayTram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuMayTram_DichVu.resx">
+      <DependentUpon>MenuMayTram_DichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuMayTram_doiMK.resx">
+      <DependentUpon>MenuMayTram_doiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuMayTram_khoaMay.resx">
+      <DependentUpon>MenuMayTram_khoaMay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuMayTram_TienIch.resx">
+      <DependentUpon>MenuMayTram_TienIch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuMayTram_TinNhan.resx">
+      <DependentUpon>MenuMayTram_TinNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,6 +144,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -114,6 +169,13 @@
     <Content Include="icon\retweet-arrows-symbol.png" />
     <Content Include="icon\switch-user.png" />
     <Content Include="icon\user-shape.png" />
+    <None Include="Resources\tinnhan.PNG" />
+    <None Include="Resources\tienich.PNG" />
+    <None Include="Resources\matkhau.PNG" />
+    <None Include="Resources\mail.png" />
+    <None Include="Resources\khoamay.PNG" />
+    <None Include="Resources\dichvu - Copy.PNG" />
+    <None Include="Resources\dangxuat.PNG" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

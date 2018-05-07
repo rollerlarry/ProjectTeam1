@@ -33,6 +33,7 @@ namespace QLPN
             LayTongSoMayTram(); //TD
             LayMTDangSuDung(); //TD
             LayMTSanSang(); //TD
+            layTTDichVu(); //HuuHien
 
             this.Text = "IRMS - Server 1.7.38 [" + tenTaiKhoan + " Staff]"; //TD
             frmLogin formLogin = new frmLogin(); //TD
@@ -825,7 +826,80 @@ namespace QLPN
             }
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
         //================END CODE HAO=====================
+
+        //================ CODE BY HIEN ===================
+        //Huuhien edited
+        private void layTTDichVu()
+        {
+            MessageBox.Show("Đang lấy dịch vụ.....");
+            DataTable dmDV = layDMDichVu();
+            for (int i = 0; i < dmDV.Rows.Count; i++)
+            {
+                dgvDichVu.Rows.Add(dmDV.Rows[i][1], "", "", "", "");
+                layDichVuTheoDM((String)dmDV.Rows[i][0]);
+            }
+        }
+
+        private void layDichVuTheoDM(string maDM)
+        {
+            string query = String.Format("Select ten,donvi,gia,tonkho from DICHVU where maDM = '{0}'", maDM);
+            SqlDataReader reader = null;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    try
+                    {
+                        connection.Open();
+                        reader = command.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            dgvDichVu.Rows.Add("", reader[0].ToString(), reader[2].ToString() + ".000đ", reader[1].ToString(), reader[3].ToString());
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Lỗi lấy chi tiết dịch vụ:\n" + e.ToString());
+                    }
+
+                }
+            }
+        }
+
+        private DataTable layDMDichVu()
+        {
+            DataTable dt = new DataTable();
+            SqlDataReader reader = null;
+            string queryDMPhong = "select * from DMDICHVU";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(queryDMPhong, connection))
+                {
+                    try
+                    {
+                        connection.Open();
+                        reader = command.ExecuteReader();
+                        /*đổ dữ liệu từ sqldatareader ra datatable*/
+                        dt.Load(reader);
+                    }
+                    catch (Exception e) { MessageBox.Show("Lỗi kết nối lấy danh mục DV:\n" + e.ToString()); }
+                }
+            }
+
+            return dt;
+        }
+
+        private void pnlMenuStrip_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        //================ END CODE HIEN ==================
     }
 }
 
