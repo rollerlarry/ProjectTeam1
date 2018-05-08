@@ -486,6 +486,7 @@
             // 
             this.cbxCanSearch.FormattingEnabled = true;
             this.cbxCanSearch.Items.AddRange(new object[] {
+            "Tên người sử dụng"});
             "Tên người sử dụng",
             "Nhóm người sử dụng",
             "Tình trạng tài khoản"});
