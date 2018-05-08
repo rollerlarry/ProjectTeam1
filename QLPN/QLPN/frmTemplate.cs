@@ -46,6 +46,7 @@ namespace QLPN
             LayDSMayTram_DanhHy();
         }
 
+        //========================================[BEGIN] Văn Danh, Hy [BEGIN]====================================
         private void LayDSMayTram_DanhHy()
         {
             try
@@ -143,6 +144,22 @@ namespace QLPN
             }
 
         }
+
+        private void listView_DanhHy_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (listView_DanhHy.FocusedItem.Bounds.Contains(e.Location) == true)
+                {
+                    contextMenuStrip_DanhHy.Show(Cursor.Position);
+                }
+            }
+        }
+
+        //========================================[END] Văn Danh, Hy [END]====================================
+
+
+
         //======================================== Thành Danh ========================================
         private int TrangThaiDangNhap(string tenTaiKhoan)
         {
@@ -294,6 +311,8 @@ namespace QLPN
             }
             
         }
+
+        
 
         //============================== End Block of Thành Danh ==============================
     }
